@@ -1,0 +1,17 @@
+protecno\escuelaBundle\Entity\anadirCamposAdicionalesParaLaDonacion:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        nombre:
+            type: string
+            length: '100'
+        estado:
+            type: boolean
+        esObligatorio:
+            type: boolean
+    lifecycleCallbacks: {  }

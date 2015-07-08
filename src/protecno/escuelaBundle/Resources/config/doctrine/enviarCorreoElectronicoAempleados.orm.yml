@@ -1,0 +1,16 @@
+protecno\escuelaBundle\Entity\enviarCorreoElectronicoAempleados:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        sujeto:
+            type: string
+            length: '100'
+        mensaje:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

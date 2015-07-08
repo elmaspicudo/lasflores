@@ -1,0 +1,30 @@
+anadirdepartamentoempleo:
+    path:     /
+    defaults: { _controller: "escuelaBundle:anadirDepartamentoEmpleo:index" }
+
+anadirdepartamentoempleo_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:anadirDepartamentoEmpleo:show" }
+
+anadirdepartamentoempleo_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:anadirDepartamentoEmpleo:new" }
+
+anadirdepartamentoempleo_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:anadirDepartamentoEmpleo:create" }
+    requirements: { _method: post }
+
+anadirdepartamentoempleo_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:anadirDepartamentoEmpleo:edit" }
+
+anadirdepartamentoempleo_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:anadirDepartamentoEmpleo:update" }
+    requirements: { _method: post|put }
+
+anadirdepartamentoempleo_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:anadirDepartamentoEmpleo:delete" }
+    requirements: { _method: post|delete }

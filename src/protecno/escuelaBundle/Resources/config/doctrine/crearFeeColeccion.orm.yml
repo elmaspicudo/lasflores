@@ -1,0 +1,19 @@
+protecno\escuelaBundle\Entity\crearFeeColeccion:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        cuotaNombreDeLaColeccion:
+            type: string
+            length: '100'
+        fechaDeInicio:
+            type: datetime
+        fechaFinal:
+            type: datetime
+        fechaDeVencimiento:
+            type: datetime
+    lifecycleCallbacks: {  }

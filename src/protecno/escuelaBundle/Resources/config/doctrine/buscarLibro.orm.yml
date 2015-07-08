@@ -1,0 +1,13 @@
+protecno\escuelaBundle\Entity\buscarLibro:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        buscar:
+            type: string
+            length: '100'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,36 @@
+protecno\escuelaBundle\Entity\detallesDeContacto:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        direccionLinea1:
+            type: string
+            length: '100'
+        direccionLinea2:
+            type: string
+            length: '100'
+        ciudad:
+            type: string
+            length: '50'
+        estado:
+            type: string
+            length: '50'
+        codigoPIN:
+            type: string
+            length: '20'
+        telefono:
+            type: integer
+        movil:
+            type: integer
+        eMail:
+            type: string
+            length: '30'
+    manyToOne:
+        pais:
+            targetEntity: protecno\escuelaBundle\Entity\pais
+            inversedBy: detallesDeContacto       
+    lifecycleCallbacks: {  }

@@ -1,0 +1,61 @@
+escuelaBundle_archivo:
+        resource: "@escuelaBundle/Resources/config/routing/archivo.yml"
+        prefix:   /archivo
+escuelaBundle_calendario:
+        resource: "@escuelaBundle/Resources/config/routing/calendario.yml"
+        prefix:   /calendario
+escuelaBundle_academica:
+        resource: "@escuelaBundle/Resources/config/routing/academica.yml"
+        prefix:   /academica
+escuelaBundle_administracion:
+        resource: "@escuelaBundle/Resources/config/routing/administracion.yml"
+        prefix:   /administracion 
+escuelaBundle_administrarclientes:
+        resource: "@escuelaBundle/Resources/config/routing/administrarclientes.yml"
+        prefix:   /administrarclientes
+escuelaBundle_administrarcursolote:
+        resource: "@escuelaBundle/Resources/config/routing/administrarcursolote.yml"
+        prefix:   /administrarcursolote                        
+escuelaBundle_admisiondeestudiantes:
+        resource: "@escuelaBundle/Resources/config/routing/admisiondeestudiantes.yml"
+        prefix:   /admisiondeestudiantes                        
+escuelaBundle_ajustes:
+        resource: "@escuelaBundle/Resources/config/routing/ajustes.yml"
+        prefix:   /ajustes
+escuelaBundle_anadirlibro:
+        resource: "@escuelaBundle/Resources/config/routing/anadirlibro.yml"
+        prefix:   /anadirlibro
+escuelaBundle_curso:
+        resource: "@escuelaBundle/Resources/config/routing/curso.yml"
+        prefix:   /curso
+escuelaBundle_lotes:
+        resource: "@escuelaBundle/Resources/config/routing/lotes.yml"
+        prefix:   /lotes
+escuelaBundle_eventos:
+        resource: "@escuelaBundle/Resources/config/routing/eventos.yml"
+        prefix:   /eventos
+
+escuelaBundle_agregarnoticia:
+        resource: "@escuelaBundle/Resources/config/routing/agregarnoticia.yml"
+        prefix:   /agregarnoticia
+
+escuelaBundle_anadirempleadocategoria:
+        resource: "@escuelaBundle/Resources/config/routing/anadirempleadocategoria.yml"
+        prefix:   /anadirempleadocategoria
+escuelaBundle_anadirdepartamentoempleo:
+        resource: "@escuelaBundle/Resources/config/routing/anadirdepartamentoempleo.yml"
+        prefix:   /anadirdepartamentoempleo
+escuelaBundle_anadircategorianomina:
+        resource: "@escuelaBundle/Resources/config/routing/anadircategorianomina.yml"
+        prefix:   /anadircategorianomina
+escuelaBundle_anadirempleadoposicion:
+        resource: "@escuelaBundle/Resources/config/routing/anadirempleadoposicion.yml"
+        prefix:   /anadirempleadoposicion
+escuelaBundle_anadirempleadogrado:
+        resource: "@escuelaBundle/Resources/config/routing/anadirempleadogrado.yml"
+        prefix:   /anadirempleadogrado
+escuelaBundle_anadirdetallesdelbanco:
+        resource: "@escuelaBundle/Resources/config/routing/anadirdetallesdelbanco.yml"
+        prefix:   /anadirdetallesdelbanco
+        
+

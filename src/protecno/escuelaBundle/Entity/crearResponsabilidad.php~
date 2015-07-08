@@ -1,0 +1,111 @@
+<?php
+
+namespace protecno\escuelaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * crearResponsabilidad
+ */
+class crearResponsabilidad
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $titulo;
+
+    /**
+     * @var string
+     */
+    private $descripcion;
+
+    /**
+     * @var integer
+     */
+    private $monto;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set titulo
+     *
+     * @param string $titulo
+     * @return crearResponsabilidad
+     */
+    public function setTitulo($titulo)
+    {
+        $this->titulo = $titulo;
+    
+        return $this;
+    }
+
+    /**
+     * Get titulo
+     *
+     * @return string 
+     */
+    public function getTitulo()
+    {
+        return $this->titulo;
+    }
+
+    /**
+     * Set descripcion
+     *
+     * @param string $descripcion
+     * @return crearResponsabilidad
+     */
+    public function setDescripcion($descripcion)
+    {
+        $this->descripcion = $descripcion;
+    
+        return $this;
+    }
+
+    /**
+     * Get descripcion
+     *
+     * @return string 
+     */
+    public function getDescripcion()
+    {
+        return $this->descripcion;
+    }
+
+    /**
+     * Set monto
+     *
+     * @param integer $monto
+     * @return crearResponsabilidad
+     */
+    public function setMonto($monto)
+    {
+        $this->monto = $monto;
+    
+        return $this;
+    }
+
+    /**
+     * Get monto
+     *
+     * @return integer 
+     */
+    public function getMonto()
+    {
+        return $this->monto;
+    }
+}

@@ -1,0 +1,30 @@
+anadirempleadoposicion:
+    path:     /
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoPosicion:index" }
+
+anadirempleadoposicion_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoPosicion:show" }
+
+anadirempleadoposicion_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoPosicion:new" }
+
+anadirempleadoposicion_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoPosicion:create" }
+    requirements: { _method: post }
+
+anadirempleadoposicion_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoPosicion:edit" }
+
+anadirempleadoposicion_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoPosicion:update" }
+    requirements: { _method: post|put }
+
+anadirempleadoposicion_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoPosicion:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,24 @@
+protecno\escuelaBundle\Entity\anadirEmpleadoGrado:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        nombre:
+            type: string
+            length: '50'
+        prioridad:
+            type: string
+            length: '100'
+        numeroMaximoDeHorasPorDia:
+            type: string
+            length: '3'
+        numeroMaximoDeHorasPorSemana:
+            type: string
+            length: '3'
+        estado:
+            type: boolean
+    lifecycleCallbacks: {  }

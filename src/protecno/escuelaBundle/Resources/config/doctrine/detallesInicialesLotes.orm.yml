@@ -1,0 +1,17 @@
+protecno\escuelaBundle\Entity\detallesInicialesLotes:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        nombreDelLote:
+            type: string
+            length: '100'
+        fechaDeInicio:
+            type: datetime
+        fachaFinal:
+            type: datetime
+    lifecycleCallbacks: {  }

@@ -1,0 +1,20 @@
+protecno\escuelaBundle\Entity\nuevaTarea:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        titulo:
+            type: string
+            length: '100'
+        descripcion:
+            type: string
+            length: 255
+        fechaDeInicio:
+            type: datetime
+        fechaFinal:
+            type: datetime
+    lifecycleCallbacks: {  }

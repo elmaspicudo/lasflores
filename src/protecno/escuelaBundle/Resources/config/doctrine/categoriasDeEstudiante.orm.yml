@@ -1,0 +1,13 @@
+protecno\escuelaBundle\Entity\categoriasDeEstudiante:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        ingreseNuevaRuta:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

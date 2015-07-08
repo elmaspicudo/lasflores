@@ -1,0 +1,32 @@
+protecno\escuelaBundle\Entity\padresDatosPersonales:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        nombrmbre:
+            type: string
+            length: '100'
+        apellido:
+            type: string
+            length: '100'
+        relacion:
+            type: string
+            length: '100'
+        fechaDeNacimiento:
+            type: datetime
+        educacion:
+            type: string
+            length: '100'
+        ocupacion:
+            type: string
+            length: '100'
+        ingresos:
+            type: integer
+        eMail:
+            type: string
+            length: '100'
+    lifecycleCallbacks: {  }

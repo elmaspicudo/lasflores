@@ -1,0 +1,30 @@
+anadircategorianomina:
+    path:     /
+    defaults: { _controller: "escuelaBundle:anadirCategoriaNomina:index" }
+
+anadircategorianomina_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:anadirCategoriaNomina:show" }
+
+anadircategorianomina_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:anadirCategoriaNomina:new" }
+
+anadircategorianomina_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:anadirCategoriaNomina:create" }
+    requirements: { _method: post }
+
+anadircategorianomina_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:anadirCategoriaNomina:edit" }
+
+anadircategorianomina_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:anadirCategoriaNomina:update" }
+    requirements: { _method: post|put }
+
+anadircategorianomina_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:anadirCategoriaNomina:delete" }
+    requirements: { _method: post|delete }

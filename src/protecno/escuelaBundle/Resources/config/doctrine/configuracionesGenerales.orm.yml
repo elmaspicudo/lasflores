@@ -1,0 +1,43 @@
+protecno\escuelaBundle\Entity\configuracionesGenerales:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        nombreDelColegio:
+            type: string
+            length: '100'
+        direccionDelColegio:
+            type: string
+            length: '100'
+        telefonoDelColegio:
+            type: string
+            length: '20'
+        ejercicioFechaDeInicio:
+            type: datetime
+        ejercicioFechaDelFinal:
+            type: datetime
+        numeroDeReciboPartir:
+            type: string
+            length: '10'
+        tipoDeMoneda:
+            type: string
+            length: '20'
+        incrementoDeAdmisionEstudiantilNo:
+            type: boolean
+        incrementoDelEmpleadoNo:
+            type: boolean
+        noticiasModeracionDeComentarios:
+            type: boolean
+        habilitarHermano:
+            type: boolean
+        cambioDeContrasenaInicioDeSesion:
+            type: boolean
+        activarNumeroDeRolloParaEstudiantes:
+            type: boolean
+        habilitarOauth:
+            type: boolean
+    lifecycleCallbacks: {  }

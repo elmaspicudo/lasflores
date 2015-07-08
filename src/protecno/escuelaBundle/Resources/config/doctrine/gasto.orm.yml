@@ -1,0 +1,14 @@
+protecno\escuelaBundle\Entity\gasto:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        seleccionarFechaDeInicio:
+            type: datetime
+        seleccionarFechaDeFinalizacion:
+            type: datetime
+    lifecycleCallbacks: {  }

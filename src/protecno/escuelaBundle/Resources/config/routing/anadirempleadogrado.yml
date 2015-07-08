@@ -1,0 +1,30 @@
+anadirempleadogrado:
+    path:     /
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoGrado:index" }
+
+anadirempleadogrado_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoGrado:show" }
+
+anadirempleadogrado_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoGrado:new" }
+
+anadirempleadogrado_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoGrado:create" }
+    requirements: { _method: post }
+
+anadirempleadogrado_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoGrado:edit" }
+
+anadirempleadogrado_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoGrado:update" }
+    requirements: { _method: post|put }
+
+anadirempleadogrado_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoGrado:delete" }
+    requirements: { _method: post|delete }

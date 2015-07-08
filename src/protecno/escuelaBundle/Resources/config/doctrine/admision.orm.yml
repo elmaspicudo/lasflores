@@ -1,0 +1,38 @@
+protecno\escuelaBundle\Entity\admision:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        noDeAdmision:
+            type: integer
+        fechaDeAdmision:
+            type: datetime
+        nombre:
+            type: string
+            length: '30'
+        segundoNombre:
+            type: string
+            length: '30'
+        apellidoPaterno:
+            type: string
+            length: '30'
+        apellidoMaterno:
+            type: string
+            length: '30'
+        genero:
+            type: string
+            length: '10'
+        grupoSanguineo:
+            type: string
+            length: '15'
+        lugarDeNacimiento:
+            type: string
+            length: '50'
+        nacionalidad:
+            type: string
+            length: '50'
+    lifecycleCallbacks: {  }

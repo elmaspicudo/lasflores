@@ -1,0 +1,30 @@
+academica:
+    path:     /
+    defaults: { _controller: "escuelaBundle:academica:index" }
+
+academica_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:academica:show" }
+
+academica_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:academica:new" }
+
+academica_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:academica:create" }
+    requirements: { _method: post }
+
+academica_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:academica:edit" }
+
+academica_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:academica:update" }
+    requirements: { _method: post|put }
+
+academica_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:academica:delete" }
+    requirements: { _method: post|delete }

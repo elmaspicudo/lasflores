@@ -1,0 +1,30 @@
+anadirempleadocategoria:
+    path:     /
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoCategoria:index" }
+
+anadirempleadocategoria_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoCategoria:show" }
+
+anadirempleadocategoria_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoCategoria:new" }
+
+anadirempleadocategoria_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoCategoria:create" }
+    requirements: { _method: post }
+
+anadirempleadocategoria_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoCategoria:edit" }
+
+anadirempleadocategoria_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoCategoria:update" }
+    requirements: { _method: post|put }
+
+anadirempleadocategoria_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:anadirEmpleadoCategoria:delete" }
+    requirements: { _method: post|delete }

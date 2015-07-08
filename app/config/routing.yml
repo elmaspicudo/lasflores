@@ -1,0 +1,4 @@
+escuela:
+    resource: "@escuelaBundle/Resources/config/routing.yml"
+    prefix:   /
+

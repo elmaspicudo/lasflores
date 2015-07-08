@@ -1,0 +1,19 @@
+protecno\escuelaBundle\Entity\nivelesDeClasificacion:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        nombre:
+            type: string
+            length: '100'
+        marcas:
+            type: decimal
+        numeroDeSujetos:
+            type: integer
+        considereTodosLosLotesAnteriores:
+            type: boolean
+    lifecycleCallbacks: {  }

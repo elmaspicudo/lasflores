@@ -1,0 +1,13 @@
+protecno\escuelaBundle\Entity\anadirLosDSocumentos:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        nombreDelDocumento:
+            type: string
+            length: '100'
+    lifecycleCallbacks: {  }

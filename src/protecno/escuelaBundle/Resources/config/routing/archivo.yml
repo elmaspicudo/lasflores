@@ -1,0 +1,30 @@
+archivo:
+    path:     /
+    defaults: { _controller: "escuelaBundle:archivo:index" }
+
+archivo_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:archivo:show" }
+
+archivo_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:archivo:new" }
+
+archivo_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:archivo:create" }
+    requirements: { _method: post }
+
+archivo_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:archivo:edit" }
+
+archivo_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:archivo:update" }
+    requirements: { _method: post|put }
+
+archivo_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:archivo:delete" }
+    requirements: { _method: post|delete }

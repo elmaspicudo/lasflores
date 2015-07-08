@@ -1,0 +1,30 @@
+administrarcursolote:
+    path:     /
+    defaults: { _controller: "escuelaBundle:administrarCursoLote:index" }
+
+administrarcursolote_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:administrarCursoLote:show" }
+
+administrarcursolote_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:administrarCursoLote:new" }
+
+administrarcursolote_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:administrarCursoLote:create" }
+    requirements: { _method: post }
+
+administrarcursolote_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:administrarCursoLote:edit" }
+
+administrarcursolote_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:administrarCursoLote:update" }
+    requirements: { _method: post|put }
+
+administrarcursolote_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:administrarCursoLote:delete" }
+    requirements: { _method: post|delete }

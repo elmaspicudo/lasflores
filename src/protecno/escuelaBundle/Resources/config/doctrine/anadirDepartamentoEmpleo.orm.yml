@@ -1,0 +1,18 @@
+protecno\escuelaBundle\Entity\anadirDepartamentoEmpleo:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        nombre:
+            type: string
+            length: '70'
+        codigoDeDepartamento:
+            type: string
+            length: '40'
+        estado:
+            type: boolean
+    lifecycleCallbacks: {  }

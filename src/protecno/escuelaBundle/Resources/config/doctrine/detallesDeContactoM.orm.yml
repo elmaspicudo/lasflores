@@ -1,0 +1,19 @@
+protecno\escuelaBundle\Entity\detallesDeContactoM:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        movil:
+            type: string
+            length: '10'
+        telefonoDeCasa:
+            type: string
+            length: '15'
+        fax:
+            type: string
+            length: '30'
+    lifecycleCallbacks: {  }

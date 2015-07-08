@@ -1,0 +1,23 @@
+protecno\escuelaBundle\Entity\nuevoGNR:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        gNRno:
+            type: integer
+            column: GNRno
+        facturaNo:
+            type: integer
+        gNRFecha:
+            type: datetime
+            column: GNRFecha
+        fechaDeLaFactura:
+            type: datetime
+        otrosCargos:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

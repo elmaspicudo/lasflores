@@ -1,0 +1,14 @@
+protecno\escuelaBundle\Entity\crearInformes:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        desde:
+            type: datetime
+        a:
+            type: datetime
+    lifecycleCallbacks: {  }

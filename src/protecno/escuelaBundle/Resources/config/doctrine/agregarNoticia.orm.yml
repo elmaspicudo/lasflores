@@ -1,0 +1,16 @@
+protecno\escuelaBundle\Entity\agregarNoticia:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        titulo:
+            type: string
+            length: '100'
+        contenido:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

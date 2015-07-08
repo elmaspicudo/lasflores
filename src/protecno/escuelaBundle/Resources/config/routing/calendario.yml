@@ -1,0 +1,30 @@
+calendario:
+    path:     /
+    defaults: { _controller: "escuelaBundle:calendario:index" }
+
+calendario_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:calendario:show" }
+
+calendario_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:calendario:new" }
+
+calendario_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:calendario:create" }
+    requirements: { _method: post }
+
+calendario_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:calendario:edit" }
+
+calendario_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:calendario:update" }
+    requirements: { _method: post|put }
+
+calendario_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:calendario:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,16 @@
+protecno\escuelaBundle\Entity\generarInformeDiaSabio:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        desde:
+            type: datetime
+        hasta:
+            type: datetime
+        estatusDePago:
+            type: boolean
+    lifecycleCallbacks: {  }

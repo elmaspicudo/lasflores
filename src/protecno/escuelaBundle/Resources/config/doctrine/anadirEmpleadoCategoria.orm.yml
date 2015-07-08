@@ -1,0 +1,18 @@
+protecno\escuelaBundle\Entity\anadirEmpleadoCategoria:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        nombre:
+            type: string
+            length: '50'
+        prefijo:
+            type: string
+            length: '100'
+        estado:
+            type: boolean
+    lifecycleCallbacks: {  }

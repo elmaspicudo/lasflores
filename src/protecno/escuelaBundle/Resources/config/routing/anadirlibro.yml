@@ -1,0 +1,30 @@
+anadirlibro:
+    path:     /
+    defaults: { _controller: "escuelaBundle:anadirLibro:index" }
+
+anadirlibro_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:anadirLibro:show" }
+
+anadirlibro_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:anadirLibro:new" }
+
+anadirlibro_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:anadirLibro:create" }
+    requirements: { _method: post }
+
+anadirlibro_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:anadirLibro:edit" }
+
+anadirlibro_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:anadirLibro:update" }
+    requirements: { _method: post|put }
+
+anadirlibro_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:anadirLibro:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,28 @@
+protecno\escuelaBundle\Entity\anadirCurso:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        puntajeMinimo:
+            type: string
+            length: '4'
+        cantidad:
+            type: string
+            length: '100'
+        estaActivo:
+            type: boolean
+        estaActivoEnElSistemaPin:
+            type: boolean
+        habilitarSistemaDeAprobacion:
+            type: boolean
+        registrstroBasadoAsunto:
+            type: boolean
+        incluyaDetalles:
+            type: boolean
+        transferirArchivosAdjuntosMientrasAsignacion:
+            type: boolean
+    lifecycleCallbacks: {  }

@@ -1,0 +1,13 @@
+protecno\escuelaBundle\Entity\agregarFoto:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        fotoNombre:
+            type: string
+            length: '100'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,18 @@
+protecno\escuelaBundle\Entity\nuevaOrdenDeCompra:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        ordenDeCompraNo:
+            type: integer
+        pOFecha:
+            type: datetime
+            column: POFecha
+        referencia:
+            type: string
+            length: '100'
+    lifecycleCallbacks: {  }

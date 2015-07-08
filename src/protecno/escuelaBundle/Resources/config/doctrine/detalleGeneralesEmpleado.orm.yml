@@ -1,0 +1,45 @@
+protecno\escuelaBundle\Entity\detalleGeneralesEmpleado:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        numeroDeEmpleado:
+            type: string
+            length: '3'
+        diaDeIngreso:
+            type: datetime
+        nombre:
+            type: string
+            length: '20'
+        segundoNombre:
+            type: string
+            length: '20'
+        apellido:
+            type: string
+            length: '20'
+        eMail:
+            type: string
+            length: '30'
+            column: EMail
+        genero:
+            type: string
+            length: '15'
+        fechaDeNacimiento:
+            type: datetime
+        tituloProfesional:
+            type: string
+            length: '100'
+        calificacion:
+            type: string
+            length: '10'
+        experiencia:
+            type: string
+            length: 255
+        experienciaTotal:
+            type: string
+            length: '20'
+    lifecycleCallbacks: {  }

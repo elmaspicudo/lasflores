@@ -1,0 +1,22 @@
+protecno\escuelaBundle\Entity\detallesPersonales:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        estadoCivil:
+            type: string
+            length: '20'
+        nombreDelPadre:
+            type: string
+            length: '60'
+        nombreDeLaMadre:
+            type: string
+            length: '60'
+        nacionalidad:
+            type: string
+            length: '30'
+    lifecycleCallbacks: {  }

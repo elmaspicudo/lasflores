@@ -1,0 +1,13 @@
+protecno\escuelaBundle\Entity\correo:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        descripcion:
+            type: string
+            length: '100'
+    lifecycleCallbacks: {  }

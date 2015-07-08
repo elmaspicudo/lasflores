@@ -1,0 +1,37 @@
+escuelaBundle_administrarcursolote:
+        resource: "@escuelaBundle/Resources/config/routing/administrarcursolote.yml"
+        prefix:   /administrarcursolote
+
+escuela_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: escuelaBundle:Default:index }
+administrarclientes:
+    path:     /
+    defaults: { _controller: "escuelaBundle:administrarClientes:index" }
+
+administrarclientes_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:administrarClientes:show" }
+
+administrarclientes_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:administrarClientes:new" }
+
+administrarclientes_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:administrarClientes:create" }
+    requirements: { _method: post }
+
+administrarclientes_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:administrarClientes:edit" }
+
+administrarclientes_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:administrarClientes:update" }
+    requirements: { _method: post|put }
+
+administrarclientes_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:administrarClientes:delete" }
+    requirements: { _method: post|delete }

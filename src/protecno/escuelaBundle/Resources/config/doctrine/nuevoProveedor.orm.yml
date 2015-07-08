@@ -1,0 +1,27 @@
+protecno\escuelaBundle\Entity\nuevoProveedor:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        tipoDeProveedor:
+            type: string
+            length: '100'
+        nombreDelProveedor:
+            type: string
+            length: '100'
+        contactoNo:
+            type: integer
+        direccion:
+            type: string
+            length: '100'
+        tINNo:
+            type: integer
+            column: TINNo
+        region:
+            type: string
+            length: '100'
+    lifecycleCallbacks: {  }

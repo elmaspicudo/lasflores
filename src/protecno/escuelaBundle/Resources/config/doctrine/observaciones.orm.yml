@@ -1,0 +1,19 @@
+protecno\escuelaBundle\Entity\observaciones:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        tema:
+            type: string
+            length: '100'
+        observacionPor:
+            type: string
+            length: 255
+        descripcion:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

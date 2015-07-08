@@ -1,0 +1,30 @@
+lotes:
+    path:     /
+    defaults: { _controller: "escuelaBundle:lotes:index" }
+
+lotes_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:lotes:show" }
+
+lotes_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:lotes:new" }
+
+lotes_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:lotes:create" }
+    requirements: { _method: post }
+
+lotes_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:lotes:edit" }
+
+lotes_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:lotes:update" }
+    requirements: { _method: post|put }
+
+lotes_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:lotes:delete" }
+    requirements: { _method: post|delete }

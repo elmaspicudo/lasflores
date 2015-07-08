@@ -1,0 +1,7 @@
+parameters:
+#    escuela.example.class: protecno\escuelaBundle\Example
+
+services:
+#    escuela.example:
+#        class: %escuela.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

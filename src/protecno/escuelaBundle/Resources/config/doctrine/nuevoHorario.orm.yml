@@ -1,0 +1,14 @@
+protecno\escuelaBundle\Entity\nuevoHorario:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        inicio:
+            type: datetime
+        fin:
+            type: datetime
+    lifecycleCallbacks: {  }

@@ -1,0 +1,13 @@
+protecno\escuelaBundle\Entity\examenCursoSabio:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        nombreDelExamen:
+            type: string
+            length: '100'
+    lifecycleCallbacks: {  }

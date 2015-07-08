@@ -1,0 +1,30 @@
+protecno\escuelaBundle\Entity\admisionDeEstudiantes:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToOne:
+        detallesDeContacto:
+            targetEntity: protecno\escuelaBundle\Entity\detallesDeContacto
+            inversedBy: admisionDeEstudiantes
+        ajustes:
+            targetEntity: protecno\escuelaBundle\Entity\ajustes
+            inversedBy: admisionDeEstudiantes
+    manyToMany:
+        subirFotoDelUsuario:
+            targetEntity: protecno\escuelaBundle\Entity\subirFotoDelUsuario
+            inversedBy: admisionDeEstudiantes 
+        admision:
+            targetEntity: protecno\escuelaBundle\Entity\admision
+            inversedBy: admisionDeEstudiantes
+        curso:
+            targetEntity: protecno\escuelaBundle\Entity\curso
+            inversedBy: admisionDeEstudiantes 
+        lotes:
+            targetEntity: protecno\escuelaBundle\Entity\lotes
+            inversedBy: admisionDeEstudiantes                                          
+    lifecycleCallbacks: {  }

@@ -1,0 +1,30 @@
+agregarnoticia:
+    path:     /
+    defaults: { _controller: "escuelaBundle:agregarNoticia:index" }
+
+agregarnoticia_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:agregarNoticia:show" }
+
+agregarnoticia_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:agregarNoticia:new" }
+
+agregarnoticia_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:agregarNoticia:create" }
+    requirements: { _method: post }
+
+agregarnoticia_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:agregarNoticia:edit" }
+
+agregarnoticia_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:agregarNoticia:update" }
+    requirements: { _method: post|put }
+
+agregarnoticia_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:agregarNoticia:delete" }
+    requirements: { _method: post|delete }

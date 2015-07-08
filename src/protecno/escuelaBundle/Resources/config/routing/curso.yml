@@ -1,0 +1,30 @@
+curso:
+    path:     /
+    defaults: { _controller: "escuelaBundle:curso:index" }
+
+curso_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:curso:show" }
+
+curso_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:curso:new" }
+
+curso_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:curso:create" }
+    requirements: { _method: post }
+
+curso_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:curso:edit" }
+
+curso_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:curso:update" }
+    requirements: { _method: post|put }
+
+curso_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:curso:delete" }
+    requirements: { _method: post|delete }

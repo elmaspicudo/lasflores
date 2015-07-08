@@ -1,0 +1,23 @@
+protecno\escuelaBundle\Entity\subirFotoDelUsuario:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        titulo:
+            type: string
+            length: '120'
+        path:
+            type: string
+            length: 255
+        imagen:
+            type: string
+            length: 255
+        updated:
+            type: datetime
+        tipo:
+            type: integer
+    lifecycleCallbacks: {  }

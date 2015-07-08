@@ -1,0 +1,12 @@
+protecno\escuelaBundle\Entity\administrarFeeColecciones:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        activo:
+            type: boolean
+    lifecycleCallbacks: {  }

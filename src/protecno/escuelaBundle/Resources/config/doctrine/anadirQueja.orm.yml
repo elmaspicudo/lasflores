@@ -1,0 +1,33 @@
+protecno\escuelaBundle\Entity\anadirQueja:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        quejaNo:
+            type: string
+            length: '9'
+        titulo:
+            type: string
+            length: '100'
+        descripcion:
+            type: string
+            length: 255
+        juicioFecha:
+            type: datetime
+        motivoDeLaQueja:
+            type: string
+            length: 255
+        demanda:
+            type: string
+            length: 255
+        jurado:
+            type: string
+            length: 255
+        autoridadesResponsables:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

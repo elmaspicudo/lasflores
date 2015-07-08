@@ -1,0 +1,30 @@
+admisiondeestudiantes:
+    path:     /
+    defaults: { _controller: "escuelaBundle:admisionDeEstudiantes:index" }
+
+admisiondeestudiantes_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:admisionDeEstudiantes:show" }
+
+admisiondeestudiantes_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:admisionDeEstudiantes:new" }
+
+admisiondeestudiantes_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:admisionDeEstudiantes:create" }
+    requirements: { _method: post }
+
+admisiondeestudiantes_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:admisionDeEstudiantes:edit" }
+
+admisiondeestudiantes_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:admisionDeEstudiantes:update" }
+    requirements: { _method: post|put }
+
+admisiondeestudiantes_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:admisionDeEstudiantes:delete" }
+    requirements: { _method: post|delete }

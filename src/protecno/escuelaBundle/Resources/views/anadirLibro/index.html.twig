@@ -1,0 +1,51 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>anadirLibro list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Numerodelibro</th>
+                <th>Titulo</th>
+                <th>Autor</th>
+                <th>Etiquetas</th>
+                <th>Etiquetaspersonalizadas</th>
+                <th>Numerodecopias</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('anadirlibro_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.numeroDeLibro }}</td>
+                <td>{{ entity.titulo }}</td>
+                <td>{{ entity.autor }}</td>
+                <td>{{ entity.etiquetas }}</td>
+                <td>{{ entity.etiquetasPersonalizadas }}</td>
+                <td>{{ entity.numeroDeCopias }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('anadirlibro_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('anadirlibro_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('anadirlibro_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

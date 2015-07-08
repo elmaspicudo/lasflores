@@ -1,0 +1,19 @@
+protecno\escuelaBundle\Entity\crearReglaDeReembolso:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        reembolsoNombre:
+            type: string
+            length: '100'
+        reembolsoValides:
+            type: datetime
+        tipo:
+            type: boolean
+        valor:
+            type: integer
+    lifecycleCallbacks: {  }

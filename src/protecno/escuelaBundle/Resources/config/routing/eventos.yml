@@ -1,0 +1,30 @@
+eventos:
+    path:     /
+    defaults: { _controller: "escuelaBundle:eventos:index" }
+
+eventos_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:eventos:show" }
+
+eventos_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:eventos:new" }
+
+eventos_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:eventos:create" }
+    requirements: { _method: post }
+
+eventos_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:eventos:edit" }
+
+eventos_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:eventos:update" }
+    requirements: { _method: post|put }
+
+eventos_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:eventos:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,32 @@
+protecno\escuelaBundle\Entity\padresInformacionDeContacto:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        oficinaDireccioLinea1:
+            type: string
+            length: '100'
+        oficinaDireccionLinea2:
+            type: string
+            length: '100'
+        ciudad:
+            type: string
+            length: '30'
+        estado:
+            type: string
+            length: '40'
+        pais:
+            type: string
+            length: '40'
+        telefonoDeLaOficina1:
+            type: string
+            length: '15'
+        telefonoDeLaOficina2:
+            type: integer
+        telefonoMovilNo:
+            type: integer
+    lifecycleCallbacks: {  }

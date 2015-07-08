@@ -1,0 +1,22 @@
+protecno\escuelaBundle\Entity\nuevoGrupoPin:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        validaDesde:
+            type: datetime
+        validoHasta:
+            type: datetime
+        nombre:
+            type: string
+            length: '100'
+        numeroDePines:
+            type: string
+            length: '10'
+        estaActivo:
+            type: boolean
+    lifecycleCallbacks: {  }

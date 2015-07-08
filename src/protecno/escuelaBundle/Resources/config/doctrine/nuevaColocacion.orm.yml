@@ -1,0 +1,21 @@
+protecno\escuelaBundle\Entity\nuevaColocacion:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        titulo:
+            type: string
+            length: '100'
+        fecha:
+            type: datetime
+        empresa:
+            type: string
+            length: '100'
+        descripcion:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

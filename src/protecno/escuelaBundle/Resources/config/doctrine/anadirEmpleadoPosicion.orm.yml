@@ -1,0 +1,19 @@
+protecno\escuelaBundle\Entity\anadirEmpleadoPosicion:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        nombre:
+            type: string
+            length: '50'
+        estado:
+            type: boolean
+    manyToMany:
+        anadirEmpleadoCategoria:
+            targetEntity: protecno\escuelaBundle\Entity\anadirEmpleadoCategoria
+            inversedBy: anadirEmpleadoPosicion        
+    lifecycleCallbacks: {  }
