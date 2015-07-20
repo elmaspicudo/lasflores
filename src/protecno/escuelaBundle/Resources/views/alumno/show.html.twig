@@ -1,0 +1,64 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>alumno</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Nodealumno</th>
+                <td>{{ entity.noDeAdmision }}</td>
+            </tr>
+            <tr>
+                <th>Fechadealumno</th>
+                <td>{{ entity.fechaDeAdmision|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ entity.nombre }}</td>
+            </tr>           
+            <tr>
+                <th>Apellidopaterno</th>
+                <td>{{ entity.apellidoPaterno }}</td>
+            </tr>
+            <tr>
+                <th>Apellidomaterno</th>
+                <td>{{ entity.apellidoMaterno }}</td>
+            </tr>
+            <tr>
+                <th>Genero</th>
+                <td>{{ entity.genero }}</td>
+            </tr>
+            <tr>
+                <th>Gruposanguineo</th>
+                <td>{{ entity.grupoSanguineo }}</td>
+            </tr>
+            <tr>
+                <th>Lugardenacimiento</th>
+                <td>{{ entity.lugarDeNacimiento }}</td>
+            </tr>
+            <tr>
+                <th>Nacionalidad</th>
+                <td>{{ entity.nacionalidad }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('alumno') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('alumno_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

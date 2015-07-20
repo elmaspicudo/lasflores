@@ -1,0 +1,162 @@
+{% extends '::index.html.twig' %}
+
+{% block panel -%}
+   <div class="col-md-12">
+        <div class="widget widget-green">
+          	<div class="widget-title">
+  	            <div class="widget-controls">
+            					  <a href="#" class="widget-control widget-control-full-screen" data-toggle="tooltip" data-placement="top" title="" data-original-title="Full Screen"><i class="fa fa-expand"></i></a>
+            					  <a href="#" class="widget-control widget-control-full-screen widget-control-show-when-full" data-toggle="tooltip" data-placement="left" title="" data-original-title="Exit Full Screen"><i class="fa fa-expand"></i></a>
+            					  <a href="#" data-toggle="dropdown" class="widget-control widget-control-settings"><i class="fa fa-cog"></i></a>
+            					  <div class="dropdown" data-toggle="tooltip" data-placement="top" title="" data-original-title="Settings">
+            					    <ul class="dropdown-menu dropdown-menu-small" role="menu" aria-labelledby="dropdownMenu1">
+            					      <li class="dropdown-header">Set Widget Color</li>
+            					      <li><a data-widget-color="blue" class="set-widget-color" href="#">Blue</a></li>
+            					      <li><a data-widget-color="red" class="set-widget-color" href="#">Red</a></li>
+            					      <li><a data-widget-color="green" class="set-widget-color" href="#">Green</a></li>
+            					      <li><a data-widget-color="orange" class="set-widget-color" href="#">Orange</a></li>
+            					      <li><a data-widget-color="purple" class="set-widget-color" href="#">Purple</a></li>
+            					    </ul>
+            					  </div>
+            					  <a href="#" class="widget-control widget-control-refresh" data-toggle="tooltip" data-placement="top" title="" data-original-title="Actualizar"><i class="fa fa-refresh"></i></a>
+            					  <a href="#" class="widget-control widget-control-minimize" data-toggle="tooltip" data-placement="top" title="" data-original-title="Minimizar"><i class="fa fa-minus-circle"></i></a>
+            					  <a href="#" class="widget-control widget-control-remove" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quitar"><i class="fa fa-times-circle"></i></a>
+  				      </div>
+              	<h3><i class="fa fa-ok-circle"></i>Nuevo alumno</h3>
+          	</div>
+          	<div class="widget-content">
+     		    {{ form_start(form, {'attr': {'class': 'form_transaccion_edit'}}) }}
+            <h4 class="widget-header">Datos del alumno</h4>
+    			       <div class="row">
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label>No. de control</label>
+                        {{ form_widget(form.alumno.noDeAdmision, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.alumno.noDeAdmision) }}</span>                    
+                      </div>
+                    </div>                
+                </div>  
+                <div class="row">     
+                  <div class="col-md-6">  
+      	             <div class="form-group">
+      	                <label>Nombre</label>
+      	                {{ form_widget(form.alumno.nombre, {'attr': {'class': 'form-control'}}) }}
+      	                <span class="errorMsg">{{ form_errors(form.alumno.nombre) }}</span> 
+      	             </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Apellido paterno</label>
+                        {{ form_widget(form.alumno.apellidoPaterno, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.alumno.apellidoPaterno) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Apellido materno</label>
+                        {{ form_widget(form.alumno.apellidoMaterno, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.alumno.apellidoMaterno) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Genero</label>
+                        {{ form_widget(form.alumno.genero, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.alumno.genero) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Tipo sanguineo</label>
+                        {{ form_widget(form.alumno.grupoSanguineo, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.alumno.grupoSanguineo) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Lugar de nacimiento</label>
+                        {{ form_widget(form.alumno.lugarDeNacimiento, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.alumno.lugarDeNacimiento) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Nacionalidad</label>
+                        {{ form_widget(form.alumno.nacionalidad, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.alumno.nacionalidad) }}</span> 
+                     </div>
+                  </div>
+                </div>
+                <h4 class="widget-header">Datos de contacto</h4>
+                <div class="row">
+                   <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Direccion</label>
+                        {{ form_widget(form.direccionLinea1, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.direccionLinea1) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Colonia</label>
+                        {{ form_widget(form.direccionLinea2, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.direccionLinea2) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Municipio</label>
+                        {{ form_widget(form.ciudad, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.ciudad) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Estado</label>
+                        {{ form_widget(form.estado, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.estado) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Codigo postal</label>
+                        {{ form_widget(form.codigoPIN, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.codigoPIN) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>pais</label>
+                        {{ form_widget(form.pais, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.pais) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Telefono</label>
+                        {{ form_widget(form.telefono, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.telefono) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Celular</label>
+                        {{ form_widget(form.movil, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.movil) }}</span> 
+                     </div>
+                  </div>                  
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>EMail</label>
+                        {{ form_widget(form.eMail, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.eMail) }}</span> 
+                     </div>
+                  </div>
+                </div>
+    		          <button class="btn btn-primary" type="submit">Guardar</button>
+                  <button class="btn btn-default" type="reset">Limpiar</button>
+            {{ form_end(form) }}
+          </div>      
+      </div>
+    </div>
+{% endblock %}

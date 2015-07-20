@@ -18,9 +18,6 @@ protecno\escuelaBundle\Entity\admisionDeEstudiantes:
         subirFotoDelUsuario:
             targetEntity: protecno\escuelaBundle\Entity\subirFotoDelUsuario
             inversedBy: admisionDeEstudiantes 
-        admision:
-            targetEntity: protecno\escuelaBundle\Entity\admision
-            inversedBy: admisionDeEstudiantes
         curso:
             targetEntity: protecno\escuelaBundle\Entity\curso
             inversedBy: admisionDeEstudiantes 

@@ -1,0 +1,80 @@
+{% extends '::index.html.twig' %}
+
+{% block panel -%}
+<div class="col-md-12">
+        <div class="widget widget-green">
+            <div class="widget-title">
+                <div class="widget-controls">
+                                  <a href="#" class="widget-control widget-control-full-screen" data-toggle="tooltip" data-placement="top" title="" data-original-title="Full Screen"><i class="fa fa-expand"></i></a>
+                                  <a href="#" class="widget-control widget-control-full-screen widget-control-show-when-full" data-toggle="tooltip" data-placement="left" title="" data-original-title="Exit Full Screen"><i class="fa fa-expand"></i></a>
+                                  <a href="#" data-toggle="dropdown" class="widget-control widget-control-settings"><i class="fa fa-cog"></i></a>
+                                  <div class="dropdown" data-toggle="tooltip" data-placement="top" title="" data-original-title="Settings">
+                                    <ul class="dropdown-menu dropdown-menu-small" role="menu" aria-labelledby="dropdownMenu1">
+                                      <li class="dropdown-header">Set Widget Color</li>
+                                      <li><a data-widget-color="blue" class="set-widget-color" href="#">Blue</a></li>
+                                      <li><a data-widget-color="red" class="set-widget-color" href="#">Red</a></li>
+                                      <li><a data-widget-color="green" class="set-widget-color" href="#">Green</a></li>
+                                      <li><a data-widget-color="orange" class="set-widget-color" href="#">Orange</a></li>
+                                      <li><a data-widget-color="purple" class="set-widget-color" href="#">Purple</a></li>
+                                    </ul>
+                                  </div>
+                                  <a href="#" class="widget-control widget-control-refresh" data-toggle="tooltip" data-placement="top" title="" data-original-title="Actualizar"><i class="fa fa-refresh"></i></a>
+                                  <a href="#" class="widget-control widget-control-minimize" data-toggle="tooltip" data-placement="top" title="" data-original-title="Minimizar"><i class="fa fa-minus-circle"></i></a>
+                                  <a href="#" class="widget-control widget-control-remove" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quitar"><i class="fa fa-times-circle"></i></a>
+                      </div>
+                <h3><i class="fa fa-ok-circle"></i>Listado de alumnos</h3>
+            </div>
+            <div class="widget-content">
+            
+                    <a href="{{ path('alumno_new') }}" class="btn btn-action btn-info btn-sm">
+                        Create a new entry
+                    </a>
+                
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>No de control</th>
+                            <th>Fecha de alta</th>
+                            <th>Nombre</th>
+                            <th>Apellido paterno</th>
+                            <th>Apellido materno</th>
+                            <th>Genero</th>
+                            <th>Grupo sanguineo</th>
+                            <th>Lugar de nacimiento</th>
+                            <th>Nacionalidad</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for entity in entities %}
+                        <tr>
+                            <td><a href="{{ path('alumno_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                            <td>{{ entity.noDeAdmision }}</td>
+                            <td>{% if entity.fechaDeAdmision %}{{ entity.fechaDeAdmision|date('Y-m-d H:i:s') }}{% endif %}</td>
+                            <td>{{ entity.nombre }}</td>
+                            <td>{{ entity.apellidoPaterno }}</td>
+                            <td>{{ entity.apellidoMaterno }}</td>
+                            <td>{{ entity.genero }}</td>
+                            <td>{{ entity.grupoSanguineo }}</td>
+                            <td>{{ entity.lugarDeNacimiento }}</td>
+                            <td>{{ entity.nacionalidad }}</td>
+                            <td>
+                            <ul>
+                                <li>
+                                    <a href="{{ path('alumno_show', { 'id': entity.id }) }}">show</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('alumno_edit', { 'id': entity.id }) }}">edit</a>
+                                </li>
+                            </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>      
+      </div>
+</div>
+        
+    {% endblock %}

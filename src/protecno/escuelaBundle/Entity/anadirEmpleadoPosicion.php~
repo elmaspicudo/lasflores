@@ -80,4 +80,49 @@ class anadirEmpleadoPosicion
     {
         return $this->estado;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $anadirEmpleadoCategoria;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->anadirEmpleadoCategoria = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Add anadirEmpleadoCategoria
+     *
+     * @param \protecno\escuelaBundle\Entity\anadirEmpleadoCategoria $anadirEmpleadoCategoria
+     * @return anadirEmpleadoPosicion
+     */
+    public function addAnadirEmpleadoCategoria(\protecno\escuelaBundle\Entity\anadirEmpleadoCategoria $anadirEmpleadoCategoria)
+    {
+        $this->anadirEmpleadoCategoria[] = $anadirEmpleadoCategoria;
+    
+        return $this;
+    }
+
+    /**
+     * Remove anadirEmpleadoCategoria
+     *
+     * @param \protecno\escuelaBundle\Entity\anadirEmpleadoCategoria $anadirEmpleadoCategoria
+     */
+    public function removeAnadirEmpleadoCategoria(\protecno\escuelaBundle\Entity\anadirEmpleadoCategoria $anadirEmpleadoCategoria)
+    {
+        $this->anadirEmpleadoCategoria->removeElement($anadirEmpleadoCategoria);
+    }
+
+    /**
+     * Get anadirEmpleadoCategoria
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getAnadirEmpleadoCategoria()
+    {
+        return $this->anadirEmpleadoCategoria;
+    }
 }

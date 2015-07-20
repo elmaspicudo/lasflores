@@ -4,7 +4,7 @@ namespace protecno\escuelaBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-/**
+/** 
  * detallesDeContacto
  */
 class detallesDeContacto
@@ -273,5 +273,33 @@ class detallesDeContacto
     public function getPais()
     {
         return $this->pais;
+    }
+    /**
+     * @var \protecno\escuelaBundle\Entity\alumno
+     */
+    private $alumno;
+
+
+    /**
+     * Set alumno
+     *
+     * @param \protecno\escuelaBundle\Entity\alumno $alumno
+     * @return detallesDeContacto
+     */
+    public function setAlumno(\protecno\escuelaBundle\Entity\alumno $alumno = null)
+    {
+        $this->alumno = $alumno;
+    
+        return $this;
+    }
+
+    /**
+     * Get alumno
+     *
+     * @return \protecno\escuelaBundle\Entity\alumno 
+     */
+    public function getAlumno()
+    {
+        return $this->alumno;
     }
 }

@@ -5,9 +5,9 @@ namespace protecno\escuelaBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * admision
+ * alumno
  */
-class admision
+class alumno
 {
     /**
      * @var integer

@@ -1,0 +1,30 @@
+detallesdecontacto:
+    path:     /
+    defaults: { _controller: "escuelaBundle:detallesDeContacto:index" }
+
+detallesdecontacto_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:detallesDeContacto:show" }
+
+detallesdecontacto_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:detallesDeContacto:new" }
+
+detallesdecontacto_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:detallesDeContacto:create" }
+    requirements: { _method: post }
+
+detallesdecontacto_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:detallesDeContacto:edit" }
+
+detallesdecontacto_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:detallesDeContacto:update" }
+    requirements: { _method: post|put }
+
+detallesdecontacto_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:detallesDeContacto:delete" }
+    requirements: { _method: post|delete }

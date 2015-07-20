@@ -4,7 +4,7 @@ namespace protecno\escuelaBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-/**
+/** 
  * detallesDeContacto
  */
 class detallesDeContacto

@@ -1,8 +1,8 @@
-protecno\escuelaBundle\Entity\admision:
+protecno\escuelaBundle\Entity\alumno:
     type: entity
     table: null
     fields:
-        id:
+        id: 
             type: integer
             id: true
             generator:
@@ -12,9 +12,6 @@ protecno\escuelaBundle\Entity\admision:
         fechaDeAdmision:
             type: datetime
         nombre:
-            type: string
-            length: '30'
-        segundoNombre:
             type: string
             length: '30'
         apellidoPaterno:

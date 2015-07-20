@@ -30,7 +30,10 @@ protecno\escuelaBundle\Entity\detallesDeContacto:
             type: string
             length: '30'
     manyToOne:
-        pais:
+        pais: 
             targetEntity: protecno\escuelaBundle\Entity\pais
-            inversedBy: detallesDeContacto       
+            inversedBy: detallesDeContacto
+        alumno:         
+            targetEntity: protecno\escuelaBundle\Entity\alumno
+            cascade: ["persist"] 
     lifecycleCallbacks: {  }

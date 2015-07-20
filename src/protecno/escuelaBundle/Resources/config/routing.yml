@@ -58,4 +58,11 @@ escuelaBundle_anadirdetallesdelbanco:
         resource: "@escuelaBundle/Resources/config/routing/anadirdetallesdelbanco.yml"
         prefix:   /anadirdetallesdelbanco
         
+escuelaBundle_alumno:
+        resource: "@escuelaBundle/Resources/config/routing/alumno.yml"
+        prefix:   /alumno
+escuelaBundle_detallesdecontacto:
+        resource: "@escuelaBundle/Resources/config/routing/detallesdecontacto.yml"
+        prefix:   /detallesdecontacto
+
 
