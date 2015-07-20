@@ -1,0 +1,20 @@
+protecno\escuelaBundle\Entity\nuevaDonacion:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        donanteNombre:
+            type: string
+            length: '100'
+        descripcion:
+            type: string
+            length: 255
+        fechaDeTransaccion:
+            type: datetime
+        importe:
+            type: integer
+    lifecycleCallbacks: {  }

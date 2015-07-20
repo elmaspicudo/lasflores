@@ -17,27 +17,7 @@ class archivo
     /**
      * @var string
      */
-    private $titulo;
-
-    /**
-     * @var string
-     */
-    private $path;
-
-    /**
-     * @var string
-     */
-    private $imagen;
-
-    /**
-     * @var \DateTime
-     */
-    private $updated;
-
-    /**
-     * @var integer
-     */
-    private $tipo;
+    private $descripcion;
 
 
     /**
@@ -51,117 +31,70 @@ class archivo
     }
 
     /**
-     * Set titulo
+     * Set descripcion
      *
-     * @param string $titulo
+     * @param string $descripcion
      * @return archivo
      */
-    public function setTitulo($titulo)
+    public function setDescripcion($descripcion)
     {
-        $this->titulo = $titulo;
+        $this->descripcion = $descripcion;
     
         return $this;
     }
 
     /**
-     * Get titulo
+     * Get descripcion
      *
      * @return string 
      */
-    public function getTitulo()
+    public function getDescripcion()
     {
-        return $this->titulo;
+        return $this->descripcion;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $lotes;
 
     /**
-     * Set path
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->lotes = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Add lotes
      *
-     * @param string $path
+     * @param \protecno\escuelaBundle\Entity\lotes $lotes
      * @return archivo
      */
-    public function setPath($path)
+    public function addLote(\protecno\escuelaBundle\Entity\lotes $lotes)
     {
-        $this->path = $path;
+        $this->lotes[] = $lotes;
     
         return $this;
     }
 
     /**
-     * Get path
+     * Remove lotes
      *
-     * @return string 
+     * @param \protecno\escuelaBundle\Entity\lotes $lotes
      */
-    public function getPath()
+    public function removeLote(\protecno\escuelaBundle\Entity\lotes $lotes)
     {
-        return $this->path;
+        $this->lotes->removeElement($lotes);
     }
 
     /**
-     * Set imagen
+     * Get lotes
      *
-     * @param string $imagen
-     * @return archivo
+     * @return \Doctrine\Common\Collections\Collection 
      */
-    public function setImagen($imagen)
+    public function getLotes()
     {
-        $this->imagen = $imagen;
-    
-        return $this;
-    }
-
-    /**
-     * Get imagen
-     *
-     * @return string 
-     */
-    public function getImagen()
-    {
-        return $this->imagen;
-    }
-
-    /**
-     * Set updated
-     *
-     * @param \DateTime $updated
-     * @return archivo
-     */
-    public function setUpdated($updated)
-    {
-        $this->updated = $updated;
-    
-        return $this;
-    }
-
-    /**
-     * Get updated
-     *
-     * @return \DateTime 
-     */
-    public function getUpdated()
-    {
-        return $this->updated;
-    }
-
-    /**
-     * Set tipo
-     *
-     * @param integer $tipo
-     * @return archivo
-     */
-    public function setTipo($tipo)
-    {
-        $this->tipo = $tipo;
-    
-        return $this;
-    }
-
-    /**
-     * Get tipo
-     *
-     * @return integer 
-     */
-    public function getTipo()
-    {
-        return $this->tipo;
+        return $this->lotes;
     }
 }

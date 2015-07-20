@@ -34,7 +34,6 @@ class nuevaTarea
      */
     private $fechaFinal;
 
-
     /**
      * Get id
      *
@@ -135,5 +134,50 @@ class nuevaTarea
     public function getFechaFinal()
     {
         return $this->fechaFinal;
+    }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $curso;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->curso = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Add curso
+     *
+     * @param \protecno\escuelaBundle\Entity\curso $curso
+     * @return nuevaTarea
+     */
+    public function addCurso(\protecno\escuelaBundle\Entity\curso $curso)
+    {
+        $this->curso[] = $curso;
+    
+        return $this;
+    }
+
+    /**
+     * Remove curso
+     *
+     * @param \protecno\escuelaBundle\Entity\curso $curso
+     */
+    public function removeCurso(\protecno\escuelaBundle\Entity\curso $curso)
+    {
+        $this->curso->removeElement($curso);
+    }
+
+    /**
+     * Get curso
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getCurso()
+    {
+        return $this->curso;
     }
 }

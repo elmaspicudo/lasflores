@@ -1,0 +1,30 @@
+buscarempleados:
+    path:     /
+    defaults: { _controller: "escuelaBundle:buscarEmpleados:index" }
+
+buscarempleados_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:buscarEmpleados:show" }
+
+buscarempleados_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:buscarEmpleados:new" }
+
+buscarempleados_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:buscarEmpleados:create" }
+    requirements: { _method: post }
+
+buscarempleados_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:buscarEmpleados:edit" }
+
+buscarempleados_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:buscarEmpleados:update" }
+    requirements: { _method: post|put }
+
+buscarempleados_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:buscarEmpleados:delete" }
+    requirements: { _method: post|delete }

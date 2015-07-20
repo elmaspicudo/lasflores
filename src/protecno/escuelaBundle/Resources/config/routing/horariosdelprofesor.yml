@@ -1,0 +1,30 @@
+horariosdelprofesor:
+    path:     /
+    defaults: { _controller: "escuelaBundle:horariosDelProfesor:index" }
+
+horariosdelprofesor_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:horariosDelProfesor:show" }
+
+horariosdelprofesor_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:horariosDelProfesor:new" }
+
+horariosdelprofesor_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:horariosDelProfesor:create" }
+    requirements: { _method: post }
+
+horariosdelprofesor_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:horariosDelProfesor:edit" }
+
+horariosdelprofesor_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:horariosDelProfesor:update" }
+    requirements: { _method: post|put }
+
+horariosdelprofesor_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:horariosDelProfesor:delete" }
+    requirements: { _method: post|delete }

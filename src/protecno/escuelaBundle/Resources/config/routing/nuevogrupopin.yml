@@ -1,0 +1,30 @@
+nuevogrupopin:
+    path:     /
+    defaults: { _controller: "escuelaBundle:nuevoGrupoPin:index" }
+
+nuevogrupopin_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:nuevoGrupoPin:show" }
+
+nuevogrupopin_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:nuevoGrupoPin:new" }
+
+nuevogrupopin_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:nuevoGrupoPin:create" }
+    requirements: { _method: post }
+
+nuevogrupopin_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:nuevoGrupoPin:edit" }
+
+nuevogrupopin_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:nuevoGrupoPin:update" }
+    requirements: { _method: post|put }
+
+nuevogrupopin_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:nuevoGrupoPin:delete" }
+    requirements: { _method: post|delete }

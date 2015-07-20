@@ -7,8 +7,8 @@ protecno\escuelaBundle\Entity\nuevoHorario:
             id: true
             generator:
                 strategy: AUTO
-        inicio:
+        fechaDeInicio:
             type: datetime
-        fin:
+        fechaFinal:
             type: datetime
     lifecycleCallbacks: {  }

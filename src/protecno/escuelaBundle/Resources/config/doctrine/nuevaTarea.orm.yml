@@ -17,4 +17,8 @@ protecno\escuelaBundle\Entity\nuevaTarea:
             type: datetime
         fechaFinal:
             type: datetime
+    manyToMany:
+        curso:
+            targetEntity: protecno\escuelaBundle\Entity\curso
+            inversedBy: nuevaTarea    
     lifecycleCallbacks: {  }

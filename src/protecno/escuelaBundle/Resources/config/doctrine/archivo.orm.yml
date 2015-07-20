@@ -7,17 +7,11 @@ protecno\escuelaBundle\Entity\archivo:
             id: true
             generator:
                 strategy: AUTO
-        titulo:
-            type: string
-            length: '120'
-        path:
+        descripcion:
             type: string
             length: 255
-        imagen:
-            type: string
-            length: 255
-        updated:
-            type: datetime
-        tipo:
-            type: integer
+    manyToMany:
+        lotes:
+            targetEntity: protecno\escuelaBundle\Entity\lotes
+            inversedBy: archivo     
     lifecycleCallbacks: {  }

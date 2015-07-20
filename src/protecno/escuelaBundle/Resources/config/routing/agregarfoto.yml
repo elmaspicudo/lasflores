@@ -1,0 +1,30 @@
+agregarfoto:
+    path:     /
+    defaults: { _controller: "escuelaBundle:agregarFoto:index" }
+
+agregarfoto_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:agregarFoto:show" }
+
+agregarfoto_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:agregarFoto:new" }
+
+agregarfoto_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:agregarFoto:create" }
+    requirements: { _method: post }
+
+agregarfoto_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:agregarFoto:edit" }
+
+agregarfoto_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:agregarFoto:update" }
+    requirements: { _method: post|put }
+
+agregarfoto_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:agregarFoto:delete" }
+    requirements: { _method: post|delete }

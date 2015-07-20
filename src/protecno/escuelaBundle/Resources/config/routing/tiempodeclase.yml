@@ -1,0 +1,30 @@
+tiempodeclase:
+    path:     /
+    defaults: { _controller: "escuelaBundle:tiempoDeClase:index" }
+
+tiempodeclase_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:tiempoDeClase:show" }
+
+tiempodeclase_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:tiempoDeClase:new" }
+
+tiempodeclase_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:tiempoDeClase:create" }
+    requirements: { _method: post }
+
+tiempodeclase_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:tiempoDeClase:edit" }
+
+tiempodeclase_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:tiempoDeClase:update" }
+    requirements: { _method: post|put }
+
+tiempodeclase_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:tiempoDeClase:delete" }
+    requirements: { _method: post|delete }

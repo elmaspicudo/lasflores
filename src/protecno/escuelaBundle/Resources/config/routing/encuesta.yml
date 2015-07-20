@@ -1,0 +1,30 @@
+encuesta:
+    path:     /
+    defaults: { _controller: "escuelaBundle:encuesta:index" }
+
+encuesta_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:encuesta:show" }
+
+encuesta_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:encuesta:new" }
+
+encuesta_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:encuesta:create" }
+    requirements: { _method: post }
+
+encuesta_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:encuesta:edit" }
+
+encuesta_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:encuesta:update" }
+    requirements: { _method: post|put }
+
+encuesta_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:encuesta:delete" }
+    requirements: { _method: post|delete }

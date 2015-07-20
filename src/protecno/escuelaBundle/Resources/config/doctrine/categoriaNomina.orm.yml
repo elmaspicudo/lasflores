@@ -1,0 +1,21 @@
+protecno\escuelaBundle\Entity\categoriaNomina:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        nombreDeLaCategoria:
+            type: string
+            length: '60'
+        porcentaje:
+            type: string
+            length: '40'
+        porcentajeDe:
+            type: string
+            length: '40'
+        estado:
+            type: boolean
+    lifecycleCallbacks: {  }

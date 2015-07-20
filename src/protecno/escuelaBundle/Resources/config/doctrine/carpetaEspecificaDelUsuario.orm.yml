@@ -1,0 +1,19 @@
+protecno\escuelaBundle\Entity\carpetaEspecificaDelUsuario:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        nombreDeLaCarpeta:
+            type: string
+            length: '100'
+        estudiante:
+            type: boolean
+        empleado:
+            type: boolean    
+        activo:
+            type: boolean
+    lifecycleCallbacks: {  }

@@ -1,0 +1,30 @@
+anadircurso:
+    path:     /
+    defaults: { _controller: "escuelaBundle:anadirCurso:index" }
+
+anadircurso_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:anadirCurso:show" }
+
+anadircurso_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:anadirCurso:new" }
+
+anadircurso_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:anadirCurso:create" }
+    requirements: { _method: post }
+
+anadircurso_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:anadirCurso:edit" }
+
+anadircurso_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:anadirCurso:update" }
+    requirements: { _method: post|put }
+
+anadircurso_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:anadirCurso:delete" }
+    requirements: { _method: post|delete }

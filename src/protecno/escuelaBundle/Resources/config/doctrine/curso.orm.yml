@@ -7,7 +7,16 @@ protecno\escuelaBundle\Entity\curso:
             id: true
             generator:
                 strategy: AUTO
-        descripcion:
+        nombreDelCurso:
             type: string
-            length: 255
+            length: '50'
+        nombreDeLaSeccion:
+            type: string
+            length: '100'
+        activarLaSeleccionElectiva:
+            type: boolean
+    manyToMany: 
+        lotes:
+            targetEntity: protecno\escuelaBundle\Entity\lotes
+            inversedBy: curso         
     lifecycleCallbacks: {  }

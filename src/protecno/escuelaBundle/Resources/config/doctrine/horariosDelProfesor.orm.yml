@@ -1,0 +1,17 @@
+protecno\escuelaBundle\Entity\horariosDelProfesor:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        descripcion:
+            type: string
+            length: 255
+    manyToOne:
+        nuevoHorario:
+            targetEntity: protecno\escuelaBundle\Entity\nuevoHorario
+            inversedBy: horariosDelProfesor        
+    lifecycleCallbacks: {  }

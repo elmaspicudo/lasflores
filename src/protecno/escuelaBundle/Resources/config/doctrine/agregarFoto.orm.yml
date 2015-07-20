@@ -10,4 +10,11 @@ protecno\escuelaBundle\Entity\agregarFoto:
         fotoNombre:
             type: string
             length: '100'
+    manyToOne:
+        categoriaFoto:
+            targetEntity: protecno\escuelaBundle\Entity\categoriaFoto
+            inversedBy: agregarFoto
+        lotes:
+            targetEntity: protecno\escuelaBundle\Entity\lotes
+            inversedBy: agregarFoto         
     lifecycleCallbacks: {  }

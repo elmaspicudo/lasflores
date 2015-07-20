@@ -1,0 +1,84 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>configuracionesGenerales</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombredelcolegio</th>
+                <td>{{ entity.nombreDelColegio }}</td>
+            </tr>
+            <tr>
+                <th>Direcciondelcolegio</th>
+                <td>{{ entity.direccionDelColegio }}</td>
+            </tr>
+            <tr>
+                <th>Telefonodelcolegio</th>
+                <td>{{ entity.telefonoDelColegio }}</td>
+            </tr>
+            <tr>
+                <th>Ejerciciofechadeinicio</th>
+                <td>{{ entity.ejercicioFechaDeInicio|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Ejerciciofechadelfinal</th>
+                <td>{{ entity.ejercicioFechaDelFinal|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Numeroderecibopartir</th>
+                <td>{{ entity.numeroDeReciboPartir }}</td>
+            </tr>
+            <tr>
+                <th>Tipodemoneda</th>
+                <td>{{ entity.tipoDeMoneda }}</td>
+            </tr>
+            <tr>
+                <th>Incrementodeadmisionestudiantilno</th>
+                <td>{{ entity.incrementoDeAdmisionEstudiantilNo }}</td>
+            </tr>
+            <tr>
+                <th>Incrementodelempleadono</th>
+                <td>{{ entity.incrementoDelEmpleadoNo }}</td>
+            </tr>
+            <tr>
+                <th>Noticiasmoderaciondecomentarios</th>
+                <td>{{ entity.noticiasModeracionDeComentarios }}</td>
+            </tr>
+            <tr>
+                <th>Habilitarhermano</th>
+                <td>{{ entity.habilitarHermano }}</td>
+            </tr>
+            <tr>
+                <th>Cambiodecontrasenainiciodesesion</th>
+                <td>{{ entity.cambioDeContrasenaInicioDeSesion }}</td>
+            </tr>
+            <tr>
+                <th>Activarnumeroderolloparaestudiantes</th>
+                <td>{{ entity.activarNumeroDeRolloParaEstudiantes }}</td>
+            </tr>
+            <tr>
+                <th>Habilitaroauth</th>
+                <td>{{ entity.habilitarOauth }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('configuracionesgenerales') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('configuracionesgenerales_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

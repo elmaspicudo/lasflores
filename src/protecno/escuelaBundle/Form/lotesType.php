@@ -16,6 +16,8 @@ class lotesType extends AbstractType
     {
         $builder
             ->add('descripcion')
+            ->add('fechaDeIncio')
+            ->add('fechaDeFinal')
         ;
     }
     

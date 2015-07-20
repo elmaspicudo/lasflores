@@ -1,0 +1,25 @@
+protecno\escuelaBundle\Entity\libro:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        numeroDeLibro:
+            type: integer
+        titulo:
+            type: string
+            length: '100'
+        autor:
+            type: string
+            length: '100'
+        etiquetas:
+            type: boolean
+        etiquetasPersonalizadas:
+            type: string
+            length: '100'
+        numeroDeCopias:
+            type: integer
+    lifecycleCallbacks: {  }

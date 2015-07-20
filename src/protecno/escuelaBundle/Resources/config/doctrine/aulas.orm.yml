@@ -1,0 +1,14 @@
+protecno\escuelaBundle\Entity\aulas:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        noDeAula:
+            type: integer
+        capacidad:
+            type: integer
+    lifecycleCallbacks: {  }

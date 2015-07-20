@@ -1,0 +1,30 @@
+nuevohorario:
+    path:     /
+    defaults: { _controller: "escuelaBundle:nuevoHorario:index" }
+
+nuevohorario_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:nuevoHorario:show" }
+
+nuevohorario_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:nuevoHorario:new" }
+
+nuevohorario_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:nuevoHorario:create" }
+    requirements: { _method: post }
+
+nuevohorario_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:nuevoHorario:edit" }
+
+nuevohorario_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:nuevoHorario:update" }
+    requirements: { _method: post|put }
+
+nuevohorario_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:nuevoHorario:delete" }
+    requirements: { _method: post|delete }

@@ -10,4 +10,11 @@ protecno\escuelaBundle\Entity\examenCursoSabio:
         nombreDelExamen:
             type: string
             length: '100'
+    manyToMany:
+        curso:
+            targetEntity: protecno\escuelaBundle\Entity\curso
+            inversedBy: examenCursoSabio
+        lotes:
+            targetEntity: protecno\escuelaBundle\Entity\lotes
+            inversedBy: examenCursoSabio               
     lifecycleCallbacks: {  }

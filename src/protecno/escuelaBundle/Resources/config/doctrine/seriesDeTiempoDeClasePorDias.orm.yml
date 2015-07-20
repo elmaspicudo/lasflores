@@ -1,0 +1,36 @@
+protecno\escuelaBundle\Entity\seriesDeTiempoDeClasePorDias:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        domingo:
+            type: boolean
+        lunes:
+            type: boolean
+        martes:
+            type: boolean
+        miercoles:
+            type: boolean
+        jueves:
+            type: boolean
+        viernes:
+            type: boolean
+        sabado:
+            type: boolean
+        aplicableApartirDel:
+            type: datetime
+    manyToMany:
+        curso:
+            targetEntity: protecno\escuelaBundle\Entity\curso
+            inversedBy: seriesDeTiempoDeClasePorDias 
+        lotes:
+            targetEntity: protecno\escuelaBundle\Entity\lotes
+            inversedBy: seriesDeTiempoDeClasePorDias
+        temporizacionDeClase:
+            targetEntity: protecno\escuelaBundle\Entity\temporizacionDeClase
+            inversedBy: seriesDeTiempoDeClasePorDias     
+    lifecycleCallbacks: {  }

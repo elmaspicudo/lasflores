@@ -1,0 +1,30 @@
+examencursosabio:
+    path:     /
+    defaults: { _controller: "escuelaBundle:examenCursoSabio:index" }
+
+examencursosabio_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:examenCursoSabio:show" }
+
+examencursosabio_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:examenCursoSabio:new" }
+
+examencursosabio_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:examenCursoSabio:create" }
+    requirements: { _method: post }
+
+examencursosabio_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:examenCursoSabio:edit" }
+
+examencursosabio_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:examenCursoSabio:update" }
+    requirements: { _method: post|put }
+
+examencursosabio_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:examenCursoSabio:delete" }
+    requirements: { _method: post|delete }

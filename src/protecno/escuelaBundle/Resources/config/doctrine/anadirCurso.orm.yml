@@ -25,4 +25,8 @@ protecno\escuelaBundle\Entity\anadirCurso:
             type: boolean
         transferirArchivosAdjuntosMientrasAsignacion:
             type: boolean
+    manyToMany:
+        curso:
+            targetEntity: protecno\escuelaBundle\Entity\curso
+            inversedBy: anadirCurso     
     lifecycleCallbacks: {  }

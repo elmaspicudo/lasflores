@@ -1,0 +1,73 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>admisionDelEmpleado list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nuemerodelempleado</th>
+                <th>Diadeingreso</th>
+                <th>Nombre</th>
+                <th>Segundonombre</th>
+                <th>Apellidopaterno</th>
+                <th>Email</th>
+                <th>Genero</th>
+                <th>Fechadenacimiento</th>
+                <th>Tituloprofesional</th>
+                <th>Calificacion</th>
+                <th>Experienciainfo</th>
+                <th>Experienciatotal</th>
+                <th>Estadocivil</th>
+                <th>Nombredelpadre</th>
+                <th>Nombredelamadre</th>
+                <th>Celular</th>
+                <th>Telefonodecasa</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('admisiondelempleado_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.nuemeroDelEmpleado }}</td>
+                <td>{% if entity.diaDeIngreso %}{{ entity.diaDeIngreso|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.nombre }}</td>
+                <td>{{ entity.segundoNombre }}</td>
+                <td>{{ entity.apellidoPaterno }}</td>
+                <td>{{ entity.eMail }}</td>
+                <td>{{ entity.genero }}</td>
+                <td>{% if entity.fechaDeNacimiento %}{{ entity.fechaDeNacimiento|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.tituloProfesional }}</td>
+                <td>{{ entity.calificacion }}</td>
+                <td>{{ entity.experienciaInfo }}</td>
+                <td>{% if entity.experienciaTotal %}{{ entity.experienciaTotal|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.estadoCivil }}</td>
+                <td>{{ entity.nombreDelPadre }}</td>
+                <td>{{ entity.nombreDeLaMadre }}</td>
+                <td>{{ entity.celular }}</td>
+                <td>{{ entity.telefonoDeCasa }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('admisiondelempleado_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('admisiondelempleado_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('admisiondelempleado_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

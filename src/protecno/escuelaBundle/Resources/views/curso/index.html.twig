@@ -7,7 +7,9 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Descripcion</th>
+                <th>Nombredelcurso</th>
+                <th>Nombredelaseccion</th>
+                <th>Activarlaseleccionelectiva</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -15,7 +17,9 @@
         {% for entity in entities %}
             <tr>
                 <td><a href="{{ path('curso_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.descripcion }}</td>
+                <td>{{ entity.nombreDelCurso }}</td>
+                <td>{{ entity.nombreDeLaSeccion }}</td>
+                <td>{{ entity.activarLaSeleccionElectiva }}</td>
                 <td>
                 <ul>
                     <li>

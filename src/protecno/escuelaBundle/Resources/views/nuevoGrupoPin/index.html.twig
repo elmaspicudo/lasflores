@@ -1,0 +1,49 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>nuevoGrupoPin list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Validadesde</th>
+                <th>Validohasta</th>
+                <th>Nombre</th>
+                <th>Numerodepines</th>
+                <th>Estaactivo</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('nuevogrupopin_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{% if entity.validaDesde %}{{ entity.validaDesde|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.validoHasta %}{{ entity.validoHasta|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.nombre }}</td>
+                <td>{{ entity.numeroDePines }}</td>
+                <td>{{ entity.estaActivo }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('nuevogrupopin_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('nuevogrupopin_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('nuevogrupopin_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

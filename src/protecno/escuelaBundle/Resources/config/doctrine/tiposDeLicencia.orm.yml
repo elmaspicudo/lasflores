@@ -1,0 +1,22 @@
+protecno\escuelaBundle\Entity\tiposDeLicencia:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        dejaNombre:
+            type: string
+            length: '60'
+        dejaCodigo:
+            type: string
+            length: '20'
+        elNumeroMaximoDeLicencia:
+            type: integer
+        restablecerFecha:
+            type: datetime
+        activo:
+            type: boolean
+    lifecycleCallbacks: {  }

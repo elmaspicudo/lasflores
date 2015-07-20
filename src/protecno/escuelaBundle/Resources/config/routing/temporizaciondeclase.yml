@@ -1,0 +1,30 @@
+temporizaciondeclase:
+    path:     /
+    defaults: { _controller: "escuelaBundle:temporizacionDeClase:index" }
+
+temporizaciondeclase_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:temporizacionDeClase:show" }
+
+temporizaciondeclase_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:temporizacionDeClase:new" }
+
+temporizaciondeclase_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:temporizacionDeClase:create" }
+    requirements: { _method: post }
+
+temporizaciondeclase_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:temporizacionDeClase:edit" }
+
+temporizaciondeclase_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:temporizacionDeClase:update" }
+    requirements: { _method: post|put }
+
+temporizaciondeclase_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:temporizacionDeClase:delete" }
+    requirements: { _method: post|delete }

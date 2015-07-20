@@ -15,11 +15,8 @@ class archivoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('titulo')
-            ->add('path')
-            ->add('imagen')
-            ->add('updated')
-            ->add('tipo')
+            
+            ->add('lotes')
         ;
     }
     
@@ -38,6 +35,6 @@ class archivoType extends AbstractType
      */
     public function getName()
     {
-        return 'escuela_bundle_archivo';
+        return 'protecno_escuelabundle_archivo';
     }
 }

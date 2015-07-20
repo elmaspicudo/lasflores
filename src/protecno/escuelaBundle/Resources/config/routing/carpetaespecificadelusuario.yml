@@ -1,0 +1,30 @@
+carpetaespecificadelusuario:
+    path:     /
+    defaults: { _controller: "escuelaBundle:carpetaEspecificaDelUsuario:index" }
+
+carpetaespecificadelusuario_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:carpetaEspecificaDelUsuario:show" }
+
+carpetaespecificadelusuario_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:carpetaEspecificaDelUsuario:new" }
+
+carpetaespecificadelusuario_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:carpetaEspecificaDelUsuario:create" }
+    requirements: { _method: post }
+
+carpetaespecificadelusuario_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:carpetaEspecificaDelUsuario:edit" }
+
+carpetaespecificadelusuario_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:carpetaEspecificaDelUsuario:update" }
+    requirements: { _method: post|put }
+
+carpetaespecificadelusuario_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:carpetaEspecificaDelUsuario:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,30 @@
+verhorarios:
+    path:     /
+    defaults: { _controller: "escuelaBundle:verHorarios:index" }
+
+verhorarios_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:verHorarios:show" }
+
+verhorarios_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:verHorarios:new" }
+
+verhorarios_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:verHorarios:create" }
+    requirements: { _method: post }
+
+verhorarios_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:verHorarios:edit" }
+
+verhorarios_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:verHorarios:update" }
+    requirements: { _method: post|put }
+
+verhorarios_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:verHorarios:delete" }
+    requirements: { _method: post|delete }

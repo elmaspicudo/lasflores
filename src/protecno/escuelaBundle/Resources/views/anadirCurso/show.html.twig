@@ -1,0 +1,60 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>anadirCurso</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Puntajeminimo</th>
+                <td>{{ entity.puntajeMinimo }}</td>
+            </tr>
+            <tr>
+                <th>Cantidad</th>
+                <td>{{ entity.cantidad }}</td>
+            </tr>
+            <tr>
+                <th>Estaactivo</th>
+                <td>{{ entity.estaActivo }}</td>
+            </tr>
+            <tr>
+                <th>Estaactivoenelsistemapin</th>
+                <td>{{ entity.estaActivoEnElSistemaPin }}</td>
+            </tr>
+            <tr>
+                <th>Habilitarsistemadeaprobacion</th>
+                <td>{{ entity.habilitarSistemaDeAprobacion }}</td>
+            </tr>
+            <tr>
+                <th>Registrstrobasadoasunto</th>
+                <td>{{ entity.registrstroBasadoAsunto }}</td>
+            </tr>
+            <tr>
+                <th>Incluyadetalles</th>
+                <td>{{ entity.incluyaDetalles }}</td>
+            </tr>
+            <tr>
+                <th>Transferirarchivosadjuntosmientrasasignacion</th>
+                <td>{{ entity.transferirArchivosAdjuntosMientrasAsignacion }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('anadircurso') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('anadircurso_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

@@ -1,0 +1,30 @@
+carpeta:
+    path:     /
+    defaults: { _controller: "escuelaBundle:carpeta:index" }
+
+carpeta_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:carpeta:show" }
+
+carpeta_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:carpeta:new" }
+
+carpeta_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:carpeta:create" }
+    requirements: { _method: post }
+
+carpeta_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:carpeta:edit" }
+
+carpeta_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:carpeta:update" }
+    requirements: { _method: post|put }
+
+carpeta_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:carpeta:delete" }
+    requirements: { _method: post|delete }

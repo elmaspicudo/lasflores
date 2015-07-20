@@ -136,4 +136,49 @@ class nivelesDeClasificacion
     {
         return $this->considereTodosLosLotesAnteriores;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $curso;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->curso = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Add curso
+     *
+     * @param \protecno\escuelaBundle\Entity\curso $curso
+     * @return nivelesDeClasificacion
+     */
+    public function addCurso(\protecno\escuelaBundle\Entity\curso $curso)
+    {
+        $this->curso[] = $curso;
+    
+        return $this;
+    }
+
+    /**
+     * Remove curso
+     *
+     * @param \protecno\escuelaBundle\Entity\curso $curso
+     */
+    public function removeCurso(\protecno\escuelaBundle\Entity\curso $curso)
+    {
+        $this->curso->removeElement($curso);
+    }
+
+    /**
+     * Get curso
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getCurso()
+    {
+        return $this->curso;
+    }
 }

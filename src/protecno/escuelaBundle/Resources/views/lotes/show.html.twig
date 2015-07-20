@@ -13,6 +13,14 @@
                 <th>Descripcion</th>
                 <td>{{ entity.descripcion }}</td>
             </tr>
+            <tr>
+                <th>Fechadeincio</th>
+                <td>{{ entity.fechaDeIncio|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Fechadefinal</th>
+                <td>{{ entity.fechaDeFinal|date('Y-m-d H:i:s') }}</td>
+            </tr>
         </tbody>
     </table>
 

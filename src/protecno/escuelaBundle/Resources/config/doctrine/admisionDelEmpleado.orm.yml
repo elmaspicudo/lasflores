@@ -1,0 +1,67 @@
+protecno\escuelaBundle\Entity\admisionDelEmpleado:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        nuemeroDelEmpleado:
+            type: integer
+        diaDeIngreso:
+            type: datetime
+        nombre:
+            type: string
+            length: '100'
+        segundoNombre:
+            type: string
+            length: '100'
+        apellidoPaterno:
+            type: string
+            length: '50'
+        eMail:
+            type: string
+            length: '20'
+        genero:
+            type: boolean
+        fechaDeNacimiento:
+            type: datetime
+        tituloProfesional:
+            type: string
+            length: 255
+        calificacion:
+            type: string
+            length: '100'
+        experienciaInfo:
+            type: string
+            length: 255
+        experienciaTotal:
+            type: datetime
+        estadoCivil:
+            type: string
+            length: '20'
+        nombreDelPadre:
+            type: string
+            length: 255
+        nombreDeLaMadre:
+            type: string
+            length: 255
+        celular:
+            type: integer
+        telefonoDeCasa:
+            type: integer
+    manyToOne:
+        anadirEmpleadoCategoria:
+            targetEntity: protecno\escuelaBundle\Entity\anadirEmpleadoCategoria
+            inversedBy: admisionDelEmpleado 
+        anadirDepartamentoEmpleo:
+            targetEntity: protecno\escuelaBundle\Entity\anadirDepartamentoEmpleo
+            inversedBy: admisionDelEmpleado
+        anadirEmpleadoPosicion:
+            targetEntity: protecno\escuelaBundle\Entity\anadirEmpleadoPosicion
+            inversedBy: admisionDelEmpleado 
+        anadirEmpleadoGrado:
+            targetEntity: protecno\escuelaBundle\Entity\anadirEmpleadoGrado
+            inversedBy: admisionDelEmpleado         
+    lifecycleCallbacks: {  }

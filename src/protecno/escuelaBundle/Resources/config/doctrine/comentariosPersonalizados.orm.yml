@@ -1,0 +1,23 @@
+protecno\escuelaBundle\Entity\comentariosPersonalizados:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        tema:
+            type: string
+            length: 255
+        obserbacionPor:
+            type: string
+            length: '100'
+    manyToMany:
+        curso:
+            targetEntity: protecno\escuelaBundle\Entity\curso
+            inversedBy: comentariosPersonalizados 
+        lotes:
+            targetEntity: protecno\escuelaBundle\Entity\lotes
+            inversedBy: comentariosPersonalizados     
+    lifecycleCallbacks: {  }

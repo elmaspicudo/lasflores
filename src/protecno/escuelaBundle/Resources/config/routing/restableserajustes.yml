@@ -1,0 +1,30 @@
+restableserajustes:
+    path:     /
+    defaults: { _controller: "escuelaBundle:restableserAjustes:index" }
+
+restableserajustes_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:restableserAjustes:show" }
+
+restableserajustes_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:restableserAjustes:new" }
+
+restableserajustes_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:restableserAjustes:create" }
+    requirements: { _method: post }
+
+restableserajustes_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:restableserAjustes:edit" }
+
+restableserajustes_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:restableserAjustes:update" }
+    requirements: { _method: post|put }
+
+restableserajustes_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:restableserAjustes:delete" }
+    requirements: { _method: post|delete }
