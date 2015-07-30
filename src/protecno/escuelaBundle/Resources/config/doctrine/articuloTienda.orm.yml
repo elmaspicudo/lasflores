@@ -1,0 +1,30 @@
+protecno\escuelaBundle\Entity\articuloTienda:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        nombreDelElemento:
+            type: string
+            length: '100'
+        codigo:
+            type: string
+            length: '40'
+        cantidad:
+            type: integer
+        precioPorUnidad:
+            type: integer
+        impuestosPorcentaje:
+            type: integer
+        noDeLote:
+            type: integer
+        vendible:
+            type: boolean
+    manyToOne:
+        tienda:
+            targetEntity: protecno\escuelaBundle\Entity\tienda
+            inversedBy: articuloTienda        
+    lifecycleCallbacks: {  }

@@ -1,0 +1,30 @@
+verhojadesueldo:
+    path:     /
+    defaults: { _controller: "escuelaBundle:verHojaDeSueldo:index" }
+
+verhojadesueldo_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:verHojaDeSueldo:show" }
+
+verhojadesueldo_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:verHojaDeSueldo:new" }
+
+verhojadesueldo_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:verHojaDeSueldo:create" }
+    requirements: { _method: post }
+
+verhojadesueldo_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:verHojaDeSueldo:edit" }
+
+verhojadesueldo_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:verHojaDeSueldo:update" }
+    requirements: { _method: post|put }
+
+verhojadesueldo_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:verHojaDeSueldo:delete" }
+    requirements: { _method: post|delete }

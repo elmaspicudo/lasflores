@@ -1,0 +1,30 @@
+responsabilidad:
+    path:     /
+    defaults: { _controller: "escuelaBundle:responsabilidad:index" }
+
+responsabilidad_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:responsabilidad:show" }
+
+responsabilidad_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:responsabilidad:new" }
+
+responsabilidad_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:responsabilidad:create" }
+    requirements: { _method: post }
+
+responsabilidad_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:responsabilidad:edit" }
+
+responsabilidad_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:responsabilidad:update" }
+    requirements: { _method: post|put }
+
+responsabilidad_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:responsabilidad:delete" }
+    requirements: { _method: post|delete }

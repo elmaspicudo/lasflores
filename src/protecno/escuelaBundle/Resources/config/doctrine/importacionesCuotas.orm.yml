@@ -7,4 +7,11 @@ protecno\escuelaBundle\Entity\importacionesCuotas:
             id: true
             generator:
                 strategy: AUTO
+    manyToMany:
+        lotes:
+            targetEntity: protecno\escuelaBundle\Entity\lotes
+            inversedBy: importacionesCuotas
+        cuotaColeccion:
+            targetEntity: protecno\escuelaBundle\Entity\cuotaColeccion
+            inversedBy: importacionesCuotas                  
     lifecycleCallbacks: {  }

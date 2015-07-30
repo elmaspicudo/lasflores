@@ -1,0 +1,16 @@
+protecno\escuelaBundle\Entity\honorariosInstantaneos:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        estudiante:
+            type: boolean
+        empleado:
+            type: boolean
+        invitado:
+            type: boolean         
+    lifecycleCallbacks: {  }

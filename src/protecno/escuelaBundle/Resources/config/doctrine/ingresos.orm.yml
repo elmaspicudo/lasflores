@@ -1,0 +1,14 @@
+protecno\escuelaBundle\Entity\ingresos:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        fechaDeInicio:
+            type: datetime
+        fechaDeFinalizacion:
+            type: datetime
+    lifecycleCallbacks: {  }

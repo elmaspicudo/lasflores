@@ -7,4 +7,10 @@ protecno\escuelaBundle\Entity\tiposDeProveedor:
             id: true
             generator:
                 strategy: AUTO
+        nombre:
+            type: string
+            length: '100'
+        codigo:
+            type: string
+            length: '50'            
     lifecycleCallbacks: {  }

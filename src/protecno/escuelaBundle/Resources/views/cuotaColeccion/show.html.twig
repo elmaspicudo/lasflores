@@ -1,0 +1,44 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>cuotaColeccion</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Cuotanombredelacoleccion</th>
+                <td>{{ entity.cuotaNombreDeLaColeccion }}</td>
+            </tr>
+            <tr>
+                <th>Fechadeinicio</th>
+                <td>{{ entity.fechaDeInicio|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Fechafinal</th>
+                <td>{{ entity.fechaFinal|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Fechadevencimiento</th>
+                <td>{{ entity.fechaDeVencimiento|date('Y-m-d H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('cuotacoleccion') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('cuotacoleccion_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

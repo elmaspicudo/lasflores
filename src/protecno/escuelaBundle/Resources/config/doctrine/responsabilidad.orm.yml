@@ -7,4 +7,12 @@ protecno\escuelaBundle\Entity\responsabilidad:
             id: true
             generator:
                 strategy: AUTO
+        titulo:
+            type: string
+            length: '100'
+        descripcion:
+            type: string
+            length: '100'
+        monto:
+            type: integer
     lifecycleCallbacks: {  }

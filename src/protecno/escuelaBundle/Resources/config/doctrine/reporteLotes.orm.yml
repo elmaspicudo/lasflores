@@ -1,0 +1,14 @@
+protecno\escuelaBundle\Entity\reporteLotes:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    oneToMany:
+        curso:
+            targetEntity: protecno\escuelaBundle\Entity\curso
+            mappedBy: reporteLotes     
+    lifecycleCallbacks: {  }

@@ -1,0 +1,30 @@
+tema:
+    path:     /
+    defaults: { _controller: "escuelaBundle:tema:index" }
+
+tema_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:tema:show" }
+
+tema_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:tema:new" }
+
+tema_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:tema:create" }
+    requirements: { _method: post }
+
+tema_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:tema:edit" }
+
+tema_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:tema:update" }
+    requirements: { _method: post|put }
+
+tema_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:tema:delete" }
+    requirements: { _method: post|delete }

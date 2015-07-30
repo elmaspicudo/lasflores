@@ -1,0 +1,30 @@
+reportelotes:
+    path:     /
+    defaults: { _controller: "escuelaBundle:reporteLotes:index" }
+
+reportelotes_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:reporteLotes:show" }
+
+reportelotes_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:reporteLotes:new" }
+
+reportelotes_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:reporteLotes:create" }
+    requirements: { _method: post }
+
+reportelotes_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:reporteLotes:edit" }
+
+reportelotes_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:reporteLotes:update" }
+    requirements: { _method: post|put }
+
+reportelotes_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:reporteLotes:delete" }
+    requirements: { _method: post|delete }

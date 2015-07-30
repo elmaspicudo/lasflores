@@ -7,8 +7,19 @@ protecno\escuelaBundle\Entity\gasto:
             id: true
             generator:
                 strategy: AUTO
-        seleccionarFechaDeInicio:
+        titulo:
+            type: string
+            length: '100'
+        descripcion:
+            type: string
+            length: '100'
+        importe:
+            type: string
+            length: '50'
+        fecha:
             type: datetime
-        seleccionarFechaDeFinalizacion:
-            type: datetime
+        reembolso:
+            type: boolean
+        inventario:
+            type: boolean    
     lifecycleCallbacks: {  }

@@ -1,0 +1,30 @@
+tienda:
+    path:     /
+    defaults: { _controller: "escuelaBundle:tienda:index" }
+
+tienda_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:tienda:show" }
+
+tienda_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:tienda:new" }
+
+tienda_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:tienda:create" }
+    requirements: { _method: post }
+
+tienda_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:tienda:edit" }
+
+tienda_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:tienda:update" }
+    requirements: { _method: post|put }
+
+tienda_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:tienda:delete" }
+    requirements: { _method: post|delete }

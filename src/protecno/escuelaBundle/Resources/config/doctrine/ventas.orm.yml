@@ -1,0 +1,23 @@
+protecno\escuelaBundle\Entity\ventas:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        cantidad:
+            type: integer
+        precioPorUnidad:
+            type: integer
+        precioTotal:
+            type: 
+    manyToOne:
+        tienda:
+            targetEntity: protecno\escuelaBundle\Entity\tienda
+            inversedBy: ventas
+        articuloTienda:
+            targetEntity: protecno\escuelaBundle\Entity\articuloTienda
+            inversedBy: ventas     
+    lifecycleCallbacks: {  }

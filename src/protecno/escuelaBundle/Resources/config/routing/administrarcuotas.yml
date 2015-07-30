@@ -1,0 +1,30 @@
+administrarcuotas:
+    path:     /
+    defaults: { _controller: "escuelaBundle:administrarCuotas:index" }
+
+administrarcuotas_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:administrarCuotas:show" }
+
+administrarcuotas_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:administrarCuotas:new" }
+
+administrarcuotas_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:administrarCuotas:create" }
+    requirements: { _method: post }
+
+administrarcuotas_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:administrarCuotas:edit" }
+
+administrarcuotas_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:administrarCuotas:update" }
+    requirements: { _method: post|put }
+
+administrarcuotas_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:administrarCuotas:delete" }
+    requirements: { _method: post|delete }

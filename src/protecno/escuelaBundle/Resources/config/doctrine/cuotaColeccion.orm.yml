@@ -1,0 +1,23 @@
+protecno\escuelaBundle\Entity\cuotaColeccion:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        cuotaNombreDeLaColeccion:
+            type: string
+            length: '100'
+        fechaDeInicio:
+            type: datetime
+        fechaFinal:
+            type: datetime
+        fechaDeVencimiento:
+            type: datetime
+    oneToMany:
+        anadirEmpleadoCategoria:
+            targetEntity: protecno\escuelaBundle\Entity\anadirEmpleadoCategoria
+            mappedBy: cuotaColeccion    
+    lifecycleCallbacks: {  }

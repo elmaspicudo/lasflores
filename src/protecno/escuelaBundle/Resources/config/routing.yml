@@ -168,6 +168,119 @@ escuelaBundle_buscarempleados:
 escuelaBundle_gestiondedatoscategorias:
         resource: "@escuelaBundle/Resources/config/routing/gestiondedatoscategorias.yml"
         prefix:   /gestiondedatoscategorias
+escuelaBundle_categoriahonorarios:
+        resource: "@escuelaBundle/Resources/config/routing/categoriahonorarios.yml"
+        prefix:   /categoriahonorarios
+escuelaBundle_crearparticulares:
+        resource: "@escuelaBundle/Resources/config/routing/crearparticulares.yml"
+        prefix:   /crearparticulares
+escuelaBundle_generarmulta:
+        resource: "@escuelaBundle/Resources/config/routing/generarmulta.yml"
+        prefix:   /generarmulta
+escuelaBundle_cuotacoleccion:
+        resource: "@escuelaBundle/Resources/config/routing/cuotacoleccion.yml"
+        prefix:   /cuotacoleccion
+escuelaBundle_presentacioncuotasdelosestudiantes:
+        resource: "@escuelaBundle/Resources/config/routing/presentacioncuotasdelosestudiantes.yml"
+        prefix:   /presentacioncuotasdelosestudiantes
+escuelaBundle_cuotasparticulares:
+        resource: "@escuelaBundle/Resources/config/routing/cuotasparticulares.yml"
+        prefix:   /cuotasparticulares
+escuelaBundle_reportelotes:
+        resource: "@escuelaBundle/Resources/config/routing/reportelotes.yml"
+        prefix:   /reportelotes
+escuelaBundle_cuotasinforme:
+        resource: "@escuelaBundle/Resources/config/routing/cuotasinforme.yml"
+        prefix:   /cuotasinforme
+escuelaBundle_tema:
+        resource: "@escuelaBundle/Resources/config/routing/tema.yml"
+        prefix:   /tema
+escuelaBundle_asignaturas:
+        resource: "@escuelaBundle/Resources/config/routing/asignaturas.yml"
+        prefix:   /asignaturas
+escuelaBundle_administrarcuotas:
+        resource: "@escuelaBundle/Resources/config/routing/administrarcuotas.yml"
+        prefix:   /administrarcuotas
+escuelaBundle_estructuradetarifas:
+        resource: "@escuelaBundle/Resources/config/routing/estructuradetarifas.yml"
+        prefix:   /estructuradetarifas
+escuelaBundle_informecuotasestudiantes:
+        resource: "@escuelaBundle/Resources/config/routing/informecuotasestudiantes.yml"
+        prefix:   /informecuotasestudiantes
+escuelaBundle_importacionescuotas:
+        resource: "@escuelaBundle/Resources/config/routing/importacionescuotas.yml"
+        prefix:   /importacionescuotas
+escuelaBundle_honorariosinstantaneos:
+        resource: "@escuelaBundle/Resources/config/routing/honorariosinstantaneos.yml"
+        prefix:   /honorariosinstantaneos
+escuelaBundle_finanzascategoria:
+        resource: "@escuelaBundle/Resources/config/routing/finanzascategoria.yml"
+        prefix:   /finanzascategoria
+escuelaBundle_gastos:
+        resource: "@escuelaBundle/Resources/config/routing/gastos.yml"
+        prefix:   /gastos
+escuelaBundle_gasto:
+        resource: "@escuelaBundle/Resources/config/routing/gasto.yml"
+        prefix:   /gasto
+escuelaBundle_ingreso:
+        resource: "@escuelaBundle/Resources/config/routing/ingreso.yml"
+        prefix:   /ingreso
+escuelaBundle_verhojadesueldo:
+        resource: "@escuelaBundle/Resources/config/routing/verhojadesueldo.yml"
+        prefix:   /verhojadesueldo
+escuelaBundle_informefinanciero:
+        resource: "@escuelaBundle/Resources/config/routing/informefinanciero.yml"
+        prefix:   /informefinanciero
+escuelaBundle_activos:
+        resource: "@escuelaBundle/Resources/config/routing/activos.yml"
+        prefix:   /activos
+escuelaBundle_responsabilidad:
+        resource: "@escuelaBundle/Resources/config/routing/responsabilidad.yml"
+        prefix:   /responsabilidad
+escuelaBundle_usuario:
+        resource: "@escuelaBundle/Resources/config/routing/usuario.yml"
+        prefix:   /usuario
+escuelaBundle_tiendacategorias:
+        resource: "@escuelaBundle/Resources/config/routing/tiendacategorias.yml"
+        prefix:   /tiendacategorias
+escuelaBundle_tipodetienda:
+        resource: "@escuelaBundle/Resources/config/routing/tipodetienda.yml"
+        prefix:   /tipodetienda
+escuelaBundle_tienda:
+        resource: "@escuelaBundle/Resources/config/routing/tienda.yml"
+        prefix:   /tienda
+escuelaBundle_articulocategoria:
+        resource: "@escuelaBundle/Resources/config/routing/articulocategoria.yml"
+        prefix:   /articulocategoria
+escuelaBundle_tiposdeproveedor:
+        resource: "@escuelaBundle/Resources/config/routing/tiposdeproveedor.yml"
+        prefix:   /tiposdeproveedor
+escuelaBundle_proveedores:
+        resource: "@escuelaBundle/Resources/config/routing/proveedores.yml"
+        prefix:   /proveedores
+escuelaBundle_ordenesdecompra:
+        resource: "@escuelaBundle/Resources/config/routing/ordenesdecompra.yml"
+        prefix:   /ordenesdecompra
+escuelaBundle_articulotienda:
+        resource: "@escuelaBundle/Resources/config/routing/articulotienda.yml"
+        prefix:   /articulotienda
+escuelaBundle_ventas:
+        resource: "@escuelaBundle/Resources/config/routing/ventas.yml"
+        prefix:   /ventas        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 escuelaBundle_anadirusuario:
         resource: "@escuelaBundle/Resources/config/routing/anadirusuario.yml"

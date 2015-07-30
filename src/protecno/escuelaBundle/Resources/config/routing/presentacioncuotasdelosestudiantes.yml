@@ -1,0 +1,30 @@
+presentacioncuotasdelosestudiantes:
+    path:     /
+    defaults: { _controller: "escuelaBundle:presentacionCuotasDeLosEstudiantes:index" }
+
+presentacioncuotasdelosestudiantes_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:presentacionCuotasDeLosEstudiantes:show" }
+
+presentacioncuotasdelosestudiantes_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:presentacionCuotasDeLosEstudiantes:new" }
+
+presentacioncuotasdelosestudiantes_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:presentacionCuotasDeLosEstudiantes:create" }
+    requirements: { _method: post }
+
+presentacioncuotasdelosestudiantes_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:presentacionCuotasDeLosEstudiantes:edit" }
+
+presentacioncuotasdelosestudiantes_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:presentacionCuotasDeLosEstudiantes:update" }
+    requirements: { _method: post|put }
+
+presentacioncuotasdelosestudiantes_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:presentacionCuotasDeLosEstudiantes:delete" }
+    requirements: { _method: post|delete }

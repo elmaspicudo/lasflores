@@ -1,0 +1,23 @@
+protecno\escuelaBundle\Entity\presentacionCuotasDeLosEstudiantes:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        descripcion:
+            type: string
+            length: 255
+    oneToOne:
+        lotes:
+            targetEntity: protecno\escuelaBundle\Entity\lotes
+            inversedBy: presentacionCuotasDeLosEstudiantes
+        cuotaColeccion:
+            targetEntity: protecno\escuelaBundle\Entity\cuotaColeccion
+            inversedBy: presentacionCuotasDeLosEstudiantes
+        admisionDeEstudiantes:
+            targetEntity: protecno\escuelaBundle\Entity\admisionDeEstudiantes
+            inversedBy: presentacionCuotasDeLosEstudiantes       
+    lifecycleCallbacks: {  }

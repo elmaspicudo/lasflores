@@ -136,4 +136,49 @@ class crearParticulares
     {
         return $this->importe;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $categoriaHonorarios;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->categoriaHonorarios = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Add categoriaHonorarios
+     *
+     * @param \protecno\escuelaBundle\Entity\categoriaHonorarios $categoriaHonorarios
+     * @return crearParticulares
+     */
+    public function addCategoriaHonorario(\protecno\escuelaBundle\Entity\categoriaHonorarios $categoriaHonorarios)
+    {
+        $this->categoriaHonorarios[] = $categoriaHonorarios;
+    
+        return $this;
+    }
+
+    /**
+     * Remove categoriaHonorarios
+     *
+     * @param \protecno\escuelaBundle\Entity\categoriaHonorarios $categoriaHonorarios
+     */
+    public function removeCategoriaHonorario(\protecno\escuelaBundle\Entity\categoriaHonorarios $categoriaHonorarios)
+    {
+        $this->categoriaHonorarios->removeElement($categoriaHonorarios);
+    }
+
+    /**
+     * Get categoriaHonorarios
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getCategoriaHonorarios()
+    {
+        return $this->categoriaHonorarios;
+    }
 }

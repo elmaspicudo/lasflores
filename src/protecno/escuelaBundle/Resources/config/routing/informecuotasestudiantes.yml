@@ -1,0 +1,30 @@
+informecuotasestudiantes:
+    path:     /
+    defaults: { _controller: "escuelaBundle:informeCuotasEstudiantes:index" }
+
+informecuotasestudiantes_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:informeCuotasEstudiantes:show" }
+
+informecuotasestudiantes_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:informeCuotasEstudiantes:new" }
+
+informecuotasestudiantes_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:informeCuotasEstudiantes:create" }
+    requirements: { _method: post }
+
+informecuotasestudiantes_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:informeCuotasEstudiantes:edit" }
+
+informecuotasestudiantes_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:informeCuotasEstudiantes:update" }
+    requirements: { _method: post|put }
+
+informecuotasestudiantes_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:informeCuotasEstudiantes:delete" }
+    requirements: { _method: post|delete }

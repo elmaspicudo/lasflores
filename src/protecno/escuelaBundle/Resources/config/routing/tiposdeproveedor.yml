@@ -1,0 +1,30 @@
+tiposdeproveedor:
+    path:     /
+    defaults: { _controller: "escuelaBundle:tiposDeProveedor:index" }
+
+tiposdeproveedor_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:tiposDeProveedor:show" }
+
+tiposdeproveedor_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:tiposDeProveedor:new" }
+
+tiposdeproveedor_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:tiposDeProveedor:create" }
+    requirements: { _method: post }
+
+tiposdeproveedor_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:tiposDeProveedor:edit" }
+
+tiposdeproveedor_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:tiposDeProveedor:update" }
+    requirements: { _method: post|put }
+
+tiposdeproveedor_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:tiposDeProveedor:delete" }
+    requirements: { _method: post|delete }

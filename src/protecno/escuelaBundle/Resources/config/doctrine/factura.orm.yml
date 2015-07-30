@@ -1,0 +1,19 @@
+protecno\escuelaBundle\Entity\factura:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        expedidoA:
+            type: string
+            length: '100'
+        nombre:
+            type: string
+            length: '100'
+        direccion:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
