@@ -108,4 +108,60 @@ class tienda
     {
         return $this->facturaPrefijo;
     }
+    /**
+     * @var \protecno\escuelaBundle\Entity\tiendaCategorias
+     */
+    private $tiendaCategorias;
+
+    /**
+     * @var \protecno\escuelaBundle\Entity\tipoDeTienda
+     */
+    private $tipoDeTienda;
+
+
+    /**
+     * Set tiendaCategorias
+     *
+     * @param \protecno\escuelaBundle\Entity\tiendaCategorias $tiendaCategorias
+     * @return tienda
+     */
+    public function setTiendaCategorias(\protecno\escuelaBundle\Entity\tiendaCategorias $tiendaCategorias = null)
+    {
+        $this->tiendaCategorias = $tiendaCategorias;
+    
+        return $this;
+    }
+
+    /**
+     * Get tiendaCategorias
+     *
+     * @return \protecno\escuelaBundle\Entity\tiendaCategorias 
+     */
+    public function getTiendaCategorias()
+    {
+        return $this->tiendaCategorias;
+    }
+
+    /**
+     * Set tipoDeTienda
+     *
+     * @param \protecno\escuelaBundle\Entity\tipoDeTienda $tipoDeTienda
+     * @return tienda
+     */
+    public function setTipoDeTienda(\protecno\escuelaBundle\Entity\tipoDeTienda $tipoDeTienda = null)
+    {
+        $this->tipoDeTienda = $tipoDeTienda;
+    
+        return $this;
+    }
+
+    /**
+     * Get tipoDeTienda
+     *
+     * @return \protecno\escuelaBundle\Entity\tipoDeTienda 
+     */
+    public function getTipoDeTienda()
+    {
+        return $this->tipoDeTienda;
+    }
 }

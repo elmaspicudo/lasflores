@@ -1,0 +1,30 @@
+crearparticulares:
+    path:     /
+    defaults: { _controller: "escuelaBundle:crearParticulares:index" }
+
+crearparticulares_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:crearParticulares:show" }
+
+crearparticulares_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:crearParticulares:new" }
+
+crearparticulares_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:crearParticulares:create" }
+    requirements: { _method: post }
+
+crearparticulares_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:crearParticulares:edit" }
+
+crearparticulares_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:crearParticulares:update" }
+    requirements: { _method: post|put }
+
+crearparticulares_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:crearParticulares:delete" }
+    requirements: { _method: post|delete }

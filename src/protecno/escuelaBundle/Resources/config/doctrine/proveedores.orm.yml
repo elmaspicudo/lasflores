@@ -7,7 +7,21 @@ protecno\escuelaBundle\Entity\proveedores:
             id: true
             generator:
                 strategy: AUTO
-        descripcion:
+        nombreDelProveedor:
             type: string
             length: '100'
+        noContacto:
+            type: integer
+        direccion:
+            type: string
+            length: '100'
+        noTin:
+            type: integer
+        region:
+            type: string
+            length: '100'
+    manyToOne:
+        tiposDeProveedor:
+            targetEntity: protecno\escuelaBundle\Entity\tiposDeProveedor
+            inversedBy: proveedores   
     lifecycleCallbacks: {  }

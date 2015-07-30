@@ -1,0 +1,30 @@
+tiendacategorias:
+    path:     /
+    defaults: { _controller: "escuelaBundle:tiendaCategorias:index" }
+
+tiendacategorias_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:tiendaCategorias:show" }
+
+tiendacategorias_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:tiendaCategorias:new" }
+
+tiendacategorias_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:tiendaCategorias:create" }
+    requirements: { _method: post }
+
+tiendacategorias_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:tiendaCategorias:edit" }
+
+tiendacategorias_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:tiendaCategorias:update" }
+    requirements: { _method: post|put }
+
+tiendacategorias_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:tiendaCategorias:delete" }
+    requirements: { _method: post|delete }

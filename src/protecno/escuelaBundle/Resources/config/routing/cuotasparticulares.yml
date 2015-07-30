@@ -1,0 +1,30 @@
+cuotasparticulares:
+    path:     /
+    defaults: { _controller: "escuelaBundle:cuotasParticulares:index" }
+
+cuotasparticulares_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:cuotasParticulares:show" }
+
+cuotasparticulares_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:cuotasParticulares:new" }
+
+cuotasparticulares_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:cuotasParticulares:create" }
+    requirements: { _method: post }
+
+cuotasparticulares_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:cuotasParticulares:edit" }
+
+cuotasparticulares_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:cuotasParticulares:update" }
+    requirements: { _method: post|put }
+
+cuotasparticulares_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:cuotasParticulares:delete" }
+    requirements: { _method: post|delete }

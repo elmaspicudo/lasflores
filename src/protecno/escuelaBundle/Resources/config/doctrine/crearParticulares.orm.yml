@@ -17,4 +17,8 @@ protecno\escuelaBundle\Entity\crearParticulares:
             type: boolean
         importe:
             type: integer
+    manyToMany:
+        categoriaHonorarios:
+            targetEntity: protecno\escuelaBundle\Entity\categoriaHonorarios
+            inversedBy: crearParticulares    
     lifecycleCallbacks: {  }

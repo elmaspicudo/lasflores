@@ -7,4 +7,19 @@ protecno\escuelaBundle\Entity\usuario:
             id: true
             generator:
                 strategy: AUTO
+        nombreDelUsuario:
+            type: string
+            length: '100'
+        nombre:
+            type: string
+            length: '100'
+        apellido:
+            type: string
+            length: '100'
+        contraseña:
+            type: string
+            length: '20'
+        eMail:
+            type: string
+            length: '50'
     lifecycleCallbacks: {  }

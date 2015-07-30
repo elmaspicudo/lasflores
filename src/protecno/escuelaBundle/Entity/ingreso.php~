@@ -136,4 +136,32 @@ class ingreso
     {
         return $this->fecha;
     }
+    /**
+     * @var \protecno\escuelaBundle\Entity\finanzasCategoria
+     */
+    private $finanzasCategoria;
+
+
+    /**
+     * Set finanzasCategoria
+     *
+     * @param \protecno\escuelaBundle\Entity\finanzasCategoria $finanzasCategoria
+     * @return ingreso
+     */
+    public function setFinanzasCategoria(\protecno\escuelaBundle\Entity\finanzasCategoria $finanzasCategoria = null)
+    {
+        $this->finanzasCategoria = $finanzasCategoria;
+    
+        return $this;
+    }
+
+    /**
+     * Get finanzasCategoria
+     *
+     * @return \protecno\escuelaBundle\Entity\finanzasCategoria 
+     */
+    public function getFinanzasCategoria()
+    {
+        return $this->finanzasCategoria;
+    }
 }

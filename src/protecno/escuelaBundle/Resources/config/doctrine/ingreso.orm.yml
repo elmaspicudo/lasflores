@@ -17,4 +17,8 @@ protecno\escuelaBundle\Entity\ingreso:
             type: integer
         fecha:
             type: datetime
+    manyToOne:
+        finanzasCategoria:
+            targetEntity: protecno\escuelaBundle\Entity\finanzasCategoria
+            inversedBy: ingreso        
     lifecycleCallbacks: {  }

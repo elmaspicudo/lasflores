@@ -1,0 +1,14 @@
+protecno\escuelaBundle\Entity\estructuraDeTarifas:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToMany:
+        cuotaColeccion:
+            targetEntity: protecno\escuelaBundle\Entity\cuotaColeccion
+            inversedBy: estructuraDeTarifas            
+    lifecycleCallbacks: {  }

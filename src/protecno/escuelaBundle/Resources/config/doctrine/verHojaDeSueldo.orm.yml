@@ -7,4 +7,10 @@ protecno\escuelaBundle\Entity\verHojaDeSueldo:
             id: true
             generator:
                 strategy: AUTO
+        mes:
+            type: datetime        
+    manyToOne:
+        anadirDepartamentoEmpleo:
+            targetEntity: protecno\escuelaBundle\Entity\anadirDepartamentoEmpleo
+            inversedBy: verHojaDeSueldo            
     lifecycleCallbacks: {  }

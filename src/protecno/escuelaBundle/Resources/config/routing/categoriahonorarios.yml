@@ -1,0 +1,30 @@
+categoriahonorarios:
+    path:     /
+    defaults: { _controller: "escuelaBundle:categoriaHonorarios:index" }
+
+categoriahonorarios_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:categoriaHonorarios:show" }
+
+categoriahonorarios_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:categoriaHonorarios:new" }
+
+categoriahonorarios_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:categoriaHonorarios:create" }
+    requirements: { _method: post }
+
+categoriahonorarios_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:categoriaHonorarios:edit" }
+
+categoriahonorarios_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:categoriaHonorarios:update" }
+    requirements: { _method: post|put }
+
+categoriahonorarios_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:categoriaHonorarios:delete" }
+    requirements: { _method: post|delete }

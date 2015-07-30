@@ -1,0 +1,30 @@
+ingreso:
+    path:     /
+    defaults: { _controller: "escuelaBundle:ingreso:index" }
+
+ingreso_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:ingreso:show" }
+
+ingreso_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:ingreso:new" }
+
+ingreso_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:ingreso:create" }
+    requirements: { _method: post }
+
+ingreso_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:ingreso:edit" }
+
+ingreso_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:ingreso:update" }
+    requirements: { _method: post|put }
+
+ingreso_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:ingreso:delete" }
+    requirements: { _method: post|delete }

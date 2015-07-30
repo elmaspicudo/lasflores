@@ -1,0 +1,30 @@
+finanzascategoria:
+    path:     /
+    defaults: { _controller: "escuelaBundle:finanzasCategoria:index" }
+
+finanzascategoria_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:finanzasCategoria:show" }
+
+finanzascategoria_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:finanzasCategoria:new" }
+
+finanzascategoria_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:finanzasCategoria:create" }
+    requirements: { _method: post }
+
+finanzascategoria_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:finanzasCategoria:edit" }
+
+finanzascategoria_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:finanzasCategoria:update" }
+    requirements: { _method: post|put }
+
+finanzascategoria_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:finanzasCategoria:delete" }
+    requirements: { _method: post|delete }

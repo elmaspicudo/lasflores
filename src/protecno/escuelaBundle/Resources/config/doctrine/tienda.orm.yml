@@ -15,5 +15,12 @@ protecno\escuelaBundle\Entity\tienda:
             length: '50'
         facturaPrefijo:
             type: string
-            length: 255
+            length: '100'
+    manyToOne:
+        tiendaCategorias:
+            targetEntity: protecno\escuelaBundle\Entity\tiendaCategorias
+            inversedBy: tienda
+        tipoDeTienda:
+            targetEntity: protecno\escuelaBundle\Entity\tipoDeTienda
+            inversedBy: tienda               
     lifecycleCallbacks: {  }

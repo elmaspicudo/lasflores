@@ -1,0 +1,30 @@
+gasto:
+    path:     /
+    defaults: { _controller: "escuelaBundle:gasto:index" }
+
+gasto_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:gasto:show" }
+
+gasto_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:gasto:new" }
+
+gasto_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:gasto:create" }
+    requirements: { _method: post }
+
+gasto_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:gasto:edit" }
+
+gasto_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:gasto:update" }
+    requirements: { _method: post|put }
+
+gasto_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:gasto:delete" }
+    requirements: { _method: post|delete }

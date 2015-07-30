@@ -1,0 +1,30 @@
+ordenesdecompra:
+    path:     /
+    defaults: { _controller: "escuelaBundle:ordenesDeCompra:index" }
+
+ordenesdecompra_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:ordenesDeCompra:show" }
+
+ordenesdecompra_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:ordenesDeCompra:new" }
+
+ordenesdecompra_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:ordenesDeCompra:create" }
+    requirements: { _method: post }
+
+ordenesdecompra_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:ordenesDeCompra:edit" }
+
+ordenesdecompra_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:ordenesDeCompra:update" }
+    requirements: { _method: post|put }
+
+ordenesdecompra_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:ordenesDeCompra:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,17 @@
+protecno\escuelaBundle\Entity\cuotasInforme:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToMany:
+        lotes:
+            targetEntity: protecno\escuelaBundle\Entity\lotes
+            inversedBy: cuotasInforme
+        cuotaColeccion:
+            targetEntity: protecno\escuelaBundle\Entity\cuotaColeccion
+            inversedBy: cuotasInforme            
+    lifecycleCallbacks: {  }

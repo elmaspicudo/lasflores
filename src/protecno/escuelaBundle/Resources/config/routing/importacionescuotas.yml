@@ -1,0 +1,30 @@
+importacionescuotas:
+    path:     /
+    defaults: { _controller: "escuelaBundle:importacionesCuotas:index" }
+
+importacionescuotas_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:importacionesCuotas:show" }
+
+importacionescuotas_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:importacionesCuotas:new" }
+
+importacionescuotas_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:importacionesCuotas:create" }
+    requirements: { _method: post }
+
+importacionescuotas_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:importacionesCuotas:edit" }
+
+importacionescuotas_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:importacionesCuotas:update" }
+    requirements: { _method: post|put }
+
+importacionescuotas_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:importacionesCuotas:delete" }
+    requirements: { _method: post|delete }

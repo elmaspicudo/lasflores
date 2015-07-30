@@ -1,0 +1,17 @@
+protecno\escuelaBundle\Entity\generarMulta:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        nombreMulta:
+            type: string
+            length: '100'
+        diasDespuesDeLaFechaDeVencimiento:
+            type: integer
+        multaCantidad:
+            type: integer
+    lifecycleCallbacks: {  }

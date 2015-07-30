@@ -1,0 +1,17 @@
+protecno\escuelaBundle\Entity\tema:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToMany:
+        lotes:
+            targetEntity: protecno\escuelaBundle\Entity\lotes
+            inversedBy: tema
+        asignaturas:
+            targetEntity: protecno\escuelaBundle\Entity\asignaturas
+            inversedBy: tema        
+    lifecycleCallbacks: {  }

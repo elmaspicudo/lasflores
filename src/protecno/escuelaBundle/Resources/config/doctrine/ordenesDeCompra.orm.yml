@@ -1,0 +1,38 @@
+protecno\escuelaBundle\Entity\ordenesDeCompra:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        ordenDeCompraNo:
+            type: integer
+        fecha:
+            type: datetime
+        referencia:
+            type: string
+            length: '40'
+        precioUnitario:
+            type: integer
+        cantidad:
+            type: integer
+        descuento:
+            type: integer
+        impuestos:
+            type: integer
+    manyToOne:
+        tienda:
+            targetEntity: protecno\escuelaBundle\Entity\tienda
+            inversedBy: ordenesDeCompra
+        tiposDeProveedor:
+            targetEntity: protecno\escuelaBundle\Entity\tiposDeProveedor
+            inversedBy: ordenesDeCompra 
+        proveedores:
+            targetEntity: protecno\escuelaBundle\Entity\proveedores
+            inversedBy: ordenesDeCompra
+        articuloTienda:
+            targetEntity: protecno\escuelaBundle\Entity\articuloTienda
+            inversedBy: ordenesDeCompra                      
+    lifecycleCallbacks: {  }

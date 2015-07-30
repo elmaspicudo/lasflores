@@ -1,0 +1,30 @@
+generarmulta:
+    path:     /
+    defaults: { _controller: "escuelaBundle:generarMulta:index" }
+
+generarmulta_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:generarMulta:show" }
+
+generarmulta_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:generarMulta:new" }
+
+generarmulta_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:generarMulta:create" }
+    requirements: { _method: post }
+
+generarmulta_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:generarMulta:edit" }
+
+generarmulta_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:generarMulta:update" }
+    requirements: { _method: post|put }
+
+generarmulta_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:generarMulta:delete" }
+    requirements: { _method: post|delete }

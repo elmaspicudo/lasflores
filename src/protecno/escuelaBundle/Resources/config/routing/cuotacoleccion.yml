@@ -1,0 +1,30 @@
+cuotacoleccion:
+    path:     /
+    defaults: { _controller: "escuelaBundle:cuotaColeccion:index" }
+
+cuotacoleccion_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:cuotaColeccion:show" }
+
+cuotacoleccion_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:cuotaColeccion:new" }
+
+cuotacoleccion_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:cuotaColeccion:create" }
+    requirements: { _method: post }
+
+cuotacoleccion_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:cuotaColeccion:edit" }
+
+cuotacoleccion_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:cuotaColeccion:update" }
+    requirements: { _method: post|put }
+
+cuotacoleccion_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:cuotaColeccion:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,30 @@
+honorariosinstantaneos:
+    path:     /
+    defaults: { _controller: "escuelaBundle:honorariosInstantaneos:index" }
+
+honorariosinstantaneos_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:honorariosInstantaneos:show" }
+
+honorariosinstantaneos_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:honorariosInstantaneos:new" }
+
+honorariosinstantaneos_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:honorariosInstantaneos:create" }
+    requirements: { _method: post }
+
+honorariosinstantaneos_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:honorariosInstantaneos:edit" }
+
+honorariosinstantaneos_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:honorariosInstantaneos:update" }
+    requirements: { _method: post|put }
+
+honorariosinstantaneos_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:honorariosInstantaneos:delete" }
+    requirements: { _method: post|delete }

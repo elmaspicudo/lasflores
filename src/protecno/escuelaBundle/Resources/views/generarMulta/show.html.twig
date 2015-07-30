@@ -1,0 +1,40 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>generarMulta</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombremulta</th>
+                <td>{{ entity.nombreMulta }}</td>
+            </tr>
+            <tr>
+                <th>Diasdespuesdelafechadevencimiento</th>
+                <td>{{ entity.diasDespuesDeLaFechaDeVencimiento }}</td>
+            </tr>
+            <tr>
+                <th>Multacantidad</th>
+                <td>{{ entity.multaCantidad }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('generarmulta') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('generarmulta_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

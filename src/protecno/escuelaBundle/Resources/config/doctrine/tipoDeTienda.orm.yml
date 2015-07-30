@@ -12,5 +12,5 @@ protecno\escuelaBundle\Entity\tipoDeTienda:
             length: '100'
         codigo:
             type: string
-            length: '100'
+            length: '50'
     lifecycleCallbacks: {  }

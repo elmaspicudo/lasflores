@@ -1,0 +1,30 @@
+tipodetienda:
+    path:     /
+    defaults: { _controller: "escuelaBundle:tipoDeTienda:index" }
+
+tipodetienda_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:tipoDeTienda:show" }
+
+tipodetienda_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:tipoDeTienda:new" }
+
+tipodetienda_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:tipoDeTienda:create" }
+    requirements: { _method: post }
+
+tipodetienda_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:tipoDeTienda:edit" }
+
+tipodetienda_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:tipoDeTienda:update" }
+    requirements: { _method: post|put }
+
+tipodetienda_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:tipoDeTienda:delete" }
+    requirements: { _method: post|delete }
