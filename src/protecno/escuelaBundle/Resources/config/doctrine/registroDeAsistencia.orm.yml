@@ -10,4 +10,8 @@ protecno\escuelaBundle\Entity\registroDeAsistencia:
         descripcion:
             type: string
             length: 255
+    oneToMany:
+        anadirDepartamentoEmpleo:
+            targetEntity:  protecno\escuelaBundle\Entity\anadirDepartamentoEmpleo
+            mappedBy: registroDeAsistencia    
     lifecycleCallbacks: {  }

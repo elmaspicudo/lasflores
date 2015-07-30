@@ -1,0 +1,20 @@
+protecno\escuelaBundle\Entity\verHorarios:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        descripcion:
+            type: string
+            length: 255
+    manyToMany:
+        nuevoHorario:
+            targetEntity: protecno\escuelaBundle\Entity\nuevoHorario
+            inversedBy: verHorarios 
+        lotes:
+            targetEntity: protecno\escuelaBundle\Entity\lotes
+            inversedBy: verHorarios                
+    lifecycleCallbacks: {  }

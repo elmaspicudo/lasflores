@@ -17,8 +17,23 @@ class curso
     /**
      * @var string
      */
-    private $descripcion;
+    private $nombreDelCurso;
 
+    /**
+     * @var string
+     */
+    private $nombreDeLaSeccion;
+
+    /**
+     * @var boolean
+     */
+    private $activarLaSeleccionElectiva;
+
+    /**
+     * @var \protecno\escuelaBundle\Entity\lotes
+     */
+    private $lotes;
+    
     /**
      * Get id
      *
@@ -26,32 +41,77 @@ class curso
      */
     public function __toString()
     {
-        return $this->descripcion;
+        return $this->nombreDelCurso;
     }
 
     /**
-     * Set descripcion
+     * Set nombreDelCurso
      *
-     * @param string $descripcion
+     * @param string $nombreDelCurso
      * @return curso
      */
-    public function setDescripcion($descripcion)
+    public function setNombreDelCurso($nombreDelCurso)
     {
-        $this->descripcion = $descripcion;
+        $this->nombreDelCurso = $nombreDelCurso;
     
         return $this;
     }
 
     /**
-     * Get descripcion
+     * Get nombreDelCurso
      *
      * @return string 
      */
-    public function getDescripcion()
+    public function getNombreDelCurso()
     {
-        return $this->descripcion;
+        return $this->nombreDelCurso;
     }
 
+    /**
+     * Set nombreDeLaSeccion
+     *
+     * @param string $nombreDeLaSeccion
+     * @return curso
+     */
+    public function setNombreDeLaSeccion($nombreDeLaSeccion)
+    {
+        $this->nombreDeLaSeccion = $nombreDeLaSeccion;
+    
+        return $this;
+    }
+
+    /**
+     * Get nombreDeLaSeccion
+     *
+     * @return string 
+     */
+    public function getNombreDeLaSeccion()
+    {
+        return $this->nombreDeLaSeccion;
+    }
+
+    /**
+     * Set activarLaSeleccionElectiva
+     *
+     * @param boolean $activarLaSeleccionElectiva
+     * @return curso
+     */
+    public function setActivarLaSeleccionElectiva($activarLaSeleccionElectiva)
+    {
+        $this->activarLaSeleccionElectiva = $activarLaSeleccionElectiva;
+    
+        return $this;
+    }
+
+    /**
+     * Get activarLaSeleccionElectiva
+     *
+     * @return boolean 
+     */
+    public function getActivarLaSeleccionElectiva()
+    {
+        return $this->activarLaSeleccionElectiva;
+    }
 
     /**
      * Get id
@@ -61,5 +121,60 @@ class curso
     public function getId()
     {
         return $this->id;
+    }
+
+
+
+    /**
+     * Set lotes
+     *
+     * @param \protecno\escuelaBundle\Entity\lotes $lotes
+     * @return curso
+     */
+    public function setLotes(\protecno\escuelaBundle\Entity\lotes $lotes = null)
+    {
+        $this->lotes = $lotes;
+    
+        return $this;
+    }
+
+    /**
+     * Get lotes
+     *
+     * @return \protecno\escuelaBundle\Entity\lotes 
+     */
+    public function getLotes()
+    {
+        return $this->lotes;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->lotes = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Add lotes
+     *
+     * @param \protecno\escuelaBundle\Entity\lotes $lotes
+     * @return curso
+     */
+    public function addLote(\protecno\escuelaBundle\Entity\lotes $lotes)
+    {
+        $this->lotes[] = $lotes;
+    
+        return $this;
+    }
+
+    /**
+     * Remove lotes
+     *
+     * @param \protecno\escuelaBundle\Entity\lotes $lotes
+     */
+    public function removeLote(\protecno\escuelaBundle\Entity\lotes $lotes)
+    {
+        $this->lotes->removeElement($lotes);
     }
 }

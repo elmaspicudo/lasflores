@@ -32,4 +32,16 @@ protecno\escuelaBundle\Entity\alumno:
         nacionalidad:
             type: string
             length: '50'
+        fechaDeNacimiento:
+            type: datetime 
+    manyToOne:
+        agrego: 
+            targetEntity: protecno\escuelaBundle\Entity\anadirUsuario
+            inversedBy: alumno
+        modifico: 
+            targetEntity: protecno\escuelaBundle\Entity\anadirUsuario
+            inversedBy: alumno
+        archivo:         
+            targetEntity: protecno\escuelaBundle\Entity\archivo
+            cascade: ["persist"]
     lifecycleCallbacks: {  }

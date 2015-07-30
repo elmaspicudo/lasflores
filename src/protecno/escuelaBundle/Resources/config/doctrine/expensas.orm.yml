@@ -1,0 +1,21 @@
+protecno\escuelaBundle\Entity\expensas:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        titulo:
+            type: string
+            length: '100'
+        descripcion:
+            type: string
+            length: '100'
+        importe:
+            type: string
+            length: '50'
+        fecha:
+            type: datetime
+    lifecycleCallbacks: {  }

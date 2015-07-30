@@ -3,12 +3,13 @@
 namespace protecno\escuelaBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * anadirUsuario
  */
-class anadirUsuario
+class anadirUsuario implements UserInterface
 {
+   
     /**
      * @var integer
      */
@@ -18,28 +19,40 @@ class anadirUsuario
      * @var string
      */
     private $nombreDelUsuario;
+   
+    /**
+     * @var string
+     */
+    private $password; 
 
     /**
      * @var string
      */
-    private $nombre;
+    private $salt;
 
     /**
-     * @var string
+     * @var integer
      */
-    private $apellido;
+    private $idPerfil;
 
     /**
-     * @var string
+     * @var \Doctrine\Common\Collections\Collection
      */
-    private $contraseña;
+    private $roles;
 
     /**
-     * @var string
+     * @var integer
      */
-    private $eMail;
+    private $role;
 
-
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->roles = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
     /**
      * Get id
      *
@@ -73,95 +86,142 @@ class anadirUsuario
         return $this->nombreDelUsuario;
     }
 
-    /**
-     * Set nombre
+       /**
+     * Set password
      *
-     * @param string $nombre
+     * @param string $password
      * @return anadirUsuario
      */
-    public function setNombre($nombre)
+    public function setPassword($password)
     {
-        $this->nombre = $nombre;
+        $this->password = $password;
     
         return $this;
     }
 
     /**
-     * Get nombre
+     * Get password
      *
      * @return string 
      */
-    public function getNombre()
+    public function getPassword()
     {
-        return $this->nombre;
+        return $this->password;
     }
+  
 
     /**
-     * Set apellido
+     * Set salt
      *
-     * @param string $apellido
+     * @param string $salt
      * @return anadirUsuario
      */
-    public function setApellido($apellido)
+    public function setSalt($salt)
     {
-        $this->apellido = $apellido;
+        $this->salt = $salt;
     
         return $this;
     }
 
     /**
-     * Get apellido
+     * Get salt
      *
      * @return string 
      */
-    public function getApellido()
+    public function getSalt()
     {
-        return $this->apellido;
+        return $this->salt;
     }
 
     /**
-     * Set contraseña
+     * Set idPerfil
      *
-     * @param string $contraseña
+     * @param integer $idPerfil
      * @return anadirUsuario
      */
-    public function setContraseña($contraseña)
+    public function setIdPerfil($idPerfil)
     {
-        $this->contraseña = $contraseña;
+        $this->idPerfil = $idPerfil;
     
         return $this;
     }
 
     /**
-     * Get contraseña
+     * Get idPerfil
      *
-     * @return string 
+     * @return integer 
      */
-    public function getContraseña()
+    public function getIdPerfil()
     {
-        return $this->contraseña;
+        return $this->idPerfil;
     }
 
     /**
-     * Set eMail
+     * Add roles
      *
-     * @param string $eMail
+     * @param \protecno\escuelaBundle\Entity\role $roles
      * @return anadirUsuario
      */
-    public function setEMail($eMail)
+    public function addRole(\protecno\escuelaBundle\Entity\role $roles)
     {
-        $this->eMail = $eMail;
+        $this->roles[] = $roles;
     
         return $this;
     }
 
     /**
-     * Get eMail
+     * Remove roles
+     *
+     * @param \protecno\escuelaBundle\Entity\role $roles
+     */
+    public function removeRole(\protecno\escuelaBundle\Entity\role $roles)
+    {
+        $this->roles->removeElement($roles);
+    }
+
+    /**
+     * Get roles
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getRoles()
+    {
+        $losroles=array();
+        foreach ($this->roles as $key) {
+            $losroles[]=$key->getName();
+        }
+        return $losroles;
+    }
+
+     /**
+     * set role
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function setRole($role)
+    {
+        $this->role=$role;
+        return $this;
+    }
+
+     /**
+     * Get roles
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getRole()
+    {
+        return $this->role;
+    }
+
+      /**
+     * Get username
      *
      * @return string 
      */
-    public function getEMail()
+    public function getUsername()
     {
-        return $this->eMail;
+        return $this->nombreDelUsuario;
     }
+    function eraseCredentials(){}
 }

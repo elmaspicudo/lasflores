@@ -10,4 +10,8 @@ protecno\escuelaBundle\Entity\lotes:
         descripcion:
             type: string
             length: 255
+        fechaDeIncio:
+            type: datetime
+        fechaDeFinal:
+            type: datetime    
     lifecycleCallbacks: {  }

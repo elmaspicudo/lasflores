@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel='stylesheet' href="{{ asset('bundles/escuela/css/style.css') }}" >
   <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700|Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
-
+  {% block style %}{% endblock %}
   <link href="assets/favicon.ico" rel="shortcut icon">
   <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -81,7 +81,7 @@
       </a>
     </li>
     <li>
-      <a href="{{ path('detallesdecontacto') }}" data-toggle="tooltip" data-placement="right" title="" data-original-title="Alumnos">
+      <a href="{{ path('detallesdecontacto') }}" data-toggle="tooltip" data-placement="right" title="Alumnos" data-original-title="Alumnos">
         <i class="fa fa-file-text-o"></i>
       </a>
     </li>
@@ -92,13 +92,13 @@
       </a>
     </li>
     <li>
-      <a href="charts.html" data-toggle="tooltip" data-placement="right" title="" data-original-title="Charts">
-        <i class="fa fa-bar-chart-o"></i>
+      <a href="{{ path('curso') }}" data-toggle="tooltip" data-placement="right" title="Configuracion" data-original-title="Configuracion">
+        <i class="fa fa-th"></i>
       </a>
     </li>
     <li>
       <a href="table.html" data-toggle="tooltip" data-placement="right" title="" data-original-title="Tables">
-        <i class="fa fa-th"></i>
+        <i class="fa fa-bar-chart-o"></i>
       </a>
     </li>
     <li>
@@ -126,13 +126,10 @@
 </div>
   <div class="sub-sidebar-wrapper">
   <ul class="nav">
-    <li><a href="#widget_stats">Statistics</a></li>
-    <li><a href="#widget_profit_chart">Profit Charts</a></li>
-    <li><a href="#widget_tasks_list">Tasks List</a></li>
-    <li><a href="#widget_real_time_chart">Real Time Chart</a></li>
-    <li><a href="#widget_server_activity">Server Activity</a></li>
-    <li><a href="#widget_calendar">Calendar</a></li>
-    <li><a href="#widget_tabs">Tabs</a></li>
+  {% block submenu -%}
+      <li><a href="{{ path('curso') }}">Grados</a></li>
+      <li><a href="{{ path('lotes') }}">Ciclo escolar</a></li>
+  {% endblock -%}
   </ul>
 </div>
   </div>
@@ -163,5 +160,5 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 <script src="{{ asset('bundles/escuela/js/pluggins.js')}}"></script>
-
-<!-- @include _footer
+{% block scripts -%}
+{% endblock -%}

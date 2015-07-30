@@ -1,0 +1,30 @@
+categoriafoto:
+    path:     /
+    defaults: { _controller: "escuelaBundle:categoriaFoto:index" }
+
+categoriafoto_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:categoriaFoto:show" }
+
+categoriafoto_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:categoriaFoto:new" }
+
+categoriafoto_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:categoriaFoto:create" }
+    requirements: { _method: post }
+
+categoriafoto_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:categoriaFoto:edit" }
+
+categoriafoto_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:categoriaFoto:update" }
+    requirements: { _method: post|put }
+
+categoriafoto_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:categoriaFoto:delete" }
+    requirements: { _method: post|delete }

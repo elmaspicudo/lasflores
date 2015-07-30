@@ -17,12 +17,12 @@ class nuevoHorario
     /**
      * @var \DateTime
      */
-    private $inicio;
+    private $fechaDeInicio;
 
     /**
      * @var \DateTime
      */
-    private $fin;
+    private $fechaFinal;
 
 
     /**
@@ -36,48 +36,48 @@ class nuevoHorario
     }
 
     /**
-     * Set inicio
+     * Set fechaDeInicio
      *
-     * @param \DateTime $inicio
+     * @param \DateTime $fechaDeInicio
      * @return nuevoHorario
      */
-    public function setInicio($inicio)
+    public function setFechaDeInicio($fechaDeInicio)
     {
-        $this->inicio = $inicio;
+        $this->fechaDeInicio = $fechaDeInicio;
     
         return $this;
     }
 
     /**
-     * Get inicio
+     * Get fechaDeInicio
      *
      * @return \DateTime 
      */
-    public function getInicio()
+    public function getFechaDeInicio()
     {
-        return $this->inicio;
+        return $this->fechaDeInicio;
     }
 
     /**
-     * Set fin
+     * Set fechaFinal
      *
-     * @param \DateTime $fin
+     * @param \DateTime $fechaFinal
      * @return nuevoHorario
      */
-    public function setFin($fin)
+    public function setFechaFinal($fechaFinal)
     {
-        $this->fin = $fin;
+        $this->fechaFinal = $fechaFinal;
     
         return $this;
     }
 
     /**
-     * Get fin
+     * Get fechaFinal
      *
      * @return \DateTime 
      */
-    public function getFin()
+    public function getFechaFinal()
     {
-        return $this->fin;
+        return $this->fechaFinal;
     }
 }

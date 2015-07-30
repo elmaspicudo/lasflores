@@ -1,0 +1,30 @@
+seriesdetiempodeclasepordias:
+    path:     /
+    defaults: { _controller: "escuelaBundle:seriesDeTiempoDeClasePorDias:index" }
+
+seriesdetiempodeclasepordias_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:seriesDeTiempoDeClasePorDias:show" }
+
+seriesdetiempodeclasepordias_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:seriesDeTiempoDeClasePorDias:new" }
+
+seriesdetiempodeclasepordias_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:seriesDeTiempoDeClasePorDias:create" }
+    requirements: { _method: post }
+
+seriesdetiempodeclasepordias_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:seriesDeTiempoDeClasePorDias:edit" }
+
+seriesdetiempodeclasepordias_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:seriesDeTiempoDeClasePorDias:update" }
+    requirements: { _method: post|put }
+
+seriesdetiempodeclasepordias_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:seriesDeTiempoDeClasePorDias:delete" }
+    requirements: { _method: post|delete }

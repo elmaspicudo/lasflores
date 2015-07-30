@@ -1,0 +1,21 @@
+protecno\escuelaBundle\Entity\tiempoDeClase:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        nombre:
+            type: string
+            length: 255
+        horaDeInicio:
+            type: datetime
+        horaDeFinalizacion:
+            type: datetime
+    onetoMany:
+        temporizacionDeClase:
+            targetEntity: protecno\escuelaBundle\Entity\temporizacionDeClase
+            inversedBy: tiempoDeClase
+    lifecycleCallbacks: {  }

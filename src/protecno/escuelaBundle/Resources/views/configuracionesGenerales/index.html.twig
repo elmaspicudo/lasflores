@@ -1,0 +1,67 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>configuracionesGenerales list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombredelcolegio</th>
+                <th>Direcciondelcolegio</th>
+                <th>Telefonodelcolegio</th>
+                <th>Ejerciciofechadeinicio</th>
+                <th>Ejerciciofechadelfinal</th>
+                <th>Numeroderecibopartir</th>
+                <th>Tipodemoneda</th>
+                <th>Incrementodeadmisionestudiantilno</th>
+                <th>Incrementodelempleadono</th>
+                <th>Noticiasmoderaciondecomentarios</th>
+                <th>Habilitarhermano</th>
+                <th>Cambiodecontrasenainiciodesesion</th>
+                <th>Activarnumeroderolloparaestudiantes</th>
+                <th>Habilitaroauth</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('configuracionesgenerales_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.nombreDelColegio }}</td>
+                <td>{{ entity.direccionDelColegio }}</td>
+                <td>{{ entity.telefonoDelColegio }}</td>
+                <td>{% if entity.ejercicioFechaDeInicio %}{{ entity.ejercicioFechaDeInicio|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.ejercicioFechaDelFinal %}{{ entity.ejercicioFechaDelFinal|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.numeroDeReciboPartir }}</td>
+                <td>{{ entity.tipoDeMoneda }}</td>
+                <td>{{ entity.incrementoDeAdmisionEstudiantilNo }}</td>
+                <td>{{ entity.incrementoDelEmpleadoNo }}</td>
+                <td>{{ entity.noticiasModeracionDeComentarios }}</td>
+                <td>{{ entity.habilitarHermano }}</td>
+                <td>{{ entity.cambioDeContrasenaInicioDeSesion }}</td>
+                <td>{{ entity.activarNumeroDeRolloParaEstudiantes }}</td>
+                <td>{{ entity.habilitarOauth }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('configuracionesgenerales_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('configuracionesgenerales_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('configuracionesgenerales_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

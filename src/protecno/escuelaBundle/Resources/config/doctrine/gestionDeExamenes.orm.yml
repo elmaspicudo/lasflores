@@ -7,7 +7,8 @@ protecno\escuelaBundle\Entity\gestionDeExamenes:
             id: true
             generator:
                 strategy: AUTO
-        descripcion:
-            type: string
-            length: 255
+    manyToMany:
+        lotes:
+            targetEntity: protecno\escuelaBundle\Entity\lotes
+            inversedBy: gestionDeExamenes       
     lifecycleCallbacks: {  }

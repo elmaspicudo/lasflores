@@ -1,0 +1,30 @@
+comentariospersonalizados:
+    path:     /
+    defaults: { _controller: "escuelaBundle:comentariosPersonalizados:index" }
+
+comentariospersonalizados_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:comentariosPersonalizados:show" }
+
+comentariospersonalizados_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:comentariosPersonalizados:new" }
+
+comentariospersonalizados_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:comentariosPersonalizados:create" }
+    requirements: { _method: post }
+
+comentariospersonalizados_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:comentariosPersonalizados:edit" }
+
+comentariospersonalizados_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:comentariosPersonalizados:update" }
+    requirements: { _method: post|put }
+
+comentariospersonalizados_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:comentariosPersonalizados:delete" }
+    requirements: { _method: post|delete }

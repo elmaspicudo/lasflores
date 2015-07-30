@@ -1,0 +1,30 @@
+nuevatarea:
+    path:     /
+    defaults: { _controller: "escuelaBundle:nuevaTarea:index" }
+
+nuevatarea_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:nuevaTarea:show" }
+
+nuevatarea_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:nuevaTarea:new" }
+
+nuevatarea_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:nuevaTarea:create" }
+    requirements: { _method: post }
+
+nuevatarea_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:nuevaTarea:edit" }
+
+nuevatarea_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:nuevaTarea:update" }
+    requirements: { _method: post|put }
+
+nuevatarea_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:nuevaTarea:delete" }
+    requirements: { _method: post|delete }

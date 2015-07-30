@@ -1,0 +1,30 @@
+gestiondedatoscategorias:
+    path:     /
+    defaults: { _controller: "escuelaBundle:gestionDeDatosCategorias:index" }
+
+gestiondedatoscategorias_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:gestionDeDatosCategorias:show" }
+
+gestiondedatoscategorias_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:gestionDeDatosCategorias:new" }
+
+gestiondedatoscategorias_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:gestionDeDatosCategorias:create" }
+    requirements: { _method: post }
+
+gestiondedatoscategorias_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:gestionDeDatosCategorias:edit" }
+
+gestiondedatoscategorias_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:gestionDeDatosCategorias:update" }
+    requirements: { _method: post|put }
+
+gestiondedatoscategorias_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:gestionDeDatosCategorias:delete" }
+    requirements: { _method: post|delete }

@@ -19,4 +19,8 @@ protecno\escuelaBundle\Entity\nuevoGrupoPin:
             length: '10'
         estaActivo:
             type: boolean
+    manyToMany:
+        curso:
+            targetEntity: protecno\escuelaBundle\Entity\curso
+            inversedBy: nuevoGrupoPin     
     lifecycleCallbacks: {  }

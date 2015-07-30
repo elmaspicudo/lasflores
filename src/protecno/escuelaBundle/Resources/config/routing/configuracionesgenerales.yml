@@ -1,0 +1,30 @@
+configuracionesgenerales:
+    path:     /
+    defaults: { _controller: "escuelaBundle:configuracionesGenerales:index" }
+
+configuracionesgenerales_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:configuracionesGenerales:show" }
+
+configuracionesgenerales_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:configuracionesGenerales:new" }
+
+configuracionesgenerales_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:configuracionesGenerales:create" }
+    requirements: { _method: post }
+
+configuracionesgenerales_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:configuracionesGenerales:edit" }
+
+configuracionesgenerales_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:configuracionesGenerales:update" }
+    requirements: { _method: post|put }
+
+configuracionesgenerales_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:configuracionesGenerales:delete" }
+    requirements: { _method: post|delete }

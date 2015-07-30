@@ -1,0 +1,15 @@
+protecno\escuelaBundle\Entity\configuracionDeLaTarjetaBiblioteca:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        librosEmisionCondicionada:
+            type: string
+            length: '100'
+        periodoDeTiempoDias:
+            type: integer
+    lifecycleCallbacks: {  }

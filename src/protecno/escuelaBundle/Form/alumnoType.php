@@ -17,12 +17,18 @@ class alumnoType extends AbstractType
         $builder
             ->add('noDeAdmision')
             ->add('nombre')
-            ->add('apellidoPaterno')
+            ->add('apellidoPaterno') 
             ->add('apellidoMaterno')
             ->add('genero')
             ->add('grupoSanguineo')
             ->add('lugarDeNacimiento')
-            ->add('nacionalidad')            
+            ->add('nacionalidad') 
+            ->add('fechaDeNacimiento', 'date', array(
+                        'widget' => 'single_text'
+                    ))
+            ->add('archivo', new archivoType(), array(
+                'attr' => array('id' => 'well')
+            ))           
         ;
     }
     

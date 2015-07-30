@@ -10,4 +10,8 @@ protecno\escuelaBundle\Entity\reciboDeSueldoDelEmpleado:
         descripcion:
             type: string
             length: 255
+    manyToOne:
+        anadirDepartamentoEmpleo:
+            targetEntity:  protecno\escuelaBundle\Entity\anadirDepartamentoEmpleo
+            mappedBy: reciboDeSueldoDelEmpleado    
     lifecycleCallbacks: {  }

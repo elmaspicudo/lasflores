@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class archivo
 {
+   
     /**
      * @var integer
      */
@@ -33,11 +34,6 @@ class archivo
      * @var \DateTime
      */
     private $updated;
-
-    /**
-     * @var integer
-     */
-    private $tipo;
 
 
     /**
@@ -143,25 +139,66 @@ class archivo
     }
 
     /**
-     * Set tipo
-     *
-     * @param integer $tipo
-     * @return archivo
+     * Manages the copying of the file to the relevant place on the server
      */
-    public function setTipo($tipo)
+    public function upload($dir='perfil')
     {
-        $this->tipo = $tipo;
-    
-        return $this;
+        // the file property can be empty if the field is not required
+        if (null === $this->getImagen()) {
+            return;
+        }
+
+        // we use the original file name here but you should
+        // sanitize it at least to avoid any security issues
+
+        // move takes the target directory and target filename as params
+        $this->getImagen()->move(
+            $this->getUploadRootDir($dir),
+            time().$this->getImagen()->getClientOriginalName()
+        );
+
+        // set the path property to the filename where you've saved the file
+        $this->path = time().$this->getImagen()->getClientOriginalName();
+        $this->setUpdated(new \DateTime("now"));
+        $this->imagen=$this->getUploadRootDir($dir).$this->path;
+        // clean up the f$this->path = $this->getFile()->getClientOriginalName();ile property as you won't need it anymore
+        //$this->setImagen(null);
     }
 
-    /**
-     * Get tipo
-     *
-     * @return integer 
+     /**
+     * Updates the hash value to force the preUpdate and postUpdate events to fire
      */
-    public function getTipo()
+   
+    public function getAbsolutePath()
     {
-        return $this->tipo;
+        return null === $this->path
+            ? null
+            : $this->getUploadRootDir().'/'.$this->path;
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->path
+            ? null
+            : $this->getUploadDir().'/'.$this->path;
+    }
+
+    protected function getUploadRootDir($dir='perfil')
+    {
+        // the absolute directory path where uploaded
+        // documents should be saved
+        return __DIR__.'/../../../../web/'.$this->getUploadDir($dir);
+    }
+
+    protected function getUploadDir($dir='perfil')
+    {
+        // get rid of the __DIR__ so it doesn't screw up
+        // when displaying uploaded doc/image in the view.
+        return 'images/'.$dir;
+    }
+
+   public function __toString()
+   { 
+     return $this->titulo;
     }
 }

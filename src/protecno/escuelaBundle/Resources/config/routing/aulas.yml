@@ -1,0 +1,30 @@
+aulas:
+    path:     /
+    defaults: { _controller: "escuelaBundle:aulas:index" }
+
+aulas_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:aulas:show" }
+
+aulas_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:aulas:new" }
+
+aulas_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:aulas:create" }
+    requirements: { _method: post }
+
+aulas_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:aulas:edit" }
+
+aulas_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:aulas:update" }
+    requirements: { _method: post|put }
+
+aulas_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:aulas:delete" }
+    requirements: { _method: post|delete }

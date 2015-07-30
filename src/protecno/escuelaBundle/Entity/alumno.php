@@ -304,4 +304,116 @@ class alumno
     {
         return $this->nacionalidad;
     }
+    /**
+     * @var \protecno\escuelaBundle\Entity\anadirUsuario
+     */
+    private $agrego;
+
+    /**
+     * @var \protecno\escuelaBundle\Entity\anadirUsuario
+     */
+    private $modifico;
+
+    /**
+     * @var \protecno\escuelaBundle\Entity\archivo
+     */
+    private $archivo;
+
+
+    /**
+     * Set agrego
+     *
+     * @param \protecno\escuelaBundle\Entity\anadirUsuario $agrego
+     * @return alumno
+     */
+    public function setAgrego(\protecno\escuelaBundle\Entity\anadirUsuario $agrego = null)
+    {
+        $this->agrego = $agrego;
+    
+        return $this;
+    }
+
+    /**
+     * Get agrego
+     *
+     * @return \protecno\escuelaBundle\Entity\anadirUsuario 
+     */
+    public function getAgrego()
+    {
+        return $this->agrego;
+    }
+
+    /**
+     * Set modifico
+     *
+     * @param \protecno\escuelaBundle\Entity\anadirUsuario $modifico
+     * @return alumno
+     */
+    public function setModifico(\protecno\escuelaBundle\Entity\anadirUsuario $modifico = null)
+    {
+        $this->modifico = $modifico;
+    
+        return $this;
+    }
+
+    /**
+     * Get modifico
+     *
+     * @return \protecno\escuelaBundle\Entity\anadirUsuario 
+     */
+    public function getModifico()
+    {
+        return $this->modifico;
+    }
+
+    /**
+     * Set archivo
+     *
+     * @param \protecno\escuelaBundle\Entity\archivo $archivo
+     * @return alumno
+     */
+    public function setArchivo(\protecno\escuelaBundle\Entity\archivo $archivo = null)
+    {
+        $this->archivo = $archivo;
+    
+        return $this;
+    }
+
+    /**
+     * Get archivo
+     *
+     * @return \protecno\escuelaBundle\Entity\archivo 
+     */
+    public function getArchivo()
+    {
+        return $this->archivo;
+    }
+    /**
+     * @var \DateTime
+     */
+    private $fechaDeNacimiento;
+
+
+    /**
+     * Set fechaDeNacimiento
+     *
+     * @param \DateTime $fechaDeNacimiento
+     * @return alumno
+     */
+    public function setFechaDeNacimiento($fechaDeNacimiento)
+    {
+        $this->fechaDeNacimiento = $fechaDeNacimiento;
+    
+        return $this;
+    }
+
+    /**
+     * Get fechaDeNacimiento
+     *
+     * @return \DateTime 
+     */
+    public function getFechaDeNacimiento()
+    {
+        return $this->fechaDeNacimiento;
+    }
 }

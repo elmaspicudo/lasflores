@@ -1,0 +1,16 @@
+protecno\escuelaBundle\Entity\restableserAjustes:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        habilitarRestablesimientoAutomatico:
+            type: boolean
+        dejaRestableserPeriodoMes:
+            type: integer
+        fiablesFechaEmpezar:
+            type: datetime
+    lifecycleCallbacks: {  }

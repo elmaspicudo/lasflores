@@ -1,0 +1,30 @@
+anadirusuario:
+    path:     /
+    defaults: { _controller: "escuelaBundle:anadirUsuario:index" }
+
+anadirusuario_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:anadirUsuario:show" }
+
+anadirusuario_new:
+    path:     /new/{idperfil}/{role}
+    defaults: { _controller: "escuelaBundle:anadirUsuario:new" }
+
+anadirusuario_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:anadirUsuario:create" }
+    requirements: { _method: post }
+
+anadirusuario_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:anadirUsuario:edit" }
+
+anadirusuario_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:anadirUsuario:update" }
+    requirements: { _method: post|put }
+
+anadirusuario_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:anadirUsuario:delete" }
+    requirements: { _method: post|delete }

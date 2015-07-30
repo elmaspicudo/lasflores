@@ -1,0 +1,55 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>anadirCurso list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Puntajeminimo</th>
+                <th>Cantidad</th>
+                <th>Estaactivo</th>
+                <th>Estaactivoenelsistemapin</th>
+                <th>Habilitarsistemadeaprobacion</th>
+                <th>Registrstrobasadoasunto</th>
+                <th>Incluyadetalles</th>
+                <th>Transferirarchivosadjuntosmientrasasignacion</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('anadircurso_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.puntajeMinimo }}</td>
+                <td>{{ entity.cantidad }}</td>
+                <td>{{ entity.estaActivo }}</td>
+                <td>{{ entity.estaActivoEnElSistemaPin }}</td>
+                <td>{{ entity.habilitarSistemaDeAprobacion }}</td>
+                <td>{{ entity.registrstroBasadoAsunto }}</td>
+                <td>{{ entity.incluyaDetalles }}</td>
+                <td>{{ entity.transferirArchivosAdjuntosMientrasAsignacion }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('anadircurso_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('anadircurso_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('anadircurso_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

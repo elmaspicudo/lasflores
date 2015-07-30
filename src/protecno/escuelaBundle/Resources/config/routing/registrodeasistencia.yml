@@ -1,0 +1,30 @@
+registrodeasistencia:
+    path:     /
+    defaults: { _controller: "escuelaBundle:registroDeAsistencia:index" }
+
+registrodeasistencia_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:registroDeAsistencia:show" }
+
+registrodeasistencia_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:registroDeAsistencia:new" }
+
+registrodeasistencia_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:registroDeAsistencia:create" }
+    requirements: { _method: post }
+
+registrodeasistencia_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:registroDeAsistencia:edit" }
+
+registrodeasistencia_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:registroDeAsistencia:update" }
+    requirements: { _method: post|put }
+
+registrodeasistencia_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:registroDeAsistencia:delete" }
+    requirements: { _method: post|delete }

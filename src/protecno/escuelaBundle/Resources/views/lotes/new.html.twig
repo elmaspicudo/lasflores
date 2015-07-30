@@ -1,15 +1,59 @@
-{% extends '::base.html.twig' %}
+{% extends '::index.html.twig' %}
 
-{% block body -%}
-    <h1>lotes creation</h1>
-
-    {{ form(form) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('lotes') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+{% block panel -%}
+   <div class="col-md-12">
+        <div class="widget widget-green">
+          	<div class="widget-title">
+  	            <div class="widget-controls">
+            					  <a href="#" class="widget-control widget-control-full-screen" data-toggle="tooltip" data-placement="top" title="" data-original-title="Full Screen"><i class="fa fa-expand"></i></a>
+            					  <a href="#" class="widget-control widget-control-full-screen widget-control-show-when-full" data-toggle="tooltip" data-placement="left" title="" data-original-title="Exit Full Screen"><i class="fa fa-expand"></i></a>
+            					  <a href="#" data-toggle="dropdown" class="widget-control widget-control-settings"><i class="fa fa-cog"></i></a>
+            					  <div class="dropdown" data-toggle="tooltip" data-placement="top" title="" data-original-title="Settings">
+            					    <ul class="dropdown-menu dropdown-menu-small" role="menu" aria-labelledby="dropdownMenu1">
+            					      <li class="dropdown-header">Set Widget Color</li>
+            					      <li><a data-widget-color="blue" class="set-widget-color" href="#">Blue</a></li>
+            					      <li><a data-widget-color="red" class="set-widget-color" href="#">Red</a></li>
+            					      <li><a data-widget-color="green" class="set-widget-color" href="#">Green</a></li>
+            					      <li><a data-widget-color="orange" class="set-widget-color" href="#">Orange</a></li>
+            					      <li><a data-widget-color="purple" class="set-widget-color" href="#">Purple</a></li>
+            					    </ul>
+            					  </div>
+            					  <a href="#" class="widget-control widget-control-refresh" data-toggle="tooltip" data-placement="top" title="" data-original-title="Actualizar"><i class="fa fa-refresh"></i></a>
+            					  <a href="#" class="widget-control widget-control-minimize" data-toggle="tooltip" data-placement="top" title="" data-original-title="Minimizar"><i class="fa fa-minus-circle"></i></a>
+            					  <a href="#" class="widget-control widget-control-remove" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quitar"><i class="fa fa-times-circle"></i></a>
+  				      </div>
+              	<h3><i class="fa fa-ok-circle"></i>Nuevo grado</h3>
+          	</div>
+          	<div class="widget-content">
+     		    {{ form_start(form, {'attr': {'class': 'form_transaccion_edit'}}) }}
+            <h4 class="widget-header">Datos del grado</h4>
+			   <div class="row">     
+			                  <div class="col-md-6">  
+			      	             <div class="form-group">
+			      	                <label>Nombre</label>
+			      	                {{ form_widget(form.descripcion, {'attr': {'class': 'form-control'}}) }}
+			      	                <span class="errorMsg">{{ form_errors(form.descripcion) }}</span> 
+			      	             </div>
+			                  </div>
+			                  <div class="col-md-6">  
+			                     <div class="form-group">
+			                        <label>Fecha de inicio</label>
+			                        {{ form_widget(form.fechaDeIncio, {'attr': {'class': 'form-control'}}) }}
+			                        <span class="errorMsg">{{ form_errors(form.fechaDeIncio) }}</span> 
+			                     </div>
+			                  </div>
+			                  <div class="col-md-6">  
+			                     <div class="form-group">
+			                        <label>Fecha de fin</label>
+			                        {{ form_widget(form.fechaDeFinal, {'attr': {'class': 'form-control'}}) }}
+			                        <span class="errorMsg">{{ form_errors(form.fechaDeFinal) }}</span> 
+			                     </div>
+			                  </div>
+			  </div>
+			  <button class="btn btn-primary" type="submit">Guardar</button>
+              <button class="btn btn-default" type="reset">Limpiar</button>
+            {{ form_end(form) }}
+          </div>      
+      </div>
+    </div>
 {% endblock %}

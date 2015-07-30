@@ -1,0 +1,30 @@
+departamentorestableser:
+    path:     /
+    defaults: { _controller: "escuelaBundle:departamentoRestableser:index" }
+
+departamentorestableser_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:departamentoRestableser:show" }
+
+departamentorestableser_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:departamentoRestableser:new" }
+
+departamentorestableser_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:departamentoRestableser:create" }
+    requirements: { _method: post }
+
+departamentorestableser_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:departamentoRestableser:edit" }
+
+departamentorestableser_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:departamentoRestableser:update" }
+    requirements: { _method: post|put }
+
+departamentorestableser_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:departamentoRestableser:delete" }
+    requirements: { _method: post|delete }

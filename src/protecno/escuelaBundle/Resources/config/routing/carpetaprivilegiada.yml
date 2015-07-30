@@ -1,0 +1,30 @@
+carpetaprivilegiada:
+    path:     /
+    defaults: { _controller: "escuelaBundle:carpetaPrivilegiada:index" }
+
+carpetaprivilegiada_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:carpetaPrivilegiada:show" }
+
+carpetaprivilegiada_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:carpetaPrivilegiada:new" }
+
+carpetaprivilegiada_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:carpetaPrivilegiada:create" }
+    requirements: { _method: post }
+
+carpetaprivilegiada_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:carpetaPrivilegiada:edit" }
+
+carpetaprivilegiada_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:carpetaPrivilegiada:update" }
+    requirements: { _method: post|put }
+
+carpetaprivilegiada_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:carpetaPrivilegiada:delete" }
+    requirements: { _method: post|delete }

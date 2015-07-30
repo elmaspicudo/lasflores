@@ -1,0 +1,30 @@
+anadirqueja:
+    path:     /
+    defaults: { _controller: "escuelaBundle:anadirQueja:index" }
+
+anadirqueja_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:anadirQueja:show" }
+
+anadirqueja_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:anadirQueja:new" }
+
+anadirqueja_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:anadirQueja:create" }
+    requirements: { _method: post }
+
+anadirqueja_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:anadirQueja:edit" }
+
+anadirqueja_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:anadirQueja:update" }
+    requirements: { _method: post|put }
+
+anadirqueja_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:anadirQueja:delete" }
+    requirements: { _method: post|delete }

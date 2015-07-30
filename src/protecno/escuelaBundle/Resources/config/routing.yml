@@ -25,12 +25,6 @@ escuelaBundle_ajustes:
 escuelaBundle_anadirlibro:
         resource: "@escuelaBundle/Resources/config/routing/anadirlibro.yml"
         prefix:   /anadirlibro
-escuelaBundle_curso:
-        resource: "@escuelaBundle/Resources/config/routing/curso.yml"
-        prefix:   /curso
-escuelaBundle_lotes:
-        resource: "@escuelaBundle/Resources/config/routing/lotes.yml"
-        prefix:   /lotes
 escuelaBundle_eventos:
         resource: "@escuelaBundle/Resources/config/routing/eventos.yml"
         prefix:   /eventos
@@ -57,12 +51,128 @@ escuelaBundle_anadirempleadogrado:
 escuelaBundle_anadirdetallesdelbanco:
         resource: "@escuelaBundle/Resources/config/routing/anadirdetallesdelbanco.yml"
         prefix:   /anadirdetallesdelbanco
-        
 escuelaBundle_alumno:
         resource: "@escuelaBundle/Resources/config/routing/alumno.yml"
         prefix:   /alumno
 escuelaBundle_detallesdecontacto:
         resource: "@escuelaBundle/Resources/config/routing/detallesdecontacto.yml"
         prefix:   /detallesdecontacto
+escuelaBundle_nuevocliente:
+        resource: "@escuelaBundle/Resources/config/routing/nuevocliente.yml"
+        prefix:   /nuevocliente
+escuelaBundle_nuevocliente:
+        resource: "@escuelaBundle/Resources/config/routing/nuevocliente.yml"
+        prefix:   /nuevocliente
+escuelaBundle_nuevacategoria:
+        resource: "@escuelaBundle/Resources/config/routing/nuevacategoria.yml"
+        prefix:   /nuevacategoria
+escuelaBundle_configuracionesgenerales:
+        resource: "@escuelaBundle/Resources/config/routing/configuracionesgenerales.yml"
+        prefix:   /configuracionesgenerales
+escuelaBundle_anadircurso:
+        resource: "@escuelaBundle/Resources/config/routing/anadircurso.yml"
+        prefix:   /anadircurso
+escuelaBundle_nuevogrupopin:
+        resource: "@escuelaBundle/Resources/config/routing/nuevogrupopin.yml"
+        prefix:   /nuevogrupopin
+escuelaBundle_anadirqueja:
+        resource: "@escuelaBundle/Resources/config/routing/anadirqueja.yml"
+        prefix:   /anadirqueja
+escuelaBundle_nivelesdeclasificacion:
+        resource: "@escuelaBundle/Resources/config/routing/nivelesdeclasificacion.yml"
+        prefix:   /nivelesdeclasificacion
+escuelaBundle_examencursosabio:
+        resource: "@escuelaBundle/Resources/config/routing/examencursosabio.yml"
+        prefix:   /examencursosabio
+escuelaBundle_gestiondeexamenes:
+        resource: "@escuelaBundle/Resources/config/routing/gestiondeexamenes.yml"
+        prefix:   /gestiondeexamenes
+escuelaBundle_lotes:
+        resource: "@escuelaBundle/Resources/config/routing/lotes.yml"
+        prefix:   /lotes
+escuelaBundle_curso:
+        resource: "@escuelaBundle/Resources/config/routing/curso.yml"
+        prefix:   /curso
+escuelaBundle_comentariospersonalizados:
+        resource: "@escuelaBundle/Resources/config/routing/comentariospersonalizados.yml"
+        prefix:   /comentariospersonalizados
+escuelaBundle_resumendelotes:
+        resource: "@escuelaBundle/Resources/config/routing/resumendelotes.yml"
+        prefix:   /resumendelotes
+escuelaBundle_temporizaciondeclase:
+        resource: "@escuelaBundle/Resources/config/routing/temporizaciondeclase.yml"
+        prefix:   /temporizaciondeclase
+escuelaBundle_tiempodeclase:
+        resource: "@escuelaBundle/Resources/config/routing/tiempodeclase.yml"
+        prefix:   /tiempodeclase
+escuelaBundle_nuevohorario:
+        resource: "@escuelaBundle/Resources/config/routing/nuevohorario.yml"
+        prefix:   /nuevohorario
+escuelaBundle_verhorarios:
+        resource: "@escuelaBundle/Resources/config/routing/verhorarios.yml"
+        prefix:   /verhorarios
+escuelaBundle_seriesdetiempodeclasepordias:
+        resource: "@escuelaBundle/Resources/config/routing/seriesdetiempodeclasepordias.yml"
+        prefix:   /seriesdetiempodeclasepordias
+escuelaBundle_horariosdelprofesor:
+        resource: "@escuelaBundle/Resources/config/routing/horariosdelprofesor.yml"
+        prefix:   /horariosdelprofesor
+escuelaBundle_aulas:
+        resource: "@escuelaBundle/Resources/config/routing/aulas.yml"
+        prefix:   /aulas
+escuelaBundle_carpeta:
+        resource: "@escuelaBundle/Resources/config/routing/carpeta.yml"
+        prefix:   /carpeta
+escuelaBundle_carpetaprivilegiada:
+        resource: "@escuelaBundle/Resources/config/routing/carpetaprivilegiada.yml"
+        prefix:   /carpetaprivilegiada
+escuelaBundle_carpetaespecificadelusuario:
+        resource: "@escuelaBundle/Resources/config/routing/carpetaespecificadelusuario.yml"
+        prefix:   /carpetaespecificadelusuario
+escuelaBundle_categoriafoto:
+        resource: "@escuelaBundle/Resources/config/routing/categoriafoto.yml"
+        prefix:   /categoriafoto
+escuelaBundle_agregarfoto:
+        resource: "@escuelaBundle/Resources/config/routing/agregarfoto.yml"
+        prefix:   /agregarfoto
+escuelaBundle_nuevatarea:
+        resource: "@escuelaBundle/Resources/config/routing/nuevatarea.yml"
+        prefix:   /nuevatarea
+escuelaBundle_encuesta:
+        resource: "@escuelaBundle/Resources/config/routing/encuesta.yml"
+        prefix:   /encuesta        
+escuelaBundle_tiposdelicencia:
+        resource: "@escuelaBundle/Resources/config/routing/tiposdelicencia.yml"
+        prefix:   /tiposdelicencia
+escuelaBundle_admisiondelempleado:
+        resource: "@escuelaBundle/Resources/config/routing/admisiondelempleado.yml"
+        prefix:   /admisiondelempleado
+escuelaBundle_registrodeasistencia:
+        resource: "@escuelaBundle/Resources/config/routing/registrodeasistencia.yml"
+        prefix:   /registrodeasistencia
+escuelaBundle_restableserajustes:
+        resource: "@escuelaBundle/Resources/config/routing/restableserajustes.yml"
+        prefix:   /restableserajustes
+escuelaBundle_departamentorestableser:
+        resource: "@escuelaBundle/Resources/config/routing/departamentorestableser.yml"
+        prefix:   /departamentorestableser
+escuelaBundle_seleccionempleadonomina:
+        resource: "@escuelaBundle/Resources/config/routing/seleccionempleadonomina.yml"
+        prefix:   /seleccionempleadonomina
+escuelaBundle_recibodesueldodelempleado:
+        resource: "@escuelaBundle/Resources/config/routing/recibodesueldodelempleado.yml"
+        prefix:   /recibodesueldodelempleado
+escuelaBundle_buscarempleados:
+        resource: "@escuelaBundle/Resources/config/routing/buscarempleados.yml"
+        prefix:   /buscarempleados
+escuelaBundle_gestiondedatoscategorias:
+        resource: "@escuelaBundle/Resources/config/routing/gestiondedatoscategorias.yml"
+        prefix:   /gestiondedatoscategorias
 
+escuelaBundle_anadirusuario:
+        resource: "@escuelaBundle/Resources/config/routing/anadirusuario.yml"
+        prefix:   /anadirusuario
 
+escuelaBundle_role:
+        resource: "@escuelaBundle/Resources/config/routing/role.yml"
+        prefix:   /role

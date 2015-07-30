@@ -1,0 +1,30 @@
+nivelesdeclasificacion:
+    path:     /
+    defaults: { _controller: "escuelaBundle:nivelesDeClasificacion:index" }
+
+nivelesdeclasificacion_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:nivelesDeClasificacion:show" }
+
+nivelesdeclasificacion_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:nivelesDeClasificacion:new" }
+
+nivelesdeclasificacion_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:nivelesDeClasificacion:create" }
+    requirements: { _method: post }
+
+nivelesdeclasificacion_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:nivelesDeClasificacion:edit" }
+
+nivelesdeclasificacion_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:nivelesDeClasificacion:update" }
+    requirements: { _method: post|put }
+
+nivelesdeclasificacion_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:nivelesDeClasificacion:delete" }
+    requirements: { _method: post|delete }

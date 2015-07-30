@@ -1,0 +1,21 @@
+protecno\escuelaBundle\Entity\seleccionEmpleadoNomina:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        fechaSalario:
+            type: datetime
+        monto:
+            type: integer   
+    oneToOne: 
+        anadirDepartamentoEmpleo:
+            targetEntity: protecno\escuelaBundle\Entity\anadirDepartamentoEmpleo
+            inversedBy: seleccionEmpleadoNomina
+        admisionDelEmpleado:
+            targetEntity: protecno\escuelaBundle\Entity\admisionDelEmpleado
+            inversedBy: seleccionEmpleadoNomina        
+    lifecycleCallbacks: {  }

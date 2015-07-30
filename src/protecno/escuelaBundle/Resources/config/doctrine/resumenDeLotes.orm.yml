@@ -7,4 +7,14 @@ protecno\escuelaBundle\Entity\resumenDeLotes:
             id: true
             generator:
                 strategy: AUTO
+        descripcion:
+            type: string
+            length: 255
+    manyToMany:
+        curso:
+            targetEntity: protecno\escuelaBundle\Entity\curso
+            inversedBy: resumenDeLotes 
+        lotes:
+            targetEntity: protecno\escuelaBundle\Entity\lotes
+            inversedBy: resumenDeLotes         
     lifecycleCallbacks: {  }

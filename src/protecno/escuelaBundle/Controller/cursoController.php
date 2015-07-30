@@ -67,7 +67,7 @@ class cursoController extends Controller
             'method' => 'POST',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Create'));
+        //$form->add('submit', 'submit', array('label' => 'Create'));
 
         return $form;
     }
@@ -128,7 +128,7 @@ class cursoController extends Controller
 
         return $this->render('escuelaBundle:curso:edit.html.twig', array(
             'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
+            'form'   => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
     }
@@ -147,7 +147,7 @@ class cursoController extends Controller
             'method' => 'PUT',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Update'));
+       // $form->add('submit', 'submit', array('label' => 'Update'));
 
         return $form;
     }
@@ -217,7 +217,7 @@ class cursoController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('curso_delete', array('id' => $id)))
             ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Delete'))
+            //->add('submit', 'submit', array('label' => 'Delete'))
             ->getForm()
         ;
     }

@@ -1,0 +1,204 @@
+{% extends '::index.html.twig' %}
+{% block style %}
+ <link rel='stylesheet' href="{{ asset('bundles/escuela/css/file.css') }}" >
+{% endblock %}
+{% block scripts -%}
+<script src="{{ asset('bundles/escuela/js/fileinput.js')}}"></script>
+<script type="text/javascript">
+	$(".file").fileinput({
+        uploadUrl: '#', // you must set a valid URL here else you will get an error
+        allowedFileExtensions : ['jpg', 'png','gif'],
+        overwriteInitial: false,
+        maxFileSize: 1000,
+        maxFilesNum: 1,
+        showCaption: false,
+	    showRemove: false,
+	    showUpload: false,
+        //allowedFileTypes: ['image', 'video', 'flash'],
+        slugCallback: function(filename) {
+            return filename.replace('(', '_').replace(']', '_');
+        }
+	});
+</script>
+{% endblock %}
+{% block panel -%}
+   <div class="col-md-12">
+        <div class="widget widget-green">
+          	<div class="widget-title">
+  	            <div class="widget-controls">
+            					  <a href="#" class="widget-control widget-control-full-screen" data-toggle="tooltip" data-placement="top" title="" data-original-title="Full Screen"><i class="fa fa-expand"></i></a>
+            					  <a href="#" class="widget-control widget-control-full-screen widget-control-show-when-full" data-toggle="tooltip" data-placement="left" title="" data-original-title="Exit Full Screen"><i class="fa fa-expand"></i></a>
+            					  <a href="#" data-toggle="dropdown" class="widget-control widget-control-settings"><i class="fa fa-cog"></i></a>
+            					  <div class="dropdown" data-toggle="tooltip" data-placement="top" title="" data-original-title="Settings">
+            					    <ul class="dropdown-menu dropdown-menu-small" role="menu" aria-labelledby="dropdownMenu1">
+            					      <li class="dropdown-header">Set Widget Color</li>
+            					      <li><a data-widget-color="blue" class="set-widget-color" href="#">Blue</a></li>
+            					      <li><a data-widget-color="red" class="set-widget-color" href="#">Red</a></li>
+            					      <li><a data-widget-color="green" class="set-widget-color" href="#">Green</a></li>
+            					      <li><a data-widget-color="orange" class="set-widget-color" href="#">Orange</a></li>
+            					      <li><a data-widget-color="purple" class="set-widget-color" href="#">Purple</a></li>
+            					    </ul>
+            					  </div>
+            					  <a href="#" class="widget-control widget-control-refresh" data-toggle="tooltip" data-placement="top" title="" data-original-title="Actualizar"><i class="fa fa-refresh"></i></a>
+            					  <a href="#" class="widget-control widget-control-minimize" data-toggle="tooltip" data-placement="top" title="" data-original-title="Minimizar"><i class="fa fa-minus-circle"></i></a>
+            					  <a href="#" class="widget-control widget-control-remove" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quitar"><i class="fa fa-times-circle"></i></a>
+  				      </div>
+              	<h3><i class="fa fa-ok-circle"></i>Nuevo empleado</h3>
+          	</div>
+          	<div class="widget-content">
+     		    {{ form_start(form, {'attr': {'class': 'form_transaccion_edit'}}) }}
+            <h4 class="widget-header">Datos del empleado</h4>
+			  <div class="row">  
+			  					<div class="col-sm-6">
+									<div class="form-group">
+									<label>Imagen de perfil</label>
+										{{ form_widget(form.archivo.imagen) }}
+					                    <span class="errorMsg">{{ form_errors(form.archivo.imagen) }}</span>
+					                </div>
+		   					  </div>
+			                  <div class="col-md-6">  
+			      	             <div class="form-group">
+			      	                <label>Clave</label>
+			      	                {{ form_widget(form.nuemeroDelEmpleado, {'attr': {'class': 'form-control'}}) }}
+			      	                <span class="errorMsg">{{ form_errors(form.nuemeroDelEmpleado) }}</span> 
+			      	             </div>
+			                  </div>
+
+			                  <div class="col-md-6">  
+			                     <div class="form-group">
+			                        <label>Fecha de ingreso</label>
+			                        {{ form_widget(form.diaDeIngreso, {'attr': {'class': 'form-control'}}) }}
+			                        <span class="errorMsg">{{ form_errors(form.diaDeIngreso) }}</span> 
+			                     </div>
+			                  </div>
+			                  <div class="col-md-6">  
+			                     <div class="form-group">
+			                        <label>Nombre</label>
+			                        {{ form_widget(form.nombre, {'attr': {'class': 'form-control'}}) }}
+			                        <span class="errorMsg">{{ form_errors(form.nombre) }}</span> 
+			                     </div>
+			                  </div>
+			                   <div class="col-md-6">  
+			      	             <div class="form-group">
+			      	                <label>Apellido paterno</label>
+			      	                {{ form_widget(form.apellidoPaterno, {'attr': {'class': 'form-control'}}) }}
+			      	                <span class="errorMsg">{{ form_errors(form.apellidoPaterno) }}</span> 
+			      	             </div>
+			                  </div>
+			                  <div class="col-md-6">  
+			                     <div class="form-group">
+			                        <label>Apellido materno</label>
+			                        {{ form_widget(form.segundoNombre, {'attr': {'class': 'form-control'}}) }}
+			                        <span class="errorMsg">{{ form_errors(form.segundoNombre) }}</span> 
+			                     </div>
+			                  </div>
+			                  <div class="col-md-6">  
+			                     <div class="form-group">
+			                        <label>Email</label>
+			                        {{ form_widget(form.eMail, {'attr': {'class': 'form-control'}}) }}
+			                        <span class="errorMsg">{{ form_errors(form.eMail) }}</span> 
+			                     </div>
+			                  </div>
+			                   <div class="col-md-6">  
+			      	             <div class="form-group">
+			      	                <label>Genero</label>
+			      	                {{ form_widget(form.genero, {'attr': {'class': 'form-control'}}) }}
+			      	                <span class="errorMsg">{{ form_errors(form.genero) }}</span> 
+			      	             </div>
+			                  </div>
+			                  <div class="col-md-6">  
+			                     <div class="form-group">
+			                        <label>Fecha de nacimiento</label>
+			                        {{ form_widget(form.fechaDeNacimiento, {'attr': {'class': 'form-control'}}) }}
+			                        <span class="errorMsg">{{ form_errors(form.fechaDeNacimiento) }}</span> 
+			                     </div>
+			                  </div>
+			                  <div class="col-md-6">  
+			                     <div class="form-group">
+			                        <label>Grado de estudios</label>
+			                        {{ form_widget(form.tituloProfesional, {'attr': {'class': 'form-control'}}) }}
+			                        <span class="errorMsg">{{ form_errors(form.tituloProfesional) }}</span> 
+			                     </div>
+			                  </div>
+			                  <div class="col-md-6">  
+			                     <div class="form-group">
+			                        <label>Promedio</label>
+			                        {{ form_widget(form.calificacion, {'attr': {'class': 'form-control'}}) }}
+			                        <span class="errorMsg">{{ form_errors(form.calificacion) }}</span> 
+			                     </div>
+			                  </div>
+			                   <div class="col-md-6">  
+			      	             <div class="form-group">
+			      	                <label>Experiencia</label>
+			      	                {{ form_widget(form.experienciaInfo, {'attr': {'class': 'form-control'}}) }}
+			      	                <span class="errorMsg">{{ form_errors(form.experienciaInfo) }}</span> 
+			      	             </div>
+			                  </div>
+			                  <div class="col-md-6">  
+			                     <div class="form-group">
+			                        <label>Estado civil</label>
+			                        {{ form_widget(form.estadoCivil, {'attr': {'class': 'form-control'}}) }}
+			                        <span class="errorMsg">{{ form_errors(form.estadoCivil) }}</span> 
+			                     </div>
+			                  </div>
+			                 <div class="col-md-6">  
+			                     <div class="form-group">
+			                        <label>Experiencia</label>
+			                        {{ form_widget(form.experienciaTotal, {'attr': {'class': 'form-control'}}) }}
+			                        <span class="errorMsg">{{ form_errors(form.experienciaTotal) }}</span> 
+			                     </div>
+			                  </div>
+			                   <div class="col-md-6">  
+			      	             <div class="form-group">
+			      	                <label>Celular</label>
+			      	                {{ form_widget(form.celular, {'attr': {'class': 'form-control'}}) }}
+			      	                <span class="errorMsg">{{ form_errors(form.celular) }}</span> 
+			      	             </div>
+			                  </div>
+			                  <div class="col-md-6">  
+			                     <div class="form-group">
+			                        <label>Telefono</label>
+			                        {{ form_widget(form.telefonoDeCasa, {'attr': {'class': 'form-control'}}) }}
+			                        <span class="errorMsg">{{ form_errors(form.telefonoDeCasa) }}</span> 
+			                     </div>
+			                  </div>
+			                  <div class="col-md-6">  
+			                     <div class="form-group">
+			                        <label>Departamento</label>
+			                        {{ form_widget(form.anadirDepartamentoEmpleo, {'attr': {'class': 'form-control'}}) }}
+			                        <span class="errorMsg">{{ form_errors(form.anadirDepartamentoEmpleo) }}</span> 
+			                     </div>
+			                  </div>
+			                   <div class="col-md-6">  
+			                     <div class="form-group">
+			                        <label>Categoria</label>
+			                        {{ form_widget(form.anadirEmpleadoCategoria, {'attr': {'class': 'form-control'}}) }}
+			                        <span class="errorMsg">{{ form_errors(form.anadirEmpleadoCategoria) }}</span> 
+			                     </div>
+			                  </div>
+			                   <div class="col-md-6">  
+			      	             <div class="form-group">
+			      	                <label>Posision</label>
+			      	                {{ form_widget(form.anadirEmpleadoPosicion, {'attr': {'class': 'form-control'}}) }}
+			      	                <span class="errorMsg">{{ form_errors(form.anadirEmpleadoPosicion) }}</span> 
+			      	             </div>
+			                  </div>
+			                  <div class="col-md-6">  
+			                     <div class="form-group">
+			                        <label>Grado</label>
+			                        {{ form_widget(form.anadirEmpleadoGrado, {'attr': {'class': 'form-control'}}) }}
+			                        <span class="errorMsg">{{ form_errors(form.anadirEmpleadoGrado) }}</span> 
+			                     </div>
+			                  </div>
+			                  
+			                  
+			  </div>
+			  <button class="btn btn-primary" type="submit">Guardar</button>
+              <button class="btn btn-default" type="reset">Limpiar</button>
+            {{ form_end(form) }}
+            {{ form(delete_form) }}
+          </div>      
+      </div>
+    </div>
+{% endblock %}
+ 

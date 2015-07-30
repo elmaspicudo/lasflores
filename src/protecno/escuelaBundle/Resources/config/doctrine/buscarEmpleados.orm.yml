@@ -1,0 +1,17 @@
+protecno\escuelaBundle\Entity\buscarEmpleados:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        descripcion:
+            type: string
+            length: 255
+    oneToMany:
+        anadirDepartamentoEmpleo:
+            targetEntity:  protecno\escuelaBundle\Entity\anadirDepartamentoEmpleo
+            mappedBy: buscarEmpleados    
+    lifecycleCallbacks: {  }

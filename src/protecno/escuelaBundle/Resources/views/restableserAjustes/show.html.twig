@@ -1,0 +1,40 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>restableserAjustes</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Habilitarrestablesimientoautomatico</th>
+                <td>{{ entity.habilitarRestablesimientoAutomatico }}</td>
+            </tr>
+            <tr>
+                <th>Dejarestableserperiodomes</th>
+                <td>{{ entity.dejaRestableserPeriodoMes }}</td>
+            </tr>
+            <tr>
+                <th>Fiablesfechaempezar</th>
+                <td>{{ entity.fiablesFechaEmpezar|date('Y-m-d H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('restableserajustes') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('restableserajustes_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

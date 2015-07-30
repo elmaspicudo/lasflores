@@ -1,0 +1,55 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>seriesDeTiempoDeClasePorDias list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Domingo</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+                <th>Sabado</th>
+                <th>Aplicableapartirdel</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('seriesdetiempodeclasepordias_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.domingo }}</td>
+                <td>{{ entity.lunes }}</td>
+                <td>{{ entity.martes }}</td>
+                <td>{{ entity.miercoles }}</td>
+                <td>{{ entity.jueves }}</td>
+                <td>{{ entity.viernes }}</td>
+                <td>{{ entity.sabado }}</td>
+                <td>{% if entity.aplicableApartirDel %}{{ entity.aplicableApartirDel|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('seriesdetiempodeclasepordias_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('seriesdetiempodeclasepordias_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('seriesdetiempodeclasepordias_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

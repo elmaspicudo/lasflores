@@ -16,4 +16,8 @@ protecno\escuelaBundle\Entity\nivelesDeClasificacion:
             type: integer
         considereTodosLosLotesAnteriores:
             type: boolean
+    manyToMany:
+        curso:
+            targetEntity: protecno\escuelaBundle\Entity\curso
+            inversedBy: nivelesDeClasificacion    
     lifecycleCallbacks: {  }

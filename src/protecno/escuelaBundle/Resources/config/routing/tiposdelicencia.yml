@@ -1,0 +1,30 @@
+tiposdelicencia:
+    path:     /
+    defaults: { _controller: "escuelaBundle:tiposDeLicencia:index" }
+
+tiposdelicencia_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:tiposDeLicencia:show" }
+
+tiposdelicencia_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:tiposDeLicencia:new" }
+
+tiposdelicencia_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:tiposDeLicencia:create" }
+    requirements: { _method: post }
+
+tiposdelicencia_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:tiposDeLicencia:edit" }
+
+tiposdelicencia_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:tiposDeLicencia:update" }
+    requirements: { _method: post|put }
+
+tiposdelicencia_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:tiposDeLicencia:delete" }
+    requirements: { _method: post|delete }

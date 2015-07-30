@@ -1,0 +1,53 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>anadirUsuario list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombredelusuario</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Password</th>
+                <th>Email</th>
+                <th>Salt</th>
+                <th>Idperfil</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('anadirusuario_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.nombreDelUsuario }}</td>
+                <td>{{ entity.nombre }}</td>
+                <td>{{ entity.apellido }}</td>
+                <td>{{ entity.password }}</td>
+                <td>{{ entity.eMail }}</td>
+                <td>{{ entity.salt }}</td>
+                <td>{{ entity.idPerfil }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('anadirusuario_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('anadirusuario_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('anadirusuario_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

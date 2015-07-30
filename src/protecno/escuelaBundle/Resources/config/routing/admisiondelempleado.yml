@@ -1,0 +1,30 @@
+admisiondelempleado:
+    path:     /
+    defaults: { _controller: "escuelaBundle:admisionDelEmpleado:index" }
+
+admisiondelempleado_show:
+    path:     /{id}/show
+    defaults: { _controller: "escuelaBundle:admisionDelEmpleado:show" }
+
+admisiondelempleado_new:
+    path:     /new
+    defaults: { _controller: "escuelaBundle:admisionDelEmpleado:new" }
+
+admisiondelempleado_create:
+    path:     /create
+    defaults: { _controller: "escuelaBundle:admisionDelEmpleado:create" }
+    requirements: { _method: post }
+
+admisiondelempleado_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "escuelaBundle:admisionDelEmpleado:edit" }
+
+admisiondelempleado_update:
+    path:     /{id}/update
+    defaults: { _controller: "escuelaBundle:admisionDelEmpleado:update" }
+    requirements: { _method: post|put }
+
+admisiondelempleado_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "escuelaBundle:admisionDelEmpleado:delete" }
+    requirements: { _method: post|delete }

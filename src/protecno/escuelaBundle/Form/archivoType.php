@@ -15,14 +15,19 @@ class archivoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('titulo')
-            ->add('path')
-            ->add('imagen')
-            ->add('updated')
-            ->add('tipo')
+            
+            ->add('imagen','file', array(
+                'attr' => array('id' => 'file-1',
+                                'class' => 'file',
+                                'data-overwrite-initial' => 'false',
+                                'data-min-file-count' => '1'),
+                'data_class' => null,
+                'property_path' => 'imagen',
+                    'required' => false,
+            ))
         ;
     }
-    
+     
     /**
      * @param OptionsResolverInterface $resolver
      */
@@ -38,6 +43,6 @@ class archivoType extends AbstractType
      */
     public function getName()
     {
-        return 'escuela_bundle_archivo';
+        return 'protecno_escuelabundle_archivo';
     }
 }

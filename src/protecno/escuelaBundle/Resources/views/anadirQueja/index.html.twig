@@ -1,0 +1,55 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>anadirQueja list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Quejano</th>
+                <th>Titulo</th>
+                <th>Descripcion</th>
+                <th>Juiciofecha</th>
+                <th>Motivodelaqueja</th>
+                <th>Demanda</th>
+                <th>Jurado</th>
+                <th>Autoridadesresponsables</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('anadirqueja_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.quejaNo }}</td>
+                <td>{{ entity.titulo }}</td>
+                <td>{{ entity.descripcion }}</td>
+                <td>{% if entity.juicioFecha %}{{ entity.juicioFecha|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.motivoDeLaQueja }}</td>
+                <td>{{ entity.demanda }}</td>
+                <td>{{ entity.jurado }}</td>
+                <td>{{ entity.autoridadesResponsables }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('anadirqueja_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('anadirqueja_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('anadirqueja_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

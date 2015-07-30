@@ -1,0 +1,44 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>nivelesDeClasificacion</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ entity.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Marcas</th>
+                <td>{{ entity.marcas }}</td>
+            </tr>
+            <tr>
+                <th>Numerodesujetos</th>
+                <td>{{ entity.numeroDeSujetos }}</td>
+            </tr>
+            <tr>
+                <th>Consideretodosloslotesanteriores</th>
+                <td>{{ entity.considereTodosLosLotesAnteriores }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('nivelesdeclasificacion') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('nivelesdeclasificacion_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

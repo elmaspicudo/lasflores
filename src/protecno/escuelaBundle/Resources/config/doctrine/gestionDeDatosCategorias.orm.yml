@@ -1,0 +1,17 @@
+
+protecno\escuelaBundle\Entity\gestionDeDatosCategorias:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        nombre:
+            type: string
+            length: '100'
+        descripcion:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

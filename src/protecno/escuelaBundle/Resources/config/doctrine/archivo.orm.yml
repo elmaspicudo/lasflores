@@ -1,12 +1,13 @@
 protecno\escuelaBundle\Entity\archivo:
     type: entity
     table: null
-    fields:
+    id:
         id:
             type: integer
             id: true
             generator:
                 strategy: AUTO
+    fields:
         titulo:
             type: string
             length: '120'
@@ -18,6 +19,4 @@ protecno\escuelaBundle\Entity\archivo:
             length: 255
         updated:
             type: datetime
-        tipo:
-            type: integer
     lifecycleCallbacks: {  }
