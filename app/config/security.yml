@@ -37,7 +37,7 @@ security:
 #                remember_me: true
             logout:
                 path:   /logout
-                target: /
+                target: /login
             #anonymous: ~
             #http_basic:
             #    realm: "Secured Demo Area"
@@ -51,4 +51,9 @@ security:
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
     #    - { path: ^/Inicio, roles: ROLE_USER } #todos tienen acceso por ser ROLE_USER
         - { path: ^/detallesdecontacto, roles: [ROLE_PROF,ROLE_ADMIN] }
+        - { path: ^/configuracionesgenerales, roles: ROLE_ADMIN }
+        - { path: ^/curso, roles: ROLE_ADMIN }
+        - { path: ^/pago, roles: ROLE_ADMIN }
+        - { path: ^/lotes, roles: ROLE_ADMIN }
+        - { path: ^/admisiondelempleado, roles: ROLE_ADMIN }
 
