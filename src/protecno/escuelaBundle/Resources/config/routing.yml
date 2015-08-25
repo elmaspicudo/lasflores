@@ -289,3 +289,6 @@ escuelaBundle_anadirusuario:
 escuelaBundle_role:
         resource: "@escuelaBundle/Resources/config/routing/role.yml"
         prefix:   /role
+escuelaBundle_pago:
+        resource: "@escuelaBundle/Resources/config/routing/pago.yml"
+        prefix:   /pago

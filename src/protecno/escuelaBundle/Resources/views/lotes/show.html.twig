@@ -1,5 +1,9 @@
 {% extends '::base.html.twig' %}
-
+{% block submenu -%}
+      <li><a href="{{ path('lotes') }}">Ciclo escolar</a></li>
+      <li><a href="{{ path('curso') }}">Grados</a></li>
+      <li><a href="{{ path('configuracionesgenerales') }}">Datos del colegio</a></li>
+  {% endblock -%}
 {% block body -%}
     <h1>lotes</h1>
 

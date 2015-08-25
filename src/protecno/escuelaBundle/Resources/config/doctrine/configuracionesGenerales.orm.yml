@@ -12,7 +12,7 @@ protecno\escuelaBundle\Entity\configuracionesGenerales:
             length: '100'
         direccionDelColegio:
             type: string
-            length: '100'
+            length: '200'
         telefonoDelColegio:
             type: string
             length: '20'
@@ -36,8 +36,17 @@ protecno\escuelaBundle\Entity\configuracionesGenerales:
             type: boolean
         cambioDeContrasenaInicioDeSesion:
             type: boolean
-        activarNumeroDeRolloParaEstudiantes:
-            type: boolean
-        habilitarOauth:
-            type: boolean
+        facebook:
+            type: string
+            length: '120'
+        twiter:
+            type: string
+            length: '120'
+        email:
+            type: string
+            length: '120'
+    manyToOne:        
+        archivo:         
+            targetEntity: protecno\escuelaBundle\Entity\archivo
+            cascade: ["persist"]
     lifecycleCallbacks: {  }

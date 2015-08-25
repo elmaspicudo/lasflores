@@ -16,10 +16,16 @@ class cuotaColeccionType extends AbstractType
     {
         $builder
             ->add('cuotaNombreDeLaColeccion')
-            ->add('fechaDeInicio')
-            ->add('fechaFinal')
-            ->add('fechaDeVencimiento')
-            ->add('anadirEmpleadoCategoria')
+            ->add('fechaDeInicio' ,'date', array(
+                        'widget' => 'single_text','required'=>false,
+                    ))
+            ->add('fechaFinal', 'date', array(
+                        'widget' => 'single_text','required'=>false,
+                    ))
+            ->add('monto')
+            ->add('tipo', 'choice', array(
+                    'choices'  => array('1' => 'Fija', '2' => 'Recurrente')
+                ));
         ;
     }
     

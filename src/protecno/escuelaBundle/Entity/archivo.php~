@@ -145,7 +145,7 @@ class archivo
     {
         // the file property can be empty if the field is not required
         if (null === $this->getImagen()) {
-            return;
+            return false;
         }
 
         // we use the original file name here but you should
@@ -154,13 +154,14 @@ class archivo
         // move takes the target directory and target filename as params
         $this->getImagen()->move(
             $this->getUploadRootDir($dir),
-            time().$this->getImagen()->getClientOriginalName()
+            urlencode(time().$this->getImagen()->getClientOriginalName())
         );
 
         // set the path property to the filename where you've saved the file
-        $this->path = time().$this->getImagen()->getClientOriginalName();
+        $this->path = urlencode(time().$this->getImagen()->getClientOriginalName());
         $this->setUpdated(new \DateTime("now"));
-        $this->imagen=$this->getUploadRootDir($dir).$this->path;
+        $this->imagen=$this->getUploadDir($dir).'/'.$this->path;
+        return true;
         // clean up the f$this->path = $this->getFile()->getClientOriginalName();ile property as you won't need it anymore
         //$this->setImagen(null);
     }

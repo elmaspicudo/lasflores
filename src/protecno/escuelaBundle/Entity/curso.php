@@ -41,7 +41,7 @@ class curso
      */
     public function __toString()
     {
-        return $this->nombreDelCurso;
+        return $this->nombreDelCurso.' '.$this->nombreDeLaSeccion.'-'.$this->lotes;
     }
 
     /**

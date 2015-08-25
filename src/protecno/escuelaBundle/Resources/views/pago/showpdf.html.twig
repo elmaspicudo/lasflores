@@ -1,0 +1,189 @@
+{% extends '::index.html.twig' %}
+{% block header %}
+{% endblock %}
+{% block footer %}
+{% endblock %}
+{% block style %}
+<link rel='stylesheet' href="http://localhost/{{ asset('bundles/escuela/css/style.css') }}" >
+<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700|Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
+<style type="text/css">
+html{
+    background: 0;
+}
+    body{
+          width: 950px;
+background: 0;
+border:0;background: 0;
+    }
+.invoice-w {
+    margin: 0;
+}
+.invoice-w .invoice-number{
+    font-size: 20px;
+}
+.invoice-w .invoice-company {
+    font-size: 12px;
+}
+.invoice-w .ic-more-info{
+    font-size: 11px;
+}
+.invoice-w .invoice-client .icl-name{
+    font-size: 12px;
+}
+.colg{
+    width: 396.656px;
+   
+}
+.colmasg{
+    width: 523.328px;
+     
+}
+.col-sm-12{ 
+    padding: 0;
+    width: 950px;
+}
+.table-responsive, .table{
+ width: 910px;
+ overflow: hidden;
+}
+.page-title{
+    border: 0;
+    margin-left: 22px;
+}
+.row{
+    margin: 0;
+}
+.invoice-w .invoice-logo{
+padding: 0;
+}
+</style>
+{% endblock %}
+{% block panel -%}
+<div class="row"><div class="col-sm-12">
+   
+      <div class="invoice-w">
+      <div class="white-paper">
+        <div class="invoice-header">
+           <table>
+                <tr>
+                    <td >
+                            <img src="http://{{server}}{{ asset(escuela.archivo.imagen)}}" width="90" height="90">
+                          
+                    </td>
+                    <td style="width: 532px;">
+                
+                     <h1 class="page-title page-title-hard-bordered">                        
+                          Recibo de pago
+                        </h1>
+                    </td>
+                    <td style="text-align: right; width: 382px;">
+                        <div class="invoice-date-w">
+                          <div class="invoice-date">{{ entity.fechaDePago|date('d-m-Y H:i:s') }}</div>
+                          <div class="invoice-number">Pago #{{entity.id}}</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+           
+        </div>
+        <div class="invoice-header">
+        <table style="  text-align: left;">
+            
+        <tr>
+            <td class="colmasg">
+        
+       
+            <div class="invoice-company">
+              <div class="ic-name" style="text-align: left">{{escuela.nombreDelColegio}}</div>
+              <div class="ic-address" style="text-align: left">{{escuela.direccionDelColegio}}</div>
+             <table style="text-align: left">
+                 <tr>
+                     <td><i class="fa fa-phone"></i> {{escuela.telefonoDelColegio}}</td>
+                 </tr>
+                 <tr>
+                     <td><i class="fa fa-envelope"></i> {{escuela.email}}</td>
+                 </tr>
+                 <tr>
+                     <td><i class="fa fa-facebook-square"></i> {{escuela.facebook}}</td>
+                 </tr>
+                 <tr>
+                     <td><i class="fa fa-twitter-square"></i> {{escuela.twiter}}</td>
+                 </tr>
+             </table>
+               
+            </div>
+            </td>
+            <td class="colg">
+          
+          <div class="invoice-client">
+              <div class="icl-name">Alumno: <strong>{{ entity.alumno}}</strong></div>
+              <div class="icl-address">
+                
+              </div>
+            </div>
+            <div class="invoice-total-top">
+              <div class="label">Total</div>
+              <div class="value">${{entity.monto}}</div>
+            </div>
+          </td>
+            </tr>
+        </table>
+        </div>
+        <div class="table-responsive">
+        <table class="table invoice-table">
+          <thead>
+            <tr>
+              <th>Descripcion</th>
+              <th class="text-center">Monto</th>
+              <th class="text-center">Descuento</th>
+              <th class="text-right">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="ii-name">{{entity.monto}}</div>
+                
+              </td>
+              <td class="text-center">${{entity.monto}}</td>
+              <td class="text-center">{{entity.monto}}</td>
+              <td class="text-right"><strong>${{entity.monto}}</strong></td>
+            </tr>            
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3" class="text-right">Subtotal:</td>
+              <td class="text-right"><strong>${{entity.monto}}</strong></td>
+            </tr>
+            <tr>
+              <td colspan="3" class="text-right">Descuento:</td>            
+              <td class="text-right"><strong class="label label-danger">- ${{entity.monto}}</strong></td>
+            </tr>
+          </tfoot>
+        </table>
+        </div>
+        <table>
+            <tr>
+                <td class="colmasg">
+                    
+                </td>
+                <td class="colg">
+                   <div class="invoice-total-top invoice-inline-total">
+                      <span class="label">Total:</span>
+                      <span class="value">${{entity.monto}}</span>
+                    </div>  
+                </td>
+            </tr>
+        </table>
+           
+          
+
+        <div class="invoice-payment-info">
+          <strong>Disclaimer:</strong> Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource sucking relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+        </div>
+      </div>
+    </div></div></div>
+    <script type="text/javascript">
+    //window.print()
+    </script>
+{% endblock %}

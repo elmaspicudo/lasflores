@@ -30,11 +30,25 @@ class cuotaColeccion
     private $fechaFinal;
 
     /**
-     * @var \DateTime
+     * @var integer
      */
-    private $fechaDeVencimiento;
+    private $diasRecurrencia;
 
+    /**
+     * @var integer
+     */
+    private $diaproximo;
 
+    /**
+     * @var string
+     */
+    private $monto;
+
+    /**
+     * @var integer
+     */
+    private $tipo;
+   
     /**
      * Get id
      *
@@ -104,6 +118,17 @@ class cuotaColeccion
         return $this;
     }
 
+    
+    /**
+     * Get fechaDeVencimiento
+     *
+     * @return \DateTime 
+     */
+    public function getFechaDeVencimiento()
+    {
+        return $this->fechaDeVencimiento;
+    }
+   
     /**
      * Get fechaFinal
      *
@@ -115,70 +140,101 @@ class cuotaColeccion
     }
 
     /**
-     * Set fechaDeVencimiento
+     * Set diasRecurrencia
      *
-     * @param \DateTime $fechaDeVencimiento
+     * @param integer $diasRecurrencia
      * @return cuotaColeccion
      */
-    public function setFechaDeVencimiento($fechaDeVencimiento)
+    public function setDiasRecurrencia($diasRecurrencia)
     {
-        $this->fechaDeVencimiento = $fechaDeVencimiento;
+        $this->diasRecurrencia = $diasRecurrencia;
     
         return $this;
     }
 
     /**
-     * Get fechaDeVencimiento
+     * Get diasRecurrencia
      *
-     * @return \DateTime 
+     * @return integer 
      */
-    public function getFechaDeVencimiento()
+    public function getDiasRecurrencia()
     {
-        return $this->fechaDeVencimiento;
+        return $this->diasRecurrencia;
     }
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $anadirEmpleadoCategoria;
 
     /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->anadirEmpleadoCategoria = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-    
-    /**
-     * Add anadirEmpleadoCategoria
+     * Set diaproximo
      *
-     * @param \protecno\escuelaBundle\Entity\anadirEmpleadoCategoria $anadirEmpleadoCategoria
+     * @param integer $diaproximo
      * @return cuotaColeccion
      */
-    public function addAnadirEmpleadoCategoria(\protecno\escuelaBundle\Entity\anadirEmpleadoCategoria $anadirEmpleadoCategoria)
+    public function setDiaproximo($diaproximo)
     {
-        $this->anadirEmpleadoCategoria[] = $anadirEmpleadoCategoria;
+        $this->diaproximo = $diaproximo;
     
         return $this;
     }
 
     /**
-     * Remove anadirEmpleadoCategoria
+     * Get diaproximo
      *
-     * @param \protecno\escuelaBundle\Entity\anadirEmpleadoCategoria $anadirEmpleadoCategoria
+     * @return integer 
      */
-    public function removeAnadirEmpleadoCategoria(\protecno\escuelaBundle\Entity\anadirEmpleadoCategoria $anadirEmpleadoCategoria)
+    public function getDiaproximo()
     {
-        $this->anadirEmpleadoCategoria->removeElement($anadirEmpleadoCategoria);
+        return $this->diaproximo;
     }
 
     /**
-     * Get anadirEmpleadoCategoria
+     * Set monto
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @param string $monto
+     * @return cuotaColeccion
      */
-    public function getAnadirEmpleadoCategoria()
+    public function setMonto($monto)
     {
-        return $this->anadirEmpleadoCategoria;
+        $this->monto = $monto;
+    
+        return $this;
     }
+
+    /**
+     * Get monto
+     *
+     * @return string 
+     */
+    public function getMonto()
+    {
+        return $this->monto;
+    }
+
+    /**
+     * Set tipo
+     *
+     * @param integer $tipo
+     * @return cuotaColeccion
+     */
+    public function setTipo($tipo)
+    {
+        $this->tipo = $tipo;
+    
+        return $this;
+    }
+
+    /**
+     * Get tipo
+     *
+     * @return integer 
+     */
+    public function getTipo()
+    {
+        return $this->tipo;
+    }
+
+    
+    public function __toString()
+    {
+        return $this->cuotaNombreDeLaColeccion;
+    }
+    
 }

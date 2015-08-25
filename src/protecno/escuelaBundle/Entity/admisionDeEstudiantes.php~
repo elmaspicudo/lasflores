@@ -13,50 +13,6 @@ class admisionDeEstudiantes
      * @var integer
      */
     private $id;
-
-
-    /**
-     * Get id
-     *
-     * @return integer 
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-    /**
-     * @var \protecno\escuelaBundle\Entity\detallesPersonales
-     */
-    private $detallesPersonales;
-
-
-    /**
-     * Set detallesPersonales
-     *
-     * @param \protecno\escuelaBundle\Entity\detallesPersonales $detallesPersonales
-     * @return admisionDeEstudiantes
-     */
-    public function setDetallesPersonales(\protecno\escuelaBundle\Entity\detallesPersonales $detallesPersonales = null)
-    {
-        $this->detallesPersonales = $detallesPersonales;
-    
-        return $this;
-    }
-
-    /**
-     * Get detallesPersonales
-     *
-     * @return \protecno\escuelaBundle\Entity\detallesPersonales 
-     */
-    public function getDetallesPersonales()
-    {
-        return $this->detallesPersonales;
-    }
-    /**
-     * @var \protecno\escuelaBundle\Entity\admision
-     */
-    private $admision;
-
     /**
      * @var \protecno\escuelaBundle\Entity\detallesDeContacto
      */
@@ -66,41 +22,27 @@ class admisionDeEstudiantes
      * @var \protecno\escuelaBundle\Entity\curso
      */
     private $curso;
-
     /**
-     * @var \protecno\escuelaBundle\Entity\lotes
+     * @var string
      */
-    private $lotes;
+    private $identificacionBiometrica;
 
     /**
-     * @var \protecno\escuelaBundle\Entity\ajutes
+     * @var boolean
      */
-    private $ajustes;
+    private $habilitarFuncionesDeCorreoElectronico;
 
 
-    /**
-     * Set admision
+  /**
+     * Get id
      *
-     * @param \protecno\escuelaBundle\Entity\admision $admision
-     * @return admisionDeEstudiantes
+     * @return integer 
      */
-    public function setAdmision(\protecno\escuelaBundle\Entity\admision $admision = null)
+    public function getId()
     {
-        $this->admision = $admision;
-    
-        return $this;
+        return $this->id;
     }
-
-    /**
-     * Get admision
-     *
-     * @return \protecno\escuelaBundle\Entity\admision 
-     */
-    public function getAdmision()
-    {
-        return $this->admision;
-    }
-
+   
     /**
      * Set detallesDeContacto
      *
@@ -146,164 +88,50 @@ class admisionDeEstudiantes
     {
         return $this->curso;
     }
-
+       
     /**
-     * Set lotes
+     * Set identificacionBiometrica
      *
-     * @param \protecno\escuelaBundle\Entity\lotes $lotes
+     * @param string $identificacionBiometrica
      * @return admisionDeEstudiantes
      */
-    public function setLotes(\protecno\escuelaBundle\Entity\lotes $lotes = null)
+    public function setIdentificacionBiometrica($identificacionBiometrica)
     {
-        $this->lotes = $lotes;
+        $this->identificacionBiometrica = $identificacionBiometrica;
     
         return $this;
     }
 
     /**
-     * Get lotes
+     * Get identificacionBiometrica
      *
-     * @return \protecno\escuelaBundle\Entity\lotes 
+     * @return string 
      */
-    public function getLotes()
+    public function getIdentificacionBiometrica()
     {
-        return $this->lotes;
+        return $this->identificacionBiometrica;
     }
 
     /**
-     * Set ajustes
+     * Set habilitarFuncionesDeCorreoElectronico
      *
-     * @param \protecno\escuelaBundle\Entity\ajutes $ajustes
+     * @param boolean $habilitarFuncionesDeCorreoElectronico
      * @return admisionDeEstudiantes
      */
-    public function setAjustes(\protecno\escuelaBundle\Entity\ajutes $ajustes = null)
+    public function setHabilitarFuncionesDeCorreoElectronico($habilitarFuncionesDeCorreoElectronico)
     {
-        $this->ajustes = $ajustes;
+        $this->habilitarFuncionesDeCorreoElectronico = $habilitarFuncionesDeCorreoElectronico;
     
         return $this;
     }
 
     /**
-     * Get ajustes
+     * Get habilitarFuncionesDeCorreoElectronico
      *
-     * @return \protecno\escuelaBundle\Entity\ajutes 
+     * @return boolean 
      */
-    public function getAjustes()
+    public function getHabilitarFuncionesDeCorreoElectronico()
     {
-        return $this->ajustes;
-    }
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $subirFotoDelUsuario;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->subirFotoDelUsuario = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-    
-    /**
-     * Add subirFotoDelUsuario
-     *
-     * @param \protecno\escuelaBundle\Entity\subirFotoDelUsuario $subirFotoDelUsuario
-     * @return admisionDeEstudiantes
-     */
-    public function addSubirFotoDelUsuario(\protecno\escuelaBundle\Entity\subirFotoDelUsuario $subirFotoDelUsuario)
-    {
-        $this->subirFotoDelUsuario[] = $subirFotoDelUsuario;
-    
-        return $this;
-    }
-
-    /**
-     * Remove subirFotoDelUsuario
-     *
-     * @param \protecno\escuelaBundle\Entity\subirFotoDelUsuario $subirFotoDelUsuario
-     */
-    public function removeSubirFotoDelUsuario(\protecno\escuelaBundle\Entity\subirFotoDelUsuario $subirFotoDelUsuario)
-    {
-        $this->subirFotoDelUsuario->removeElement($subirFotoDelUsuario);
-    }
-
-    /**
-     * Get subirFotoDelUsuario
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getSubirFotoDelUsuario()
-    {
-        return $this->subirFotoDelUsuario;
-    }
-
-    /**
-     * Add admision
-     *
-     * @param \protecno\escuelaBundle\Entity\admision $admision
-     * @return admisionDeEstudiantes
-     */
-    public function addAdmision(\protecno\escuelaBundle\Entity\admision $admision)
-    {
-        $this->admision[] = $admision;
-    
-        return $this;
-    }
-
-    /**
-     * Remove admision
-     *
-     * @param \protecno\escuelaBundle\Entity\admision $admision
-     */
-    public function removeAdmision(\protecno\escuelaBundle\Entity\admision $admision)
-    {
-        $this->admision->removeElement($admision);
-    }
-
-    /**
-     * Add curso
-     *
-     * @param \protecno\escuelaBundle\Entity\curso $curso
-     * @return admisionDeEstudiantes
-     */
-    public function addCurso(\protecno\escuelaBundle\Entity\curso $curso)
-    {
-        $this->curso[] = $curso;
-    
-        return $this;
-    }
-
-    /**
-     * Remove curso
-     *
-     * @param \protecno\escuelaBundle\Entity\curso $curso
-     */
-    public function removeCurso(\protecno\escuelaBundle\Entity\curso $curso)
-    {
-        $this->curso->removeElement($curso);
-    }
-
-    /**
-     * Add lotes
-     *
-     * @param \protecno\escuelaBundle\Entity\lotes $lotes
-     * @return admisionDeEstudiantes
-     */
-    public function addLote(\protecno\escuelaBundle\Entity\lotes $lotes)
-    {
-        $this->lotes[] = $lotes;
-    
-        return $this;
-    }
-
-    /**
-     * Remove lotes
-     *
-     * @param \protecno\escuelaBundle\Entity\lotes $lotes
-     */
-    public function removeLote(\protecno\escuelaBundle\Entity\lotes $lotes)
-    {
-        $this->lotes->removeElement($lotes);
+        return $this->habilitarFuncionesDeCorreoElectronico;
     }
 }

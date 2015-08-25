@@ -7,21 +7,17 @@ protecno\escuelaBundle\Entity\admisionDeEstudiantes:
             id: true
             generator:
                 strategy: AUTO
+        identificacionBiometrica:
+            type: string
+            length: '100'
+        habilitarFuncionesDeCorreoElectronico:
+            type: boolean
+            nullable: true
     manyToOne:
         detallesDeContacto:
             targetEntity: protecno\escuelaBundle\Entity\detallesDeContacto
-            inversedBy: admisionDeEstudiantes
-        ajustes:
-            targetEntity: protecno\escuelaBundle\Entity\ajustes
-            inversedBy: admisionDeEstudiantes
-    manyToMany:
-        subirFotoDelUsuario:
-            targetEntity: protecno\escuelaBundle\Entity\subirFotoDelUsuario
-            inversedBy: admisionDeEstudiantes 
+            inversedBy: admisionDeEstudiantes        
         curso:
             targetEntity: protecno\escuelaBundle\Entity\curso
-            inversedBy: admisionDeEstudiantes 
-        lotes:
-            targetEntity: protecno\escuelaBundle\Entity\lotes
-            inversedBy: admisionDeEstudiantes                                          
+            inversedBy: admisionDeEstudiantes                                                
     lifecycleCallbacks: {  }

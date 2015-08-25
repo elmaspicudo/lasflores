@@ -7,7 +7,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use protecno\escuelaBundle\Entity\admisionDeEstudiantes;
 use protecno\escuelaBundle\Form\admisionDeEstudiantesType;
-
+use protecno\escuelaBundle\Entity\detallesDeContacto;
+use protecno\escuelaBundle\Form\detallesDeContactoType;
 /**
  * admisionDeEstudiantes controller.
  *
@@ -38,18 +39,23 @@ class admisionDeEstudiantesController extends Controller
         $entity = new admisionDeEstudiantes();
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);
+        $alumno=$request->request->get('hdnAlumno', 0);
+        if($alumno>0){
+            if ($form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
+                $detallesDeContacto=$em->getRepository('escuelaBundle:detallesDeContacto')->find($alumno);
+                $entity->setDetallesDeContacto($detallesDeContacto);
+                $em->persist($entity);
+                $em->flush();
 
-        if ($form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($entity);
-            $em->flush();
-
-            return $this->redirect($this->generateUrl('admisiondeestudiantes_show', array('id' => $entity->getId())));
+                return $this->redirect($this->generateUrl('admisiondeestudiantes_show', array('id' => $entity->getId())));
+            }
         }
 
         return $this->render('escuelaBundle:admisionDeEstudiantes:new.html.twig', array(
             'entity' => $entity,
             'form'   => $form->createView(),
+            'error'=>$alumno
         ));
     }
 
@@ -67,7 +73,7 @@ class admisionDeEstudiantesController extends Controller
             'method' => 'POST',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Create'));
+       // $form->add('submit', 'submit', array('label' => 'Create'));
 
         return $form;
     }
@@ -147,7 +153,7 @@ class admisionDeEstudiantesController extends Controller
             'method' => 'PUT',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Update'));
+        //$form->add('submit', 'submit', array('label' => 'Update'));
 
         return $form;
     }
@@ -217,7 +223,7 @@ class admisionDeEstudiantesController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('admisiondeestudiantes_delete', array('id' => $id)))
             ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Delete'))
+           // ->add('submit', 'submit', array('label' => 'Delete'))
             ->getForm()
         ;
     }

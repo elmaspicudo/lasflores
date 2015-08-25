@@ -21,9 +21,9 @@
 </head>
 
 <body class="glossed">
-<script>
-  
-</script>
+{% block header %}
+<div class="cssload-box-loading" id="ctnLoader">
+</div>
 <div class="all-wrapper fixed-header left-menu">
   <div class="page-header">
   <div class="header-links hidden-xs">
@@ -75,33 +75,36 @@
   <div class="side">
   <div class="sidebar-wrapper">
   <ul>
-    <li class='current'>
+   <!-- <li class='current'>
       <a class='current' href="index.html" data-toggle="tooltip" data-placement="right" title="" data-original-title="Dashboard">
         <i class="fa fa-home"></i>
       </a>
-    </li>
+    </li>-->
     <li>
       <a href="{{ path('detallesdecontacto') }}" data-toggle="tooltip" data-placement="right" title="Alumnos" data-original-title="Alumnos">
         <i class="fa fa-file-text-o"></i>
       </a>
     </li>
-    <li>
-      <a href="elements.html" data-toggle="tooltip" data-placement="right" title="" data-original-title="UI Elements">
+    
+    {% if is_granted('ROLE_ADMIN') %} 
+        <li>
+          <a href="{{ path('curso') }}" data-toggle="tooltip" data-placement="right" title="Configuracion" data-original-title="Configuracion">
+            <i class="fa fa-code-fork"></i>
+          </a>
+        </li>  
+        <li>
+      <a href="{{ path('admisiondelempleado') }}" data-toggle="tooltip" data-placement="right" title="" data-original-title="Empleados">
         <span class="badge"></span>
-        <i class="fa fa-code-fork"></i>
-      </a>
-    </li>
-    <li>
-      <a href="{{ path('curso') }}" data-toggle="tooltip" data-placement="right" title="Configuracion" data-original-title="Configuracion">
         <i class="fa fa-th"></i>
       </a>
-    </li>
-    <li>
-      <a href="table.html" data-toggle="tooltip" data-placement="right" title="" data-original-title="Tables">
-        <i class="fa fa-bar-chart-o"></i>
-      </a>
-    </li>
-    <li>
+    </li>   
+        <li>
+          <a href="{{ path('pago') }}" data-toggle="tooltip" data-placement="right" title="" data-original-title="Administracion">
+            <i class="fa fa-bar-chart-o"></i>
+          </a>
+        </li>
+    {% endif %}
+   <!-- <li>
       <a href="grid.html" data-toggle="tooltip" data-placement="right" title="" data-original-title="Layouts">
         <i class="fa fa-font"></i>
       </a>
@@ -121,7 +124,7 @@
       <a href="page_search.html" data-toggle="tooltip" data-placement="right" title="" data-original-title="Extra Pages">
         <i class="fa fa-trophy"></i>
       </a>
-    </li>
+    </li>-->
   </ul>
 </div>
   <div class="sub-sidebar-wrapper">
@@ -144,9 +147,10 @@
   <i class="fa fa-exclamation-circle"></i> <strong>Welcome!</strong> This is a dashboard of the powerful admin template.
 </div>
 <div class="row">
+{% endblock -%}
 {% block panel -%}
 {% endblock -%}
- 
+{% block footer %}
 </div>
 </div>
 
@@ -160,5 +164,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 <script src="{{ asset('bundles/escuela/js/pluggins.js')}}"></script>
+<script src="{{ asset('bundles/escuela/js/generales.js')}}"></script>
+{% endblock -%}
 {% block scripts -%}
 {% endblock -%}

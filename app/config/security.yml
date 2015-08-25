@@ -50,4 +50,5 @@ security:
     access_control:
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
     #    - { path: ^/Inicio, roles: ROLE_USER } #todos tienen acceso por ser ROLE_USER
-        - { path: ^/detallesdecontacto, roles: ROLE_PROF }
+        - { path: ^/detallesdecontacto, roles: [ROLE_PROF,ROLE_ADMIN] }
+

@@ -9,18 +9,15 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 class admisionDeEstudiantesType extends AbstractType
 {
         /**
-     * @param FormBuilderInterface $builder
+     * @param FormBuilderInterface $builder 
      * @param array $options
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('admision')
-            ->add('detallesDeContacto')
             ->add('curso')
-            ->add('lotes')
-            ->add('ajustes')
-            ->add('subirFotoDelUsuario')
+            ->add('habilitarFuncionesDeCorreoElectronico')
+            ->add('identificacionBiometrica')
         ;
     }
     

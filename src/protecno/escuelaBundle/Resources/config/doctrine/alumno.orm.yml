@@ -1,6 +1,7 @@
 protecno\escuelaBundle\Entity\alumno:
     type: entity
     table: null
+    repositoryClass: protecno\escuelaBundle\Entity\alumnoRepository
     fields:
         id: 
             type: integer
@@ -21,7 +22,7 @@ protecno\escuelaBundle\Entity\alumno:
             type: string
             length: '30'
         genero:
-            type: string
+            type: string 
             length: '10'
         grupoSanguineo:
             type: string

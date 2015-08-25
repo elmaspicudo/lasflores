@@ -1,0 +1,30 @@
+protecno\escuelaBundle\Entity\pago:
+    type: entity
+    table: null
+    fields:
+        id: 
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO        
+        fechaDePago:
+            type: datetime
+        estatus:
+            type: integer
+        descuento:
+            type: integer 
+        monto:
+            type: decimal 
+        montoDescuento:
+            type: decimal      
+    manyToOne:
+        alumno: 
+            targetEntity: protecno\escuelaBundle\Entity\alumno
+            inversedBy: pago
+        cuota: 
+            targetEntity: protecno\escuelaBundle\Entity\cuotaColeccion
+            inversedBy: pago
+        archivo:         
+            targetEntity: protecno\escuelaBundle\Entity\archivo
+            cascade: ["persist"]
+    lifecycleCallbacks: {  }

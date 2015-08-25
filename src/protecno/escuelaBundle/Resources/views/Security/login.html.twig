@@ -1,5 +1,24 @@
-{% extends '::index.html.twig' %}
-{% block panel -%}
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel='stylesheet' href="{{ asset('bundles/escuela/css/style.css') }}" >
+  <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700|Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
+  {% block style %}{% endblock %}
+  <link href="assets/favicon.ico" rel="shortcut icon">
+  <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    @javascript html5shiv respond.min
+  <![endif]-->
+
+  <title>{% block title %}Tecno School!{% endblock %}</title>
+
+</head>
+<body class="glossed">
 <div class="all-wrapper no-menu-wrapper light-bg">
   <div class="login-logo-w">
     <a href="index.html" class="logo">
@@ -48,4 +67,4 @@
     </div>
   </div>
 </div>
-{% endblock %}
+</body>

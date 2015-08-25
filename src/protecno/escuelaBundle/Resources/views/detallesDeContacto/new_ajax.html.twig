@@ -1,0 +1,173 @@
+<head>
+  <link rel='stylesheet' href="{{ asset('bundles/escuela/css/style.css') }}" >
+  <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700|Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' href="{{ asset('bundles/escuela/css/file.css') }}" >
+</head>
+<body class="glossed" style="height: 100%; width: 100%; background: #fff">
+     		    {{ form_start(form, {'attr': {'class': 'form_transaccion_edit'}}) }}
+          <div class="col-md-12">
+    			       <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                      <label>Imagen de perfil</label>
+                        {{ form_widget(form.alumno.archivo.imagen,{'attr': {'required': 'true'}}) }}
+                                  <span class="errorMsg">{{ form_errors(form.alumno.archivo.imagen) }}</span>
+                              </div>
+                      </div>
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label>No. de control</label>
+                        {{ form_widget(form.alumno.noDeAdmision, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.alumno.noDeAdmision) }}</span>                    
+                      </div>
+                    </div>                
+                   
+                  <div class="col-md-6">  
+      	             <div class="form-group">
+      	                <label>Nombre</label>
+      	                {{ form_widget(form.alumno.nombre, {'attr': {'class': 'form-control'}}) }}
+      	                <span class="errorMsg">{{ form_errors(form.alumno.nombre) }}</span> 
+      	             </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Apellido paterno</label>
+                        {{ form_widget(form.alumno.apellidoPaterno, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.alumno.apellidoPaterno) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Apellido materno</label>
+                        {{ form_widget(form.alumno.apellidoMaterno, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.alumno.apellidoMaterno) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Genero</label>
+                        {{ form_widget(form.alumno.genero, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.alumno.genero) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Tipo sanguineo</label>
+                        {{ form_widget(form.alumno.grupoSanguineo, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.alumno.grupoSanguineo) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Lugar de nacimiento</label>
+                        {{ form_widget(form.alumno.lugarDeNacimiento, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.alumno.lugarDeNacimiento) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Fecha de nacimiento</label>
+                        {{ form_widget(form.alumno.fechaDeNacimiento, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.alumno.fechaDeNacimiento) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Nacionalidad</label>
+                        {{ form_widget(form.alumno.nacionalidad, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.alumno.nacionalidad) }}</span> 
+                     </div>
+                  </div>
+                </div>
+                <h4 class="widget-header">Datos de contacto</h4>
+                <div class="row">
+                   <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Direccion</label>
+                        {{ form_widget(form.direccionLinea1, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.direccionLinea1) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Colonia</label>
+                        {{ form_widget(form.direccionLinea2, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.direccionLinea2) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Municipio</label>
+                        {{ form_widget(form.ciudad, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.ciudad) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Estado</label>
+                        {{ form_widget(form.estado, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.estado) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Codigo postal</label>
+                        {{ form_widget(form.codigoPIN, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.codigoPIN) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>pais</label>
+                        {{ form_widget(form.pais, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.pais) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Telefono</label>
+                        {{ form_widget(form.telefono, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.telefono) }}</span> 
+                     </div>
+                  </div>
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>Celular</label>
+                        {{ form_widget(form.movil, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.movil) }}</span> 
+                     </div>
+                  </div>                  
+                  <div class="col-md-6">  
+                     <div class="form-group">
+                        <label>EMail</label>
+                        {{ form_widget(form.eMail, {'attr': {'class': 'form-control'}}) }}
+                        <span class="errorMsg">{{ form_errors(form.eMail) }}</span> 
+                     </div>
+                  </div>
+                </div>
+    		          <button class="btn btn-primary" type="submit">Guardar</button>
+                  <button class="btn btn-default" type="reset">Limpiar</button>
+              </div>
+              <div style="clear: both"></div>
+            {{ form_end(form) }}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="{{ asset('bundles/escuela/js/pluggins.js')}}"></script>          
+<script src="{{ asset('bundles/escuela/js/fileinput.js')}}"></script>
+<script type="text/javascript">
+  $(".file").fileinput({
+        uploadUrl: '#', // you must set a valid URL here else you will get an error
+        allowedFileExtensions : ['jpg', 'png','gif'],
+        overwriteInitial: false,
+        maxFileSize: 1000,
+        maxFilesNum: 1,
+        showCaption: false,
+      showRemove: false,
+      showUpload: false,
+        //allowedFileTypes: ['image', 'video', 'flash'],
+        slugCallback: function(filename) {
+            return filename.replace('(', '_').replace(']', '_');
+        }
+  });
+</script>
+</body>

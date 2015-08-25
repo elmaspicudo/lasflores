@@ -18,17 +18,18 @@ class configuracionesGeneralesType extends AbstractType
             ->add('nombreDelColegio')
             ->add('direccionDelColegio')
             ->add('telefonoDelColegio')
-            ->add('ejercicioFechaDeInicio')
-            ->add('ejercicioFechaDelFinal')
             ->add('numeroDeReciboPartir')
             ->add('tipoDeMoneda')
             ->add('incrementoDeAdmisionEstudiantilNo')
             ->add('incrementoDelEmpleadoNo')
             ->add('noticiasModeracionDeComentarios')
-            ->add('habilitarHermano')
             ->add('cambioDeContrasenaInicioDeSesion')
-            ->add('activarNumeroDeRolloParaEstudiantes')
-            ->add('habilitarOauth')
+            ->add('facebook')
+            ->add('twiter')
+            ->add('email')
+             ->add('archivo', new archivoType(), array(
+                'attr' => array('id' => 'well')
+            ))
         ;
     }
     

@@ -20,7 +20,7 @@ class alumno
     private $noDeAdmision;
 
     /**
-     * @var \DateTime
+     * @var \DateTime 
      */
     private $fechaDeAdmision;
 
@@ -64,7 +64,21 @@ class alumno
      */
     private $nacionalidad;
 
+ /**
+     * @var \protecno\escuelaBundle\Entity\anadirUsuario
+     */
+    private $agrego;
 
+    /**
+     * @var \protecno\escuelaBundle\Entity\anadirUsuario
+     */
+    private $modifico;
+
+    /**
+     * @var \protecno\escuelaBundle\Entity\archivo
+     */
+    private $archivo;
+    
     /**
      * Get id
      *
@@ -304,22 +318,7 @@ class alumno
     {
         return $this->nacionalidad;
     }
-    /**
-     * @var \protecno\escuelaBundle\Entity\anadirUsuario
-     */
-    private $agrego;
-
-    /**
-     * @var \protecno\escuelaBundle\Entity\anadirUsuario
-     */
-    private $modifico;
-
-    /**
-     * @var \protecno\escuelaBundle\Entity\archivo
-     */
-    private $archivo;
-
-
+   
     /**
      * Set agrego
      *
@@ -415,5 +414,15 @@ class alumno
     public function getFechaDeNacimiento()
     {
         return $this->fechaDeNacimiento;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function __toString()
+    {
+        return $this->nombre.' '.$this->apellidoPaterno.' '.$this->apellidoMaterno;
     }
 }

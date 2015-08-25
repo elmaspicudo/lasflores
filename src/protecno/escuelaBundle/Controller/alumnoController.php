@@ -4,7 +4,7 @@ namespace protecno\escuelaBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
+use Symfony\Component\HttpFoundation\Response;
 use protecno\escuelaBundle\Entity\alumno;
 use protecno\escuelaBundle\Form\alumnoType;
 
@@ -52,6 +52,21 @@ class alumnoController extends Controller
             'entity' => $entity,
             'form'   => $form->createView(),
         ));
+    }
+
+     /**
+     * buscar coinsidencias alumno entity.
+     *
+     */
+    public function searchAction(Request $request)
+    {
+       
+        $em = $this->getDoctrine()->getManager();
+        $lines=$em->getRepository('escuelaBundle:alumno')->findLike($request->request->get('search', ''));
+
+        $response = new Response(json_encode(array('success' => true,'mylist'=>$lines)));
+        $response->headers->set('Content-Type', 'application/json');
+        return $response;
     }
 
     /**

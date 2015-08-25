@@ -302,4 +302,15 @@ class detallesDeContacto
     {
         return $this->alumno;
     }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function __toString()
+    {
+        //return $this->alumno;
+        return $this->alumno->getNombre().' '.$this->alumno->getApellidoPaterno().' '.$this->alumno->getApellidoMaterno();
+    }
 }

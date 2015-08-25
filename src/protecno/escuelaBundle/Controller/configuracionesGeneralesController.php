@@ -23,10 +23,14 @@ class configuracionesGeneralesController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('escuelaBundle:configuracionesGenerales')->findAll();
+        $entity = $em->getRepository('escuelaBundle:configuracionesGenerales')->find(1);
+
+        if (!$entity) {
+            return $this->redirect($this->generateUrl('configuracionesgenerales_new'));
+        }
 
         return $this->render('escuelaBundle:configuracionesGenerales:index.html.twig', array(
-            'entities' => $entities,
+            'entity' => $entity,
         ));
     }
     /**
@@ -41,10 +45,19 @@ class configuracionesGeneralesController extends Controller
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($entity);
-            $em->flush();
-
-            return $this->redirect($this->generateUrl('configuracionesgenerales_show', array('id' => $entity->getId())));
+            $existe = $em->getRepository('escuelaBundle:configuracionesGenerales')->find(1);
+            if (!$existe) {
+                $entity->setEjercicioFechaDeInicio(new \DateTime("now"));
+                $entity->setEjercicioFechaDelFinal(new \DateTime("now"));
+                $entity->getArchivo()->setTitulo($entity->getNombreDelColegio());
+                $entity->setHabilitarHermano(1);
+                $entity->getArchivo()->upload('pagos');
+                
+                $em->persist($entity);
+                $em->flush();
+                return $this->redirect($this->generateUrl('configuracionesgenerales'));
+            }
+            return $this->redirect($this->generateUrl('configuracionesgenerales_edit', array('id' => 1)));
         }
 
         return $this->render('escuelaBundle:configuracionesGenerales:new.html.twig', array(
@@ -67,7 +80,7 @@ class configuracionesGeneralesController extends Controller
             'method' => 'POST',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Create'));
+//        $form->add('submit', 'submit', array('label' => 'Create'));
 
         return $form;
     }
@@ -91,7 +104,7 @@ class configuracionesGeneralesController extends Controller
      * Finds and displays a configuracionesGenerales entity.
      *
      */
-    public function showAction($id)
+    /*public function showAction($id)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -124,12 +137,12 @@ class configuracionesGeneralesController extends Controller
         }
 
         $editForm = $this->createEditForm($entity);
-        $deleteForm = $this->createDeleteForm($id);
+     //   $deleteForm = $this->createDeleteForm($id);
 
-        return $this->render('escuelaBundle:configuracionesGenerales:edit.html.twig', array(
+        return $this->render('escuelaBundle:configuracionesGenerales:new.html.twig', array(
             'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+            'form'   => $editForm->createView(),
+            //'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -147,7 +160,7 @@ class configuracionesGeneralesController extends Controller
             'method' => 'PUT',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Update'));
+    //    $form->add('submit', 'submit', array('label' => 'Update'));
 
         return $form;
     }
@@ -184,7 +197,7 @@ class configuracionesGeneralesController extends Controller
     /**
      * Deletes a configuracionesGenerales entity.
      *
-     */
+     *//*
     public function deleteAction(Request $request, $id)
     {
         $form = $this->createDeleteForm($id);
@@ -211,7 +224,7 @@ class configuracionesGeneralesController extends Controller
      * @param mixed $id The entity id
      *
      * @return \Symfony\Component\Form\Form The form
-     */
+     *//*
     private function createDeleteForm($id)
     {
         return $this->createFormBuilder()
@@ -220,5 +233,5 @@ class configuracionesGeneralesController extends Controller
             ->add('submit', 'submit', array('label' => 'Delete'))
             ->getForm()
         ;
-    }
+    }*/
 }

@@ -1,5 +1,8 @@
 {% extends '::index.html.twig' %}
-
+{% block submenu -%}
+      <li><a href="{{ path('admisiondeestudiantes') }}">Inscripciones</a></li>
+      <li><a href="{{ path('detallesdecontacto') }}">Alumnos</a></li>
+  {% endblock -%}
 {% block panel -%}
    <div class="col-md-12">
         <div class="widget widget-green">

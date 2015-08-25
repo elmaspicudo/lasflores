@@ -1,5 +1,8 @@
 {% extends '::index.html.twig' %}
-
+{% block submenu -%}
+      <li><a href="{{ path('admisiondeestudiantes') }}">Inscripciones</a></li>
+      <li><a href="{{ path('detallesdecontacto') }}">Alumnos</a></li>
+  {% endblock -%}
 {% block panel -%}
 <div class="col-md-12">
         <div class="widget widget-green">
@@ -60,21 +63,17 @@
                             <td>{{ entity.alumno.lugarDeNacimiento }}</td>
                             <td>{{ entity.alumno.nacionalidad }}</td>
                             <td>
-                            <ul>
-                                <li>
-                                    <a href="{{ path('detallesdecontacto_show', { 'id': entity.id }) }}">show</a>
-                                </li>
-                                <li>
-                                    <a href="{{ path('detallesdecontacto_edit', { 'id': entity.id }) }}">edit</a>
-                                </li>
-                            </ul>
+                            <td>
+                                <a href="{{ path('detallesdecontacto_show', { 'id': entity.id }) }}" title="Ver mas"><i class="fa fa-sign-in"></i></a>
+                                <a href="{{ path('detallesdecontacto_edit', { 'id': entity.id }) }}" title="Editar"><i class="fa fa-edit"></i></a>
+                                
                             </td>
                         </tr>
-                    {% endfor %}
+        {% endfor %}
                     </tbody>
                 </table>
             </div>      
       </div>
 </div>
-        
-    {% endblock %}
+{% endblock %}
+ 

@@ -14,10 +14,22 @@ detallesdecontacto_create:
     path:     /create
     defaults: { _controller: "escuelaBundle:detallesDeContacto:create" }
     requirements: { _method: post }
+detallesdecontacto_new_ajax:
+    path:     /new_ajax
+    defaults: { _controller: "escuelaBundle:detallesDeContacto:newAjax" }
+
+detallesdecontacto_create_ajax:
+    path:     /create_ajax
+    defaults: { _controller: "escuelaBundle:detallesDeContacto:createAjax" }
+    requirements: { _method: post }
 
 detallesdecontacto_edit:
     path:     /{id}/edit
     defaults: { _controller: "escuelaBundle:detallesDeContacto:edit" }
+    
+detallesdecontacto_edit_ajax:
+    path:     /{id}/add
+    defaults: { _controller: "escuelaBundle:detallesDeContacto:editAjax" }
 
 detallesdecontacto_update:
     path:     /{id}/update

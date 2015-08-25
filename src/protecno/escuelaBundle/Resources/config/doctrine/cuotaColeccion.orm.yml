@@ -12,12 +12,19 @@ protecno\escuelaBundle\Entity\cuotaColeccion:
             length: '100'
         fechaDeInicio:
             type: datetime
+            nullable: true
         fechaFinal:
             type: datetime
-        fechaDeVencimiento:
-            type: datetime
-    oneToMany:
-        anadirEmpleadoCategoria:
-            targetEntity: protecno\escuelaBundle\Entity\anadirEmpleadoCategoria
-            mappedBy: cuotaColeccion    
+            nullable: true
+        diasRecurrencia:
+            type: integer
+            nullable: true
+        diaproximo:
+            type: integer
+            nullable: true
+        monto:
+            type: decimal
+        tipo:
+            type: integer
+      
     lifecycleCallbacks: {  }

@@ -1,15 +1,218 @@
-{% extends '::base.html.twig' %}
+{% extends '::index.html.twig' %}
+{% block submenu -%}
+      <li><a href="{{ path('admisiondeestudiantes') }}">Inscripciones</a></li>
+      <li><a href="{{ path('detallesdecontacto') }}">Alumnos</a></li>
+  {% endblock -%}
+{% block style %}
+ <link rel='stylesheet' href="{{ asset('bundles/escuela/css/file.css') }}" >
+{% endblock %}
+{% block scripts -%}
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+<div class="modal-dialog modal-lg">
+		        <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title" id="gridSystemModalLabel">Agregar alumno</h4>
+				      </div>
+				      <div class="modal-body">
+							<iframe src="{{ path('detallesdecontacto_new_ajax') }}" style="  width: 100%;
+  border: 0;
 
-{% block body -%}
-    <h1>admisionDeEstudiantes creation</h1>
+  padding: 0;
+  margin: 0;
+min-height: 700px;">
+								
+							</iframe>
+				      </div> 
+			  	</div>
+		  	</div>
+	</div>
+<script src="{{ asset('bundles/escuela/js/bootstrap-typeahead.min.js') }}"></script>
 
-    {{ form(form) }}
+<script type="text/javascript">
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('admisiondeestudiantes') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+
+$("input.typeahead").typeahead({
+    onSelect: displayResult,
+    ajax: {
+        url: "{{ path('alumno_search') }}",
+        timeout: 500,
+        triggerLength: 4,
+        method: "post",
+        displayField: 'name',
+        valueField: 'id',
+        loadingClass: "loading-circle",
+        
+        preDispatch: function (query) {
+           // showLoadingMask(true);
+            return {
+                search: query
+            }
+        },
+        preProcess: function (data) {
+            //showLoadingMask(false);
+            if (data.success === false) {
+                // Hide the list, there was some error
+                return false;
+            }
+            // We good!
+            return data.mylist;
+        }
+    }
+});
+
+function displayResult(item) {
+                   // $('.alert').show().html('You selected <strong>' + item.value + '</strong>: <strong>' + item.text + '</strong>');
+                   $('#hdnAlumno').val(item.value);
+                   var url="{{ path('detallesdecontacto_edit_ajax', { 'id': 0 }) }}";
+                   var param=url.replace("0", item.value);
+                   $.ajax({
+			            type: "POST",
+			            dataType: "json",
+			            data: {
+			                accion: true,			                
+			            },
+			            url:param ,
+			            beforeSend: function () {
+			                getLoaderFormulario("block");
+			            },
+			            success: function (xhr) {
+
+			                getLoaderFormulario("none");
+			                if (xhr.success) {			                    
+			                    $('#ctnAlumno').html( xhr.body);
+			                } else {
+			                    //alert(xhr.mensaje);
+			                    $('.alert').show().html('<strong>' + xhr.mensaje + '</strong>');
+			                }
+
+			                
+			            },
+			            error: function (xhr, ajaxOptions, thrownError) {
+			                getLoaderFormulario("none");
+			               // alert("Error " + xhr.responseText);
+			                $('.alert').show().html('<strong>Error: ' + xhr.responseText + '</strong>');
+			            }
+			        });
+                }
+
+
+    function displayResult_error(item,action) {
+                   // $('.alert').show().html('You selected <strong>' + item.value + '</strong>: <strong>' + item.text + '</strong>');
+                   if(action>0){
+                   	$('.bs-example-modal-lg').modal('hide');
+                   }
+                   $('#hdnAlumno').val(item);
+                   var url="{{ path('detallesdecontacto_edit_ajax', { 'id': 0 }) }}";
+                   var param=url.replace("0", item);
+                   $.ajax({
+			            type: "POST",
+			            dataType: "json",
+			            data: {
+			                accion: true,			                
+			            },
+			            url:param ,
+			            beforeSend: function () {
+			                getLoaderFormulario("block");
+			            },
+			            success: function (xhr) {
+
+			                getLoaderFormulario("none");
+			                if (xhr.success) {			                    
+			                    $('#ctnAlumno').html( xhr.body);
+			                } else {
+			                    //alert(xhr.mensaje);
+			                    $('.alert').show().html('<strong>' + xhr.mensaje + '</strong>');
+			                }
+
+			                
+			            },
+			            error: function (xhr, ajaxOptions, thrownError) {
+			                getLoaderFormulario("none");
+			               // alert("Error " + xhr.responseText);
+			                $('.alert').show().html('<strong>Error: ' + xhr.responseText + '</strong>');
+			            }
+			        });
+                }
+        {% if error is defined %}
+        	displayResult_error({{error}},0)
+		{% endif %}
+</script>
+{% endblock %}
+{% block panel -%}
+<div style="display:none" class="alert"></div>
+   <div class="col-md-12">
+        <div class="widget widget-green">
+          	<div class="widget-title">
+  	            <div class="widget-controls">
+            					  <a href="#" class="widget-control widget-control-full-screen" data-toggle="tooltip" data-placement="top" title="" data-original-title="Full Screen"><i class="fa fa-expand"></i></a>
+            					  <a href="#" class="widget-control widget-control-full-screen widget-control-show-when-full" data-toggle="tooltip" data-placement="left" title="" data-original-title="Exit Full Screen"><i class="fa fa-expand"></i></a>
+            					  <a href="#" data-toggle="dropdown" class="widget-control widget-control-settings"><i class="fa fa-cog"></i></a>
+            					  <div class="dropdown" data-toggle="tooltip" data-placement="top" title="" data-original-title="Settings">
+            					    <ul class="dropdown-menu dropdown-menu-small" role="menu" aria-labelledby="dropdownMenu1">
+            					      <li class="dropdown-header">Set Widget Color</li>
+            					      <li><a data-widget-color="blue" class="set-widget-color" href="#">Blue</a></li>
+            					      <li><a data-widget-color="red" class="set-widget-color" href="#">Red</a></li>
+            					      <li><a data-widget-color="green" class="set-widget-color" href="#">Green</a></li>
+            					      <li><a data-widget-color="orange" class="set-widget-color" href="#">Orange</a></li>
+            					      <li><a data-widget-color="purple" class="set-widget-color" href="#">Purple</a></li>
+            					    </ul>
+            					  </div>
+            					  <a href="#" class="widget-control widget-control-refresh" data-toggle="tooltip" data-placement="top" title="" data-original-title="Actualizar"><i class="fa fa-refresh"></i></a>
+            					  <a href="#" class="widget-control widget-control-minimize" data-toggle="tooltip" data-placement="top" title="" data-original-title="Minimizar"><i class="fa fa-minus-circle"></i></a>
+            					  <a href="#" class="widget-control widget-control-remove" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quitar"><i class="fa fa-times-circle"></i></a>
+  				      </div>
+              	<h3><i class="fa fa-ok-circle"></i>Inscribir alumno</h3>
+          	</div>
+          	<div class="widget-content">
+     		    {{ form_start(form, {'attr': {'class': 'form_transaccion_edit'}}) }}
+            <h4 class="widget-header">Alumno</h4>
+
+  				<div class="row">
+            		<div class="col-md-6">  
+	                     <div class="form-group">
+	                        <label>Grado-Ciclo escolar</label>
+	                        {{ form_widget(form.curso, {'attr': {'class': 'form-control'}}) }}
+	                        <span class="errorMsg">{{ form_errors(form.curso) }}</span> 
+	                     </div>
+                    </div>
+                </div>
+                <div class="row">
+            		<div class="col-md-6">  
+	                     <div class="form-group">
+	                        <label>Nombre del alumno</label>	                       
+				               <div class="input-group">
+				                  <input autocomplete="on" placeholder="Nombre" class="form-control typeahead" type="text">
+				                  <span class="input-group-addon" title="Agregar alumno" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-plus-square-o"></i></span>
+				                </div>              
+	                     </div>
+                    </div>
+                </div>
+                <input type="hidden" name="hdnAlumno" id="hdnAlumno">
+                <div id="ctnAlumno">
+
+                </div>
+                <div class="row">
+                    <div class="col-md-6">  
+	                     <div class="form-group">
+	                        <label>Habilitar usuario</label>
+	                        {{ form_widget(form.habilitarFuncionesDeCorreoElectronico, {'attr': {'class': 'form-control'}}) }}
+	                        <span class="errorMsg">{{ form_errors(form.habilitarFuncionesDeCorreoElectronico) }}</span> 
+	                     </div>
+                    </div>
+                    <div class="col-md-6">  
+	                     <div class="form-group">
+	                        <label>Identificacion Biometrica</label>
+	                        {{ form_widget(form.identificacionBiometrica, {'attr': {'class': 'form-control'}}) }}
+	                        <span class="errorMsg">{{ form_errors(form.identificacionBiometrica) }}</span> 
+	                     </div>
+                    </div>
+                </div>
+    		    <button class="btn btn-primary" type="submit">Guardar</button>
+                <button class="btn btn-default" type="reset">Limpiar</button>
+         {{ form_end(form) }}
+          </div>      
+      </div>
+    </div>
+    
 {% endblock %}

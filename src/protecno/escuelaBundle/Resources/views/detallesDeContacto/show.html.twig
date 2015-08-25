@@ -1,64 +1,93 @@
-{% extends '::base.html.twig' %}
-
-{% block body -%}
-    <h1>alumno</h1>
-
-    <table class="record_properties">
+{% extends '::index.html.twig' %}
+{% block submenu -%}
+      <li><a href="{{ path('admisiondeestudiantes') }}">Inscripciones</a></li>
+      <li><a href="{{ path('detallesdecontacto') }}">Alumnos</a></li>
+  {% endblock -%}
+{% block panel -%}
+<div class="col-md-12">
+        <div class="widget widget-green">
+            <div class="widget-title">
+                <div class="widget-controls">
+                                  <a href="#" class="widget-control widget-control-full-screen" data-toggle="tooltip" data-placement="top" title="" data-original-title="Full Screen"><i class="fa fa-expand"></i></a>
+                                  <a href="#" class="widget-control widget-control-full-screen widget-control-show-when-full" data-toggle="tooltip" data-placement="left" title="" data-original-title="Exit Full Screen"><i class="fa fa-expand"></i></a>
+                                  <a href="#" data-toggle="dropdown" class="widget-control widget-control-settings"><i class="fa fa-cog"></i></a>
+                                  <div class="dropdown" data-toggle="tooltip" data-placement="top" title="" data-original-title="Settings">
+                                    <ul class="dropdown-menu dropdown-menu-small" role="menu" aria-labelledby="dropdownMenu1">
+                                      <li class="dropdown-header">Set Widget Color</li>
+                                      <li><a data-widget-color="blue" class="set-widget-color" href="#">Blue</a></li>
+                                      <li><a data-widget-color="red" class="set-widget-color" href="#">Red</a></li>
+                                      <li><a data-widget-color="green" class="set-widget-color" href="#">Green</a></li>
+                                      <li><a data-widget-color="orange" class="set-widget-color" href="#">Orange</a></li>
+                                      <li><a data-widget-color="purple" class="set-widget-color" href="#">Purple</a></li>
+                                    </ul>
+                                  </div>
+                                  <a href="#" class="widget-control widget-control-refresh" data-toggle="tooltip" data-placement="top" title="" data-original-title="Actualizar"><i class="fa fa-refresh"></i></a>
+                                  <a href="#" class="widget-control widget-control-minimize" data-toggle="tooltip" data-placement="top" title="" data-original-title="Minimizar"><i class="fa fa-minus-circle"></i></a>
+                                  <a href="#" class="widget-control widget-control-remove" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quitar"><i class="fa fa-times-circle"></i></a>
+                      </div>
+                <h3><i class="fa fa-ok-circle"></i>Nuevo alumno</h3>
+            </div>
+            <div class="widget-content">
+            
+                      El alumno se creo correctamente
+                   
+                
+                <table class="table table-bordered table-hover">
         <tbody>
             <tr>
                 <th>Id</th>
                 <td>{{ entity.id }}</td>
             </tr>
             <tr>
-                <th>Nodealumno</th>
-                <td>{{ entity.noDeAdmision }}</td>
+                <th>No de control</th>
+                <td>{{ entity.alumno.noDeAdmision }}</td>
             </tr>
             <tr>
-                <th>Fechadealumno</th>
-                <td>{{ entity.fechaDeAdmision|date('Y-m-d H:i:s') }}</td>
+                <th>Fecha de inscripcion</th>
+                <td>{{ entity.alumno.fechaDeAdmision|date('Y-m-d H:i:s') }}</td>
             </tr>
             <tr>
                 <th>Nombre</th>
-                <td>{{ entity.nombre }}</td>
+                <td>{{ entity.alumno.nombre }}</td>
             </tr>           
             <tr>
-                <th>Apellidopaterno</th>
-                <td>{{ entity.apellidoPaterno }}</td>
+                <th>Apellido paterno</th>
+                <td>{{ entity.alumno.apellidoPaterno }}</td>
             </tr>
             <tr>
-                <th>Apellidomaterno</th>
-                <td>{{ entity.apellidoMaterno }}</td>
+                <th>Apellido materno</th>
+                <td>{{ entity.alumno.apellidoMaterno }}</td>
             </tr>
             <tr>
                 <th>Genero</th>
-                <td>{{ entity.genero }}</td>
+                <td>{{ entity.alumno.genero }}</td>
             </tr>
             <tr>
-                <th>Gruposanguineo</th>
-                <td>{{ entity.grupoSanguineo }}</td>
+                <th>Grupo sanguineo</th>
+                <td>{{ entity.alumno.grupoSanguineo }}</td>
             </tr>
             <tr>
-                <th>Lugardenacimiento</th>
-                <td>{{ entity.lugarDeNacimiento }}</td>
+                <th>Lugar de nacimiento</th>
+                <td>{{ entity.alumno.lugarDeNacimiento }}</td>
             </tr>
             <tr>
                 <th>Nacionalidad</th>
-                <td>{{ entity.nacionalidad }}</td>
+                <td>{{ entity.alumno.nacionalidad }}</td>
             </tr>
         </tbody>
     </table>
+   
+        <a href="{{ path('detallesdecontacto') }}" class="btn btn-action btn-info btn-sm">
+            Regresar
+        </a>
+    
+        <a href="{{ path('detallesdecontacto_edit', { 'id': entity.id }) }}" class="btn btn-action btn-info btn-sm">
+            Editar
+        </a>
+    {{ form(delete_form) }}
+            </div>      
+      </div>
+</div>
+        
+    {% endblock %}
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('detallesdecontacto') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href="{{ path('detallesdecontacto_edit', { 'id': entity.id }) }}">
-            Edit
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
-{% endblock %}

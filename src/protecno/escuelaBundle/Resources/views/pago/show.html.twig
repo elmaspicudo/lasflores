@@ -1,0 +1,120 @@
+{% extends '::index.html.twig' %}
+{% block submenu -%}
+      <li><a href="{{ path('pago') }}">Registrar pago</a></li>
+      <li><a href="{{ path('cuotacoleccion') }}">Catalogo de cuotas</a></li>
+  {% endblock -%}
+{% block panel -%}
+    <h1 class="page-title page-title-hard-bordered">
+      <i class="fa fa-file-text-o"></i>
+      Recibo de pago
+    </h1>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="back-invoice-link hidden-xs">
+          <a href="{{ path('pago') }}" class="iconed-link back-invoice-link">
+            <i class="fa fa-long-arrow-left"></i> <span>Regresar a lista de pagos</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="invoice-buttons">
+          <a href="{{ path('pagopdf_show', { 'id': entity.id }) }}" class="btn btn-primary btn-sm">
+            <i class="fa fa-download"></i> <span>Abrir PDF</span>
+          </a>
+          
+        </div>
+      </div>
+    </div>
+    <div class="invoice-w">
+      <div class="white-paper">
+        <div class="invoice-header">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="invoice-logo">
+                <i class="fa fa-rocket"></i>
+              </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="invoice-date-w">
+                  <div class="invoice-date">{{ entity.fechaDePago|date('d-m-Y H:i:s') }}</div>
+                  <div class="invoice-number">Pago #{{entity.id}}</div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="invoice-header">
+        <div class="row">
+          <div class="col-sm-7">
+            <div class="invoice-company">
+              <div class="ic-name">{{escuela.nombreDelColegio}}</div>
+              <div class="ic-address">{{escuela.direccionDelColegio}}</div>
+              <ul class="ic-more-info hidden-xs">
+                <li><i class="fa fa-phone"></i> {{escuela.telefonoDelColegio}}</li>
+                <li><i class="fa fa-envelope"></i> {{escuela.email}}</li>
+                <li><i class="fa fa-facebook-square"></i> {{escuela.facebook}}</li>
+                <li><i class="fa fa-twitter-square"></i> {{escuela.twiter}}</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="invoice-client">
+              <div class="icl-name">Alumno: <strong>{{ entity.alumno}}</strong></div>
+              <div class="icl-address">
+                
+              </div>
+            </div>
+            <div class="invoice-total-top">
+              <div class="label">Total</div>
+              <div class="value">${{entity.monto}}</div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="table-responsive">
+        <table class="table invoice-table">
+          <thead>
+            <tr>
+              <th>Descripcion</th>
+              <th class="text-center">Monto</th>
+              <th class="text-center">Descuento</th>
+              <th class="text-right">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="ii-name">{{entity.monto}}</div>
+                
+              </td>
+              <td class="text-center">${{entity.monto}}</td>
+              <td class="text-center">{{entity.monto}}</td>
+              <td class="text-right"><strong>${{entity.monto}}</strong></td>
+            </tr>            
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3" class="text-right">Subtotal:</td>
+              <td class="text-right"><strong>${{entity.monto}}</strong></td>
+            </tr>
+            <tr>
+              <td colspan="3" class="text-right">Descuento:</td>            
+              <td class="text-right"><strong class="label label-danger">- ${{entity.monto}}</strong></td>
+            </tr>
+          </tfoot>
+        </table>
+        </div>
+        <div class="row">
+          <div class="col-sm-5 col-sm-offset-7">
+            <div class="invoice-total-top invoice-inline-total">
+              <span class="label">Total:</span>
+              <span class="value">${{entity.monto}}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="invoice-payment-info">
+          <strong>Disclaimer:</strong> Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource sucking relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+        </div>
+      </div>
+    </div>
+{% endblock %}

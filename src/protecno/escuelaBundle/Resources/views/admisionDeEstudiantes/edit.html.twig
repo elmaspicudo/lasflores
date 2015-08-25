@@ -1,5 +1,8 @@
 {% extends '::base.html.twig' %}
-
+{% block submenu -%}
+      <li><a href="{{ path('admisiondeestudiantes') }}">Inscripciones</a></li>
+      <li><a href="{{ path('detallesdecontacto') }}">Alumnos</a></li>
+  {% endblock -%}
 {% block body -%}
     <h1>admisionDeEstudiantes edit</h1>
 

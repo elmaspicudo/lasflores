@@ -1,5 +1,9 @@
 {% extends '::index.html.twig' %}
-
+{% block submenu -%}
+      <li><a href="{{ path('lotes') }}">Ciclo escolar</a></li>
+      <li><a href="{{ path('curso') }}">Grados</a></li>
+      <li><a href="{{ path('configuracionesgenerales') }}">Datos del colegio</a></li>
+  {% endblock -%}
 {% block panel -%}
 <div class="col-md-12">
         <div class="widget widget-green">
@@ -37,7 +41,7 @@
                 <th>Nombredelcurso</th>
                 <th>Nombredelaseccion</th>
                 <th>Activarlaseleccionelectiva</th>
-                <th>Actions</th>
+                <th>Acciones</th>
             </tr>
         </thead> 
         <tbody>

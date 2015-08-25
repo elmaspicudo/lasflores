@@ -18,7 +18,7 @@ class admisionDelEmpleadoController extends Controller
     /**
      * Lists all admisionDelEmpleado entities.
      *
-     */
+     */ 
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();

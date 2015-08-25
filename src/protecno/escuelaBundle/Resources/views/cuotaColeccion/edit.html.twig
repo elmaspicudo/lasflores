@@ -1,5 +1,8 @@
 {% extends '::base.html.twig' %}
-
+{% block submenu -%}
+      <li><a href="{{ path('pago') }}">Registrar pago</a></li>
+      <li><a href="{{ path('cuotacoleccion') }}">Catalogo de cuotas</a></li>
+  {% endblock -%}
 {% block body -%}
     <h1>cuotaColeccion edit</h1>
 

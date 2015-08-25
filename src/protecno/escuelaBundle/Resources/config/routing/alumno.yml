@@ -14,7 +14,10 @@ alumno_create:
     path:     /create
     defaults: { _controller: "escuelaBundle:alumno:create" }
     requirements: { _method: post }
-
+alumno_search:
+    path:     /buscar
+    defaults: { _controller: "escuelaBundle:alumno:search" }
+    requirements: { _method: post }
 alumno_edit:
     path:     /{id}/edit
     defaults: { _controller: "escuelaBundle:alumno:edit" }

@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class configuracionesGenerales
 {
+    
     /**
      * @var integer
      */
@@ -52,17 +53,17 @@ class configuracionesGenerales
     /**
      * @var boolean
      */
-    private $habilitarIncrementoAutomaticoDeAdmisionEstudiantilNo;
+    private $incrementoDeAdmisionEstudiantilNo;
 
     /**
      * @var boolean
      */
-    private $habilitarIncrementoAutomaticoDelEmpleadoNo;
+    private $incrementoDelEmpleadoNo;
 
     /**
      * @var boolean
      */
-    private $habilitarNoticiasModeracionDeComentarios;
+    private $noticiasModeracionDeComentarios;
 
     /**
      * @var boolean
@@ -72,17 +73,27 @@ class configuracionesGenerales
     /**
      * @var boolean
      */
-    private $habilitarCambiDeContrasenaEnElPrimerInicioDeSesion;
+    private $cambioDeContrasenaInicioDeSesion;
 
     /**
-     * @var boolean
+     * @var string
      */
-    private $activarNumeroDeRolloParaEstudiantes;
+    private $facebook;
 
     /**
-     * @var boolean
+     * @var string
      */
-    private $habilitarOauth;
+    private $twiter;
+
+    /**
+     * @var string
+     */
+    private $email;
+
+    /**
+     * @var \protecno\escuelaBundle\Entity\archivo
+     */
+    private $archivo;
 
 
     /**
@@ -257,187 +268,6 @@ class configuracionesGenerales
     }
 
     /**
-     * Set habilitarIncrementoAutomaticoDeAdmisionEstudiantilNo
-     *
-     * @param boolean $habilitarIncrementoAutomaticoDeAdmisionEstudiantilNo
-     * @return configuracionesGenerales
-     */
-    public function setHabilitarIncrementoAutomaticoDeAdmisionEstudiantilNo($habilitarIncrementoAutomaticoDeAdmisionEstudiantilNo)
-    {
-        $this->habilitarIncrementoAutomaticoDeAdmisionEstudiantilNo = $habilitarIncrementoAutomaticoDeAdmisionEstudiantilNo;
-    
-        return $this;
-    }
-
-    /**
-     * Get habilitarIncrementoAutomaticoDeAdmisionEstudiantilNo
-     *
-     * @return boolean 
-     */
-    public function getHabilitarIncrementoAutomaticoDeAdmisionEstudiantilNo()
-    {
-        return $this->habilitarIncrementoAutomaticoDeAdmisionEstudiantilNo;
-    }
-
-    /**
-     * Set habilitarIncrementoAutomaticoDelEmpleadoNo
-     *
-     * @param boolean $habilitarIncrementoAutomaticoDelEmpleadoNo
-     * @return configuracionesGenerales
-     */
-    public function setHabilitarIncrementoAutomaticoDelEmpleadoNo($habilitarIncrementoAutomaticoDelEmpleadoNo)
-    {
-        $this->habilitarIncrementoAutomaticoDelEmpleadoNo = $habilitarIncrementoAutomaticoDelEmpleadoNo;
-    
-        return $this;
-    }
-
-    /**
-     * Get habilitarIncrementoAutomaticoDelEmpleadoNo
-     *
-     * @return boolean 
-     */
-    public function getHabilitarIncrementoAutomaticoDelEmpleadoNo()
-    {
-        return $this->habilitarIncrementoAutomaticoDelEmpleadoNo;
-    }
-
-    /**
-     * Set habilitarNoticiasModeracionDeComentarios
-     *
-     * @param boolean $habilitarNoticiasModeracionDeComentarios
-     * @return configuracionesGenerales
-     */
-    public function setHabilitarNoticiasModeracionDeComentarios($habilitarNoticiasModeracionDeComentarios)
-    {
-        $this->habilitarNoticiasModeracionDeComentarios = $habilitarNoticiasModeracionDeComentarios;
-    
-        return $this;
-    }
-
-    /**
-     * Get habilitarNoticiasModeracionDeComentarios
-     *
-     * @return boolean 
-     */
-    public function getHabilitarNoticiasModeracionDeComentarios()
-    {
-        return $this->habilitarNoticiasModeracionDeComentarios;
-    }
-
-    /**
-     * Set habilitarHermano
-     *
-     * @param boolean $habilitarHermano
-     * @return configuracionesGenerales
-     */
-    public function setHabilitarHermano($habilitarHermano)
-    {
-        $this->habilitarHermano = $habilitarHermano;
-    
-        return $this;
-    }
-
-    /**
-     * Get habilitarHermano
-     *
-     * @return boolean 
-     */
-    public function getHabilitarHermano()
-    {
-        return $this->habilitarHermano;
-    }
-
-    /**
-     * Set habilitarCambiDeContrasenaEnElPrimerInicioDeSesion
-     *
-     * @param boolean $habilitarCambiDeContrasenaEnElPrimerInicioDeSesion
-     * @return configuracionesGenerales
-     */
-    public function setHabilitarCambiDeContrasenaEnElPrimerInicioDeSesion($habilitarCambiDeContrasenaEnElPrimerInicioDeSesion)
-    {
-        $this->habilitarCambiDeContrasenaEnElPrimerInicioDeSesion = $habilitarCambiDeContrasenaEnElPrimerInicioDeSesion;
-    
-        return $this;
-    }
-
-    /**
-     * Get habilitarCambiDeContrasenaEnElPrimerInicioDeSesion
-     *
-     * @return boolean 
-     */
-    public function getHabilitarCambiDeContrasenaEnElPrimerInicioDeSesion()
-    {
-        return $this->habilitarCambiDeContrasenaEnElPrimerInicioDeSesion;
-    }
-
-    /**
-     * Set activarNumeroDeRolloParaEstudiantes
-     *
-     * @param boolean $activarNumeroDeRolloParaEstudiantes
-     * @return configuracionesGenerales
-     */
-    public function setActivarNumeroDeRolloParaEstudiantes($activarNumeroDeRolloParaEstudiantes)
-    {
-        $this->activarNumeroDeRolloParaEstudiantes = $activarNumeroDeRolloParaEstudiantes;
-    
-        return $this;
-    }
-
-    /**
-     * Get activarNumeroDeRolloParaEstudiantes
-     *
-     * @return boolean 
-     */
-    public function getActivarNumeroDeRolloParaEstudiantes()
-    {
-        return $this->activarNumeroDeRolloParaEstudiantes;
-    }
-
-    /**
-     * Set habilitarOauth
-     *
-     * @param boolean $habilitarOauth
-     * @return configuracionesGenerales
-     */
-    public function setHabilitarOauth($habilitarOauth)
-    {
-        $this->habilitarOauth = $habilitarOauth;
-    
-        return $this;
-    }
-
-    /**
-     * Get habilitarOauth
-     *
-     * @return boolean 
-     */
-    public function getHabilitarOauth()
-    {
-        return $this->habilitarOauth;
-    }
-    /**
-     * @var boolean
-     */
-    private $incrementoDeAdmisionEstudiantilNo;
-
-    /**
-     * @var boolean
-     */
-    private $incrementoDelEmpleadoNo;
-
-    /**
-     * @var boolean
-     */
-    private $noticiasModeracionDeComentarios;
-
-    /**
-     * @var boolean
-     */
-    private $cambioDeContrasenaInicioDeSesion;
-
-
-    /**
      * Set incrementoDeAdmisionEstudiantilNo
      *
      * @param boolean $incrementoDeAdmisionEstudiantilNo
@@ -507,6 +337,29 @@ class configuracionesGenerales
     }
 
     /**
+     * Set habilitarHermano
+     *
+     * @param boolean $habilitarHermano
+     * @return configuracionesGenerales
+     */
+    public function setHabilitarHermano($habilitarHermano)
+    {
+        $this->habilitarHermano = $habilitarHermano;
+    
+        return $this;
+    }
+
+    /**
+     * Get habilitarHermano
+     *
+     * @return boolean 
+     */
+    public function getHabilitarHermano()
+    {
+        return $this->habilitarHermano;
+    }
+
+    /**
      * Set cambioDeContrasenaInicioDeSesion
      *
      * @param boolean $cambioDeContrasenaInicioDeSesion
@@ -527,5 +380,97 @@ class configuracionesGenerales
     public function getCambioDeContrasenaInicioDeSesion()
     {
         return $this->cambioDeContrasenaInicioDeSesion;
+    }
+
+    /**
+     * Set facebook
+     *
+     * @param string $facebook
+     * @return configuracionesGenerales
+     */
+    public function setFacebook($facebook)
+    {
+        $this->facebook = $facebook;
+    
+        return $this;
+    }
+
+    /**
+     * Get facebook
+     *
+     * @return string 
+     */
+    public function getFacebook()
+    {
+        return $this->facebook;
+    }
+
+    /**
+     * Set twiter
+     *
+     * @param string $twiter
+     * @return configuracionesGenerales
+     */
+    public function setTwiter($twiter)
+    {
+        $this->twiter = $twiter;
+    
+        return $this;
+    }
+
+    /**
+     * Get twiter
+     *
+     * @return string 
+     */
+    public function getTwiter()
+    {
+        return $this->twiter;
+    }
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     * @return configuracionesGenerales
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string 
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set archivo
+     *
+     * @param \protecno\escuelaBundle\Entity\archivo $archivo
+     * @return configuracionesGenerales
+     */
+    public function setArchivo(\protecno\escuelaBundle\Entity\archivo $archivo = null)
+    {
+        $this->archivo = $archivo;
+    
+        return $this;
+    }
+
+    /**
+     * Get archivo
+     *
+     * @return \protecno\escuelaBundle\Entity\archivo 
+     */
+    public function getArchivo()
+    {
+        return $this->archivo;
     }
 }
