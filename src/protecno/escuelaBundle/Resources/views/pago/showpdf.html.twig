@@ -1,10 +1,11 @@
+
 {% extends '::index.html.twig' %}
 {% block header %}
 {% endblock %}
 {% block footer %}
 {% endblock %}
 {% block style %}
-<link rel='stylesheet' href="http://localhost/{{ asset('bundles/escuela/css/style.css') }}" >
+<link rel='stylesheet' href="{{ asset('bundles/escuela/css/style.css') }}" >
 <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700|Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
 <style type="text/css">
 html{
@@ -31,19 +32,18 @@ border:0;background: 0;
     font-size: 12px;
 }
 .colg{
-    width: 396.656px;
-   
-}
+    width: 355.656px;
+  }
 .colmasg{
     width: 523.328px;
-     
+   
 }
 .col-sm-12{ 
     padding: 0;
     width: 950px;
 }
 .table-responsive, .table{
- width: 910px;
+ width:878.984px;
  overflow: hidden;
 }
 .page-title{
@@ -56,6 +56,14 @@ border:0;background: 0;
 .invoice-w .invoice-logo{
 padding: 0;
 }
+.invoice-w .invoice-total-top .value {
+  font-size: 25px;}
+  .invoice-w .invoice-table td {
+  padding: 7px 15px;
+}
+.invoice-w .invoice-table thead th {
+  padding: 7px 15px;
+}
 </style>
 {% endblock %}
 {% block panel -%}
@@ -66,8 +74,8 @@ padding: 0;
         <div class="invoice-header">
            <table>
                 <tr>
-                    <td >
-                            <img src="http://{{server}}{{ asset(escuela.archivo.imagen)}}" width="90" height="90">
+                    <td width="90" height="90" >
+                            <img src="{{ asset(escuela.archivo.imagen)}}" width="90" height="90" >
                           
                     </td>
                     <td style="width: 532px;">
@@ -184,6 +192,6 @@ padding: 0;
       </div>
     </div></div></div>
     <script type="text/javascript">
-    //window.print()
+    window.print()
     </script>
 {% endblock %}

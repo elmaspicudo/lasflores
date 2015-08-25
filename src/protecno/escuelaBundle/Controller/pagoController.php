@@ -140,25 +140,62 @@ class pagoController extends Controller
         }
 
         //$deleteForm = $this->createDeleteForm($id);
-/*
-        return $this->render('escuelaBundle:pago:show.html.twig', array(
-            'entity'      => $entity,
-            'delete_form' => $deleteForm->createView(),
-        ));*/
+
+        
         $existe = $em->getRepository('escuelaBundle:configuracionesGenerales')->find(1);
-        $html = $this->renderView('escuelaBundle:pago:showpdf.html.twig', array(
+        return $this->render('escuelaBundle:pago:showpdf.html.twig', array(
+            'entity'      => $entity,
+            'escuela' => $existe,'server'=>$_SERVER['HTTP_HOST'],
+        ));
+       /* $html = $this->renderView('escuelaBundle:pago:showpdf.html.twig', array(
             'entity'      => $entity,
             'escuela' => $existe,'server'=>$_SERVER['HTTP_HOST'],
         ));
 
-        return new Response(
+       /* return new Response(
             $this->get('knp_snappy.pdf')->getOutputFromHtml($html),
             200,
             array(
                 'Content-Type'          => 'application/pdf',
                // 'Content-Disposition'   => 'attachment; filename="file.pdf"'
             )
-        );
+        );*/
+      $pdf = $this->container->get("white_october.tcpdf")->create();
+
+        $pdf->SetAuthor('Protecno');
+        $pdf->SetTitle('Recibo de pago');
+        //$pdf->SetSubject('PDF Vecinos2.0');
+        //$pdf->SetKeywords('TCPDF, PDF, example, test, guide');
+// set default header data
+//$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 001', PDF_HEADER_STRING);
+// set header and footer fonts
+//$pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+//$pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+// set default monospaced font
+//$pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
+//set margins
+//$pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+//$pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+//$pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+//set auto page breaks
+//$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+//set image scale factor
+//$pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
+//set some language-dependent strings
+//$pdf->setLanguageArray($l);
+// ---------------------------------------------------------
+// set default font subsetting mode
+        $pdf->setFontSubsetting(true);
+
+        $pdf->SetFont('dejavusans', '', 11, '', true);
+
+        $pdf->AddPage();
+          
+         
+        $pdf->writeHTMLCell($w = 0, $h = 0, $x = '', $y = '', $html, $border = 0, $ln = 1, $fill = 0, $reseth = true, $align = '', $autopadding = true);
+//
+       // $nombre_pdf = $junta->getPath();
+       // $pdf->Output();
     }
 
     
