@@ -9,8 +9,5 @@ use Composer\Autoload\ClassLoader;
 $loader = require __DIR__.'/../vendor/autoload.php';
 
 AnnotationRegistry::registerLoader(array($loader, 'loadClass'));
-$loader->add(
-    // ...
-    'WhiteOctober', __DIR__.'/../vendor/bundles'
-);
+
 return $loader;

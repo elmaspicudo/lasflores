@@ -19,7 +19,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new protecno\escuelaBundle\escuelaBundle(),
             //new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
-            new WhiteOctober\TCPDFBundle\WhiteOctoberTCPDFBundle(),
+            //new WhiteOctober\TCPDFBundle\WhiteOctoberTCPDFBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
